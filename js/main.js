@@ -216,7 +216,14 @@ document.addEventListener('DOMContentLoaded', function () {
     tooltip.style.top  = ly + 'px';
   }
 
-  // --- Drag-to-scroll on the horizontal strip ---
+  // --- Wheel over timeline = horizontal scroll ---
+  htlScroll.addEventListener('wheel', function (e) {
+    // Only hijack purely vertical wheel input
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      e.preventDefault();
+      htlScroll.scrollLeft += e.deltaY * 1.2;
+    }
+  }, { passive: false });
   let isDown = false, startX = 0, scrollL = 0;
 
   htlScroll.addEventListener('mousedown', function (e) {
