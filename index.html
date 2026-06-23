@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ridgeline Corridor Restoration — Project Status</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-brand">
+    <div class="header-eyebrow">Project Status Report · Fieldwork Division</div>
+    <div class="header-title">Ridgeline Corridor Restoration</div>
+  </div>
+  <div class="header-meta">
+    <div class="meta-item">
+      <span class="meta-label">Project No.</span>
+      <span class="meta-value">FLD-2024-047</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Lead Engineer</span>
+      <span class="meta-value">M. Okonkwo, P.E.</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Report Date</span>
+      <span class="meta-value">June 23, 2026</span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <div class="hero-label">Overall Project Completion</div>
+    <div class="hero-heading">68%<span>.</span><br>On Track</div>
+    <p class="hero-summary">
+      Remediation of 4.2 km of degraded riparian corridor along Ridgeline Creek, including erosion control, native revegetation, and stormwater infrastructure upgrades. Currently in active earthwork phase.
+    </p>
+    <div class="overall-bar-label">
+      <span>Progress to Final Acceptance</span>
+      <span class="overall-pct">68%</span>
+    </div>
+    <div class="overall-bar-track">
+      <div class="overall-bar-fill" id="mainBar"></div>
+    </div>
+  </div>
+  <div class="hero-gauge-wrap">
+    <svg class="gauge-svg" viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="gaugeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#6B8F71"/>
+          <stop offset="100%" style="stop-color:#F5A623"/>
+        </linearGradient>
+      </defs>
+      <!-- Track -->
+      <path d="M 16 88 A 64 64 0 0 1 144 88" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="10" stroke-linecap="round"/>
+      <!-- Fill (68% of 180deg, animated via JS) -->
+      <path id="gaugeFill" d="M 16 88 A 64 64 0 0 1 144 88" fill="none" stroke="url(#gaugeGrad)" stroke-width="10" stroke-linecap="round"
+        stroke-dasharray="201" stroke-dashoffset="201"/>
+      <!-- Tick marks -->
+      <g stroke="rgba(255,255,255,0.15)" stroke-width="1.5">
+        <line x1="80" y1="24" x2="80" y2="32"/>
+        <line x1="18" y1="88" x2="25" y2="88"/>
+        <line x1="142" y1="88" x2="135" y2="88"/>
+        <line x1="36" y1="39" x2="41" y2="45"/>
+        <line x1="124" y1="39" x2="119" y2="45"/>
+      </g>
+      <!-- Center text -->
+      <text x="80" y="76" text-anchor="middle" font-family="'Barlow Condensed', sans-serif" font-size="22" font-weight="800" fill="#F5A623">68%</text>
+      <text x="80" y="90" text-anchor="middle" font-family="'Inter', sans-serif" font-size="7.5" fill="#B8AFA4" letter-spacing="1.5">COMPLETE</text>
+    </svg>
+    <div class="gauge-caption">Project Health Gauge</div>
+  </div>
+</section>
+
+<!-- STATUS KEY -->
+<div class="status-bar">
+  <div class="status-pill"><span class="pill-dot complete"></span> Complete</div>
+  <div class="status-pill"><span class="pill-dot active"></span> In Progress</div>
+  <div class="status-pill"><span class="pill-dot pending"></span> Pending</div>
+  <div class="status-pill"><span class="pill-dot issue"></span> Issue / Delayed</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+  <!-- PHASE BREAKDOWN -->
+  <div class="section-heading">Phase Breakdown</div>
+  <div class="phases">
+
+    <div class="phase-card complete">
+      <div class="phase-info">
+        <div class="phase-name">Phase 1 · Site Assessment</div>
+        <div class="phase-dates">Jan 15 – Feb 28, 2026</div>
+      </div>
+      <div class="phase-progress">
+        <div class="phase-tasks">
+          <span class="task-chip done">Geotechnical Survey</span>
+          <span class="task-chip done">Hydrology Report</span>
+          <span class="task-chip done">Species Inventory</span>
+          <span class="task-chip done">Permit Acquisition</span>
+        </div>
+        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="100"></div></div>
+      </div>
+      <div class="phase-stat">
+        <div class="phase-pct">100%</div>
+        <div class="phase-status-badge">Complete</div>
+      </div>
+    </div>
+
+    <div class="phase-card complete">
+      <div class="phase-info">
+        <div class="phase-name">Phase 2 · Mobilization</div>
+        <div class="phase-dates">Mar 4 – Mar 22, 2026</div>
+      </div>
+      <div class="phase-progress">
+        <div class="phase-tasks">
+          <span class="task-chip done">Equipment Staging</span>
+          <span class="task-chip done">Access Road</span>
+          <span class="task-chip done">Erosion Controls</span>
+          <span class="task-chip done">Safety Plan Filed</span>
+        </div>
+        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="100"></div></div>
+      </div>
+      <div class="phase-stat">
+        <div class="phase-pct">100%</div>
+        <div class="phase-status-badge">Complete</div>
+      </div>
+    </div>
+
+    <div class="phase-card active">
+      <div class="phase-info">
+        <div class="phase-name">Phase 3 · Earthwork &amp; Grading</div>
+        <div class="phase-dates">Apr 1 – Jul 15, 2026</div>
+      </div>
+      <div class="phase-progress">
+        <div class="phase-tasks">
+          <span class="task-chip done">Bank Reshaping — Reach A</span>
+          <span class="task-chip done">Bank Reshaping — Reach B</span>
+          <span class="task-chip in-prog">Reach C Grading (72%)</span>
+          <span class="task-chip blocked">Reach D — Permit Delay</span>
+          <span class="task-chip queued">Bioengineering Structures</span>
+        </div>
+        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="62"></div></div>
+      </div>
+      <div class="phase-stat">
+        <div class="phase-pct">62%</div>
+        <div class="phase-status-badge">In Progress</div>
+      </div>
+    </div>
+
+    <div class="phase-card issue">
+      <div class="phase-info">
+        <div class="phase-name">Phase 4 · Stormwater Infrastructure</div>
+        <div class="phase-dates">May 12 – Aug 30, 2026</div>
+      </div>
+      <div class="phase-progress">
+        <div class="phase-tasks">
+          <span class="task-chip done">Inlet Structures (3 of 5)</span>
+          <span class="task-chip blocked">Culvert STA 18+40 — Delay</span>
+          <span class="task-chip queued">Outfall Armoring</span>
+          <span class="task-chip queued">Detention Basin</span>
+        </div>
+        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="30"></div></div>
+      </div>
+      <div class="phase-stat">
+        <div class="phase-pct">30%</div>
+        <div class="phase-status-badge">Issue</div>
+      </div>
+    </div>
+
+    <div class="phase-card pending">
+      <div class="phase-info">
+        <div class="phase-name">Phase 5 · Revegetation</div>
+        <div class="phase-dates">Aug 2026 – Jan 2027</div>
+      </div>
+      <div class="phase-progress">
+        <div class="phase-tasks">
+          <span class="task-chip queued">Seedbank Preparation</span>
+          <span class="task-chip queued">Native Planting — Riparian</span>
+          <span class="task-chip queued">Upland Seeding</span>
+          <span class="task-chip queued">Irrigation System</span>
+        </div>
+        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="0"></div></div>
+      </div>
+      <div class="phase-stat">
+        <div class="phase-pct">0%</div>
+        <div class="phase-status-badge">Pending</div>
+      </div>
+    </div>
+
+    <div class="phase-card pending">
+      <div class="phase-info">
+        <div class="phase-name">Phase 6 · Monitoring &amp; Closeout</div>
+        <div class="phase-dates">Feb 2027 – May 2027</div>
+      </div>
+      <div class="phase-progress">
+        <div class="phase-tasks">
+          <span class="task-chip queued">Year-1 Monitoring Plan</span>
+          <span class="task-chip queued">As-Built Drawings</span>
+          <span class="task-chip queued">Final Regulatory Report</span>
+          <span class="task-chip queued">Site Acceptance Walk</span>
+        </div>
+        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="0"></div></div>
+      </div>
+      <div class="phase-stat">
+        <div class="phase-pct">0%</div>
+        <div class="phase-status-badge">Pending</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- METRICS -->
+  <div class="section-heading">Field Metrics</div>
+  <div class="metrics">
+    <div class="metric">
+      <div class="metric-value">2.8<span class="unit">km</span></div>
+      <div class="metric-label">Corridor Restored</div>
+      <div class="metric-delta pos">↑ of 4.2 km total</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">14,200<span class="unit">m³</span></div>
+      <div class="metric-label">Earthwork Moved</div>
+      <div class="metric-delta pos">↑ On target</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">3<span class="unit">of 5</span></div>
+      <div class="metric-label">Inlet Structures</div>
+      <div class="metric-delta neu">→ In progress</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">0<span class="unit"> </span></div>
+      <div class="metric-label">Safety Incidents</div>
+      <div class="metric-delta pos">↑ 87 days incident-free</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">12<span class="unit">d</span></div>
+      <div class="metric-label">Schedule Variance</div>
+      <div class="metric-delta neg">↓ Behind (Reach D delay)</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">94<span class="unit">%</span></div>
+      <div class="metric-label">Budget Consumed</div>
+      <div class="metric-delta neg">↓ Contingency draw likely</div>
+    </div>
+  </div>
+
+  <!-- ACTIVE ISSUES -->
+  <div class="section-heading">Open Issues</div>
+  <div class="issues">
+    <div class="issue-row">
+      <div class="issue-id">ISS-009</div>
+      <div class="issue-desc"><strong>Reach D permit hold</strong> — CDFW requested additional raptor nesting survey before earthwork can resume. Estimated 3-week delay.</div>
+      <div class="issue-owner">Owner: J. Hargrove</div>
+    </div>
+    <div class="issue-row">
+      <div class="issue-id">ISS-012</div>
+      <div class="issue-desc"><strong>Culvert STA 18+40 backorder</strong> — 72" HDPE culvert delayed 6 weeks from supplier. Exploring alternate sourcing.</div>
+      <div class="issue-owner">Owner: Procurement</div>
+    </div>
+    <div class="issue-row">
+      <div class="issue-id">ISS-015</div>
+      <div class="issue-desc"><strong>Budget contingency threshold</strong> — Earthwork overrun in Reach B has consumed 40% of contingency reserve. PM review scheduled.</div>
+      <div class="issue-owner">Owner: M. Okonkwo</div>
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="section-heading">Key Milestones</div>
+  <div class="timeline">
+    <div class="tl-event done">
+      <div class="tl-date">Jan 15, 2026</div>
+      <div class="tl-title">Notice to Proceed Issued</div>
+      <div class="tl-desc">Client authorization received; field team mobilized to base camp.</div>
+    </div>
+    <div class="tl-event done">
+      <div class="tl-date">Feb 28, 2026</div>
+      <div class="tl-title">Site Assessment Complete</div>
+      <div class="tl-desc">All baseline surveys accepted by regulatory agencies.</div>
+    </div>
+    <div class="tl-event done">
+      <div class="tl-date">Apr 1, 2026</div>
+      <div class="tl-title">Earthwork Commenced</div>
+      <div class="tl-desc">Reach A and B bank reshaping begun; equipment fully deployed.</div>
+    </div>
+    <div class="tl-event now">
+      <div class="tl-date">Jun 23, 2026 · TODAY</div>
+      <div class="tl-title">Active: Reach C Grading + Infrastructure Phase</div>
+      <div class="tl-desc">Earthwork 62% complete. Permit hold on Reach D under resolution. First three stormwater inlets operational.</div>
+    </div>
+    <div class="tl-event future">
+      <div class="tl-date">Jul 15, 2026</div>
+      <div class="tl-title">Earthwork Substantial Completion</div>
+      <div class="tl-desc">All grading and bank reshaping to be complete. Subject to Reach D permit clearance.</div>
+    </div>
+    <div class="tl-event future">
+      <div class="tl-date">Aug 30, 2026</div>
+      <div class="tl-title">Stormwater Infrastructure Complete</div>
+      <div class="tl-desc">All culverts, inlets, and detention basin operational.</div>
+    </div>
+    <div class="tl-event future">
+      <div class="tl-date">Jan 15, 2027</div>
+      <div class="tl-title">Revegetation Complete</div>
+      <div class="tl-desc">Native planting and seeding of 4.2 km corridor finished.</div>
+    </div>
+    <div class="tl-event future">
+      <div class="tl-date">May 30, 2027</div>
+      <div class="tl-title">Final Acceptance</div>
+      <div class="tl-desc">Regulatory sign-off and project closeout. Monitoring program transferred to client.</div>
+    </div>
+  </div>
+
+  <!-- FINAL STATE -->
+  <div class="section-heading">Projected Final State</div>
+  <div class="final-state">
+    <div class="final-header">
+      <div>
+        <div class="final-badge">✓ As-Built Target</div>
+        <div class="final-title">Ridgeline Corridor<br>Restored &amp; Stabilized</div>
+        <div class="final-subtitle">A functioning riparian buffer meeting all CDFW and RWQCB performance standards, with 5-year survival warranty on native plantings.</div>
+      </div>
+      <div class="final-projected">
+        <span class="proj-label">Projected Completion</span>
+        <div class="proj-date">May 30<br>2027</div>
+        <div class="proj-note">+12 days vs. baseline</div>
+      </div>
+    </div>
+    <div class="deliverables">
+      <div class="deliverable">
+        <div class="deliv-icon">🌿</div>
+        <div class="deliv-name">4.2 km Riparian Buffer</div>
+        <div class="deliv-spec">Native woody species, ≥80% cover target at Year 3</div>
+        <div class="deliv-status projected">Target: Jan 2027</div>
+      </div>
+      <div class="deliverable">
+        <div class="deliv-icon">💧</div>
+        <div class="deliv-name">Stormwater System</div>
+        <div class="deliv-spec">5 inlets, 3 culverts, 1 detention basin — 25-yr storm capacity</div>
+        <div class="deliv-status projected">Target: Aug 2026</div>
+      </div>
+      <div class="deliverable">
+        <div class="deliv-icon">🪨</div>
+        <div class="deliv-name">Bioengineered Banks</div>
+        <div class="deliv-spec">Brush layering &amp; live stake revetments, 4.2 km both banks</div>
+        <div class="deliv-status projected">Target: Jul 2026</div>
+      </div>
+      <div class="deliverable">
+        <div class="deliv-icon">📋</div>
+        <div class="deliv-name">As-Built Drawings</div>
+        <div class="deliv-spec">Full CAD set stamped by P.E. of record</div>
+        <div class="deliv-status projected">Target: Apr 2027</div>
+      </div>
+      <div class="deliverable">
+        <div class="deliv-icon">🦅</div>
+        <div class="deliv-name">Habitat Monitoring Plan</div>
+        <div class="deliv-spec">5-year annual reporting to CDFW, success criteria verified</div>
+        <div class="deliv-status projected">Target: May 2027</div>
+      </div>
+      <div class="deliverable">
+        <div class="deliv-icon">✅</div>
+        <div class="deliv-name">Regulatory Closeout</div>
+        <div class="deliv-spec">401/404 permits closed, CDFW agreement satisfied</div>
+        <div class="deliv-status projected">Target: May 2027</div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>Ridgeline Corridor Restoration · Project FLD-2024-047 · Fieldwork Division</p>
+  <span class="update-tag">Last Updated: June 23, 2026</span>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
