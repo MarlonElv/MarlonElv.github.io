@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Easely I &amp; II — Project Incident Log</title>
-  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -336,35 +335,44 @@
   <!-- ——————————————————————————————————————
        OPEN ISSUES
        —————————————————————————————————————— -->
-  <div class="section-heading" id="open-issues">Open Issues</div>
-  <div class="issues">
+  <button class="collapsible-header" id="open-issues" data-target="collapse-issues" aria-expanded="true">
+    <div class="project-block-label">Status</div>
+    <div class="project-block-title">Open Issues</div>
+    <span class="collapse-chevron" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </span>
+  </button>
 
-    <div class="issue-row">
-      <div class="issue-id">SEC</div>
-      <div class="issue-desc"><strong>Ongoing theft and vandalism</strong> — Multiple UTVs, fencing, tools, and trailers stolen across Easely I and II zones. Latest report 5/27/2026, RUTV2939 not located during inventory audit. Police report filed A261380004.</div>
-      <div class="issue-owner">Owner: Security Team</div>
-    </div>
-    <div class="issue-row">
-      <div class="issue-id">MECH</div>
-      <div class="issue-desc"><strong>Drive time completion gap</strong> — As of 3/31/2026, team only had 25% drive times for Easely II and 35% for Easely I. Jeremiah Rodman finished processing: E1 72%, E2 58% as of 5/5/2026. Final gap still open.</div>
-      <div class="issue-owner">Owner: Mechanical / Sam Alamin</div>
-    </div>
-    <div class="issue-row">
-      <div class="issue-id">MECH</div>
-      <div class="issue-desc"><strong>Pile refusal count</strong> — PRE survey data processed 4/16/2026. 3,542 pile refusals identified. Resolution and rework plan pending.</div>
-      <div class="issue-owner">Owner: Mechanical Team</div>
-    </div>
-    <div class="issue-row">
-      <div class="issue-id">ELEC</div>
-      <div class="issue-desc"><strong>MC 2/2/26 acceleration plan active</strong> — Ramp to 10,000 modules/day. Equipment support plan initiated 1/5/2026. Current module installation pace and circuit completion status to be tracked against plan.</div>
-      <div class="issue-owner">Owner: Electrical / Site</div>
-    </div>
-    <div class="issue-row">
-      <div class="issue-id">CIVIL</div>
-      <div class="issue-desc"><strong>UXO discovery delays</strong> — Multiple zones affected across project life. Most recent: IPX halted Zones 1, J, and Hutnil on 2/21/2026. Civil unable to work in E2 for 10 days per 2/24/2026 email confirmation.</div>
-      <div class="issue-owner">Owner: Civil / Anthony Esparza</div>
-    </div>
+  <div class="collapsible-body" id="collapse-issues">
+    <div class="issues">
 
+      <div class="issue-row">
+        <div class="issue-id">SEC</div>
+        <div class="issue-desc"><strong>Ongoing theft and vandalism</strong> — Multiple UTVs, fencing, tools, and trailers stolen across Easely I and II zones. Latest report 5/27/2026, RUTV2939 not located during inventory audit. Police report filed A261380004.</div>
+        <div class="issue-owner">Owner: Security Team</div>
+      </div>
+      <div class="issue-row">
+        <div class="issue-id">MECH</div>
+        <div class="issue-desc"><strong>Drive time completion gap</strong> — As of 3/31/2026, team only had 25% drive times for Easely II and 35% for Easely I. Jeremiah Rodman finished processing: E1 72%, E2 58% as of 5/5/2026. Final gap still open.</div>
+        <div class="issue-owner">Owner: Mechanical / Sam Alamin</div>
+      </div>
+      <div class="issue-row">
+        <div class="issue-id">MECH</div>
+        <div class="issue-desc"><strong>Pile refusal count</strong> — PRE survey data processed 4/16/2026. 3,542 pile refusals identified. Resolution and rework plan pending.</div>
+        <div class="issue-owner">Owner: Mechanical Team</div>
+      </div>
+      <div class="issue-row">
+        <div class="issue-id">ELEC</div>
+        <div class="issue-desc"><strong>MC 2/2/26 acceleration plan active</strong> — Ramp to 10,000 modules/day. Equipment support plan initiated 1/5/2026. Current module installation pace and circuit completion status to be tracked against plan.</div>
+        <div class="issue-owner">Owner: Electrical / Site</div>
+      </div>
+      <div class="issue-row">
+        <div class="issue-id">CIVIL</div>
+        <div class="issue-desc"><strong>UXO discovery delays</strong> — Multiple zones affected across project life. Most recent: IPX halted Zones 1, J, and Hutnil on 2/21/2026. Civil unable to work in E2 for 10 days per 2/24/2026 email confirmation.</div>
+        <div class="issue-owner">Owner: Civil / Anthony Esparza</div>
+      </div>
+
+    </div>
   </div>
 
 
@@ -945,7 +953,7 @@
 </main>
 
 <footer>
-  <p>Easely I &amp; II · Engineering Project Showcase · Primoris Renewable Energy</p>
+  <p>Easely I &amp; II · Engineering Project Showcase · [Organization Name]</p>
   <span class="update-tag">Last Updated: <span id="footer-date">—</span></span>
 </footer>
 
