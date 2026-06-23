@@ -25,7 +25,7 @@
   --border-blue: rgba(0,111,185,0.25);
   --radius:      6px;
   --radius-lg:   10px;
-  --nav-h:       52px;
+  --nav-h:       56px;
 }
 
 html { scroll-behavior: smooth; }
@@ -48,14 +48,15 @@ body {
   right: 0;
   z-index: 200;
   height: var(--nav-h);
-  background: rgba(13,17,23,0.96);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(13,17,23,0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
   padding: 0 2rem;
   gap: 2rem;
+  box-sizing: border-box;
 }
 
 .nav-logo {
@@ -781,7 +782,11 @@ footer {
 
 .htl-wrap {
   margin-bottom: 2rem;
-  position: relative;
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 100;
+  /* subtle shadow to separate from content scrolling beneath */
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,0.55));
 }
 
 .htl-outer {
@@ -789,39 +794,39 @@ footer {
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  background: var(--bg-card);
+  background: var(--bg-panel);
 }
 
 .htl-scroll {
   overflow-x: auto;
   overflow-y: visible;
-  padding: 28px 32px 0;
+  padding: 36px 48px 0;
   scrollbar-width: thin;
-  scrollbar-color: rgba(223,197,115,0.2) transparent;
+  scrollbar-color: rgba(223,197,115,0.25) transparent;
   cursor: grab;
 }
 
 .htl-scroll:active { cursor: grabbing; }
 
-.htl-scroll::-webkit-scrollbar { height: 4px; }
-.htl-scroll::-webkit-scrollbar-track { background: transparent; }
-.htl-scroll::-webkit-scrollbar-thumb { background: rgba(223,197,115,0.2); border-radius: 2px; }
+.htl-scroll::-webkit-scrollbar { height: 5px; }
+.htl-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.03); }
+.htl-scroll::-webkit-scrollbar-thumb { background: rgba(223,197,115,0.25); border-radius: 3px; }
 
 .htl-track-wrap {
   position: relative;
-  height: 60px;
+  height: 76px;
   min-width: 100%;
 }
 
 /* The horizontal spine line */
 .htl-spine {
   position: absolute;
-  top: 20px;
+  top: 24px;
   left: 0;
   right: 0;
   height: 2px;
   background: linear-gradient(90deg, var(--blue) 0%, var(--gold) 100%);
-  opacity: 0.35;
+  opacity: 0.4;
 }
 
 /* Dots container — JS sets its width based on event count */
@@ -835,11 +840,11 @@ footer {
 /* Individual dot */
 .htl-dot {
   position: absolute;
-  top: 12px;
-  width: 16px;
-  height: 16px;
+  top: 14px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  border: 2px solid var(--bg-card);
+  border: 2px solid var(--bg-panel);
   transform: translateX(-50%);
   cursor: pointer;
   transition: transform 0.15s, box-shadow 0.15s;
@@ -847,17 +852,17 @@ footer {
 }
 
 .htl-dot:hover {
-  transform: translateX(-50%) scale(1.5);
+  transform: translateX(-50%) scale(1.6);
   z-index: 10;
 }
 
 .htl-dot.htl-active {
-  transform: translateX(-50%) scale(1.6);
-  box-shadow: 0 0 0 3px rgba(223,197,115,0.35);
+  transform: translateX(-50%) scale(1.7);
+  box-shadow: 0 0 0 4px rgba(223,197,115,0.35);
   z-index: 10;
 }
 
-.htl-dot.htl-filtered { opacity: 0.1; pointer-events: none; }
+.htl-dot.htl-filtered { opacity: 0.08; pointer-events: none; }
 
 /* Dept colors for dots */
 .htl-dot.security   { background: #e53e3e; }
@@ -869,13 +874,13 @@ footer {
 
 /* Stagger: dots on same date alternate above/below spine */
 .htl-dot.above { top: 4px; }
-.htl-dot.below { top: 22px; }
+.htl-dot.below { top: 28px; }
 
 /* Month labels row */
 .htl-months {
   position: relative;
-  height: 24px;
-  margin-top: 4px;
+  height: 28px;
+  margin-top: 6px;
 }
 
 .htl-month-label {
@@ -895,8 +900,8 @@ footer {
   position: absolute;
   top: -16px;
   width: 1px;
-  height: 8px;
-  background: rgba(255,255,255,0.12);
+  height: 10px;
+  background: rgba(255,255,255,0.15);
   transform: translateX(-50%);
 }
 
@@ -971,4 +976,10 @@ footer {
   border-color: rgba(223,197,115,0.6) !important;
   box-shadow: 0 0 0 2px rgba(223,197,115,0.15);
   transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* ---- SCROLL ANCHOR OFFSET ---------------------------------- */
+/* Prevents fixed nav from covering the target section on click */
+[id] {
+  scroll-margin-top: calc(var(--nav-h) + 12px);
 }

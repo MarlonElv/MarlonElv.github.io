@@ -89,11 +89,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const totalMs = maxDate - minDate || 1;
 
   // Layout constants
-  const DOT_SIZE   = 16;
-  const PAD_LEFT   = 32;
-  const PAD_RIGHT  = 32;
-  const MIN_WIDTH  = 900;   // px — ensures dots aren't too cramped
-  const PER_DAY    = 3.2;   // px per day — controls spread
+  const DOT_SIZE   = 18;
+  const PAD_LEFT   = 48;
+  const PAD_RIGHT  = 48;
+  const MIN_WIDTH  = 1800;  // px — wider minimum so months are well spaced
+  const PER_DAY    = 6.5;   // px per day — more stretch between incidents
 
   const spanDays  = totalMs / 86400000;
   const trackW    = Math.max(MIN_WIDTH, spanDays * PER_DAY + PAD_LEFT + PAD_RIGHT);
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
     dot.setAttribute('aria-label', ev.dateStr + ': ' + ev.title);
     dot.dataset.incId = ev.id;
 
-    // Alternate above/below spine for same-date stacking
+    // Alternate above/below spine for same-date stacking (spine is at top:24px)
     if (stackIndex % 2 === 1) dot.classList.add('below');
     else if (stackIndex > 0)  dot.classList.add('above');
 
@@ -235,14 +235,11 @@ document.addEventListener('DOMContentLoaded', function () {
     htlScroll.scrollLeft = scrollL - walk;
   });
 
-  // --- Scroll to latest event on load ---
-  const lastDot = htlDots.lastElementChild;
-  if (lastDot) {
-    setTimeout(function () {
-      const dotLeft = parseFloat(lastDot.style.left) - htlScroll.offsetWidth / 2;
-      htlScroll.scrollLeft = Math.max(0, dotLeft);
-    }, 400);
-  }
+  // --- Scroll to show roughly the middle of the timeline on load ---
+  setTimeout(function () {
+    // Start at the beginning so the user sees the full range
+    htlScroll.scrollLeft = 0;
+  }, 400);
 
   /* ============================================================
      FILTER BUTTONS
