@@ -1,17 +1,10 @@
 /* ============================================================
    EASELY 1 & 2 — main.js
-   Handles:
-     - Progress bar animations (hero + phase cards)
-     - Gauge arc animation
-     - Dynamic date injection
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  /* ---- DYNAMIC DATE ----------------------------------------
-     Injects today's date into the header and footer.
-     Remove or override if you prefer a fixed date.
-  ------------------------------------------------------------ */
+  /* ---- DYNAMIC DATE ---------------------------------------- */
   const today = new Date().toLocaleDateString('en-US', {
     month: 'long', day: 'numeric', year: 'numeric'
   });
@@ -21,42 +14,25 @@ document.addEventListener('DOMContentLoaded', function () {
   if (footerDateEl) footerDateEl.textContent = today;
 
 
-  /* ---- HERO PROGRESS BAR -----------------------------------
-     Reads data-width from #mainBar and animates to that width.
-     To update completion: set data-width="68" (for 68%), etc.
-  ------------------------------------------------------------ */
-  const mainBar = document.getElementById('mainBar');
-  if (mainBar) {
-    const targetWidth = parseFloat(mainBar.dataset.width) || 0;
-
-    // Update hero percentage displays
-    const heroPct = document.querySelector('.hero-heading');
-    const overallPct = document.querySelector('.overall-pct');
-    if (overallPct) overallPct.textContent = targetWidth + '%';
-
-    // Animate after a short delay so the transition is visible on load
+  /* ---- DUAL HERO BARS (Easely 1 = 100, Easely 2 = 80) ------ */
+  const dualBars = document.querySelectorAll('.dual-bar-fill');
+  dualBars.forEach(function (bar) {
+    const w = parseFloat(bar.dataset.width) || 0;
     requestAnimationFrame(() => {
-      setTimeout(() => {
-        mainBar.style.width = targetWidth + '%';
-      }, 200);
+      setTimeout(() => { bar.style.width = w + '%'; }, 200);
     });
-  }
+  });
 
 
-  /* ---- GAUGE ARC -------------------------------------------
-     Reads the same data-width from #mainBar to drive the SVG arc.
-     Total arc path length = ~201px for this viewBox.
-  ------------------------------------------------------------ */
+  /* ---- GAUGE (combined 90%) -------------------------------- */
   const gaugeFill  = document.getElementById('gaugeFill');
   const gaugeLabel = document.getElementById('gaugeLabel');
+  const COMBINED_PCT = 90;
+  const arcLength  = 201;
 
-  if (gaugeFill && mainBar) {
-    const pct = parseFloat(mainBar.dataset.width) || 0;
-    const arcLength = 201;
-    const offset = arcLength - (arcLength * pct / 100);
-
-    if (gaugeLabel) gaugeLabel.textContent = Math.round(pct) + '%';
-
+  if (gaugeFill) {
+    const offset = arcLength - (arcLength * COMBINED_PCT / 100);
+    if (gaugeLabel) gaugeLabel.textContent = COMBINED_PCT + '%';
     requestAnimationFrame(() => {
       setTimeout(() => {
         gaugeFill.style.transition = 'stroke-dashoffset 1.4s cubic-bezier(0.4,0,0.2,1)';
@@ -66,26 +42,58 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 
-  /* ---- PHASE BAR ANIMATIONS --------------------------------
-     Each .phase-bar-fill reads its own data-width attribute.
-  ------------------------------------------------------------ */
+  /* ---- PHASE BAR ANIMATIONS -------------------------------- */
   const phaseBars = document.querySelectorAll('.phase-bar-fill');
   phaseBars.forEach(function (bar) {
     const w = parseFloat(bar.dataset.width) || 0;
     requestAnimationFrame(() => {
-      setTimeout(() => {
-        bar.style.width = w + '%';
-      }, 400);
+      setTimeout(() => { bar.style.width = w + '%'; }, 450);
     });
   });
 
 
-  /* ---- SCROLL REVEAL (OPTIONAL) ----------------------------
-     Lightly fades in timeline events and phase cards on scroll.
-     Remove this block if you prefer no scroll animation.
-  ------------------------------------------------------------ */
+  /* ---- ACTIVE NAV LINK ON SCROLL --------------------------- */
+  const sections = document.querySelectorAll('[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  function onScroll () {
+    let current = '';
+    sections.forEach(function (section) {
+      const top = section.getBoundingClientRect().top;
+      if (top <= 80) current = section.id;
+    });
+    navLinks.forEach(function (link) {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+
+  /* ---- MOBILE NAV TOGGLE ----------------------------------- */
+  const toggle = document.getElementById('mobileToggle');
+  const navLinksEl = document.querySelector('.nav-links');
+
+  if (toggle && navLinksEl) {
+    toggle.addEventListener('click', function () {
+      navLinksEl.classList.toggle('open');
+    });
+
+    // Close on link click
+    navLinksEl.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        navLinksEl.classList.remove('open');
+      });
+    });
+  }
+
+
+  /* ---- SCROLL REVEAL --------------------------------------- */
   const revealTargets = document.querySelectorAll(
-    '.tl-event, .phase-card, .metric, .deliverable'
+    '.tl-event, .phase-card, .metric, .deliverable, .issue-row'
   );
 
   if ('IntersectionObserver' in window) {
@@ -103,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.08 });
+    }, { threshold: 0.06 });
 
     revealTargets.forEach(el => observer.observe(el));
   }
