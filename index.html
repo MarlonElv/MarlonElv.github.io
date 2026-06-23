@@ -10,6 +10,29 @@
 </head>
 <body>
 
+
+
+<!-- ============================================================
+     NAV BAR
+     ============================================================ -->
+<nav class="site-nav" id="siteNav">
+  <div class="nav-logo">
+    <span class="nav-logo-mark">E</span>
+    <span class="nav-logo-text">Easely <span class="nav-logo-dim">1 &amp; 2</span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#overview"    class="nav-link active">Overview</a></li>
+    <li><a href="#easely1"     class="nav-link">Easely 1</a></li>
+    <li><a href="#easely2"     class="nav-link">Easely 2</a></li>
+    <li><a href="#metrics"     class="nav-link">Metrics</a></li>
+    <li><a href="#issues"      class="nav-link">Issues</a></li>
+    <li><a href="#milestones"  class="nav-link">Milestones</a></li>
+    <li><a href="#deliverables" class="nav-link">Deliverables</a></li>
+  </ul>
+  <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+</nav>  
 <!-- ============================================================
      HEADER
      ============================================================ -->
@@ -47,37 +70,49 @@
      ============================================================ -->
 <section class="hero">
   <div class="hero-text">
-    <div class="hero-label">Overall Project Completion</div>
-    <div class="hero-heading">00%<span class="hero-dot">.</span><br>On Track</div>
-    <!-- PLACEHOLDER: Replace percentage and status above -->
+    <div class="hero-label">Combined Project Completion</div>
+    <div class="hero-heading">90%<span class="hero-dot">.</span><br>In Progress</div>
     <p class="hero-summary">
       [Project description placeholder. Describe the scope, location, and primary engineering
       objectives of Easely 1 and Easely 2 here. Include key systems involved, total area or
-      scale, and the primary client or owner.]
+      scale, and the primary client or owner.] Easely 1 has reached full completion and
+      final acceptance. Easely 2 is currently 80% complete and in active construction.
     </p>
-    <div class="overall-bar-label">
-      <span>Progress to Final Acceptance</span>
-      <span class="overall-pct">00%</span>
-      <!-- PLACEHOLDER: Update percentage -->
-    </div>
-    <div class="overall-bar-track">
-      <div class="overall-bar-fill" id="mainBar" data-width="0"></div>
-      <!-- PLACEHOLDER: Set data-width="XX" to match your completion percentage (0–100) -->
+ 
+    <!-- DUAL PROGRESS BARS — one per project -->
+    <div class="dual-bars">
+      <div class="dual-bar-row">
+        <div class="dual-bar-label-group">
+          <span class="dual-bar-name">Easely 1</span>
+          <span class="dual-bar-tag complete-tag">Complete</span>
+        </div>
+        <div class="dual-bar-track">
+          <div class="dual-bar-fill fill-complete" data-width="100"></div>
+        </div>
+        <span class="dual-bar-pct">100%</span>
+      </div>
+      <div class="dual-bar-row">
+        <div class="dual-bar-label-group">
+          <span class="dual-bar-name">Easely 2</span>
+          <span class="dual-bar-tag active-tag">In Progress</span>
+        </div>
+        <div class="dual-bar-track">
+          <div class="dual-bar-fill fill-active" data-width="80" id="mainBar"></div>
+        </div>
+        <span class="dual-bar-pct">80%</span>
+      </div>
     </div>
   </div>
-
+ 
   <div class="hero-gauge-wrap">
-    <svg class="gauge-svg" viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Project completion gauge">
-      <title>Project Completion Gauge</title>
-      <!-- Track arc -->
+    <svg class="gauge-svg" viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Combined project completion gauge">
+      <title>Combined Project Completion Gauge</title>
       <path d="M 16 88 A 64 64 0 0 1 144 88"
         fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="10" stroke-linecap="round"/>
-      <!-- Fill arc — JS animates stroke-dashoffset -->
       <path id="gaugeFill"
         d="M 16 88 A 64 64 0 0 1 144 88"
         fill="none" stroke="#DFC573" stroke-width="10" stroke-linecap="round"
         stroke-dasharray="201" stroke-dashoffset="201"/>
-      <!-- Tick marks -->
       <g stroke="rgba(255,255,255,0.18)" stroke-width="1.5">
         <line x1="80"  y1="24" x2="80"  y2="32"/>
         <line x1="18"  y1="88" x2="25"  y2="88"/>
@@ -85,43 +120,44 @@
         <line x1="36"  y1="39" x2="41"  y2="45"/>
         <line x1="124" y1="39" x2="119" y2="45"/>
       </g>
-      <!-- Center readout -->
-      <text x="80" y="76" text-anchor="middle"
+      <text x="80" y="72" text-anchor="middle"
         font-family="'Barlow Condensed', sans-serif"
-        font-size="22" font-weight="800" fill="#DFC573" id="gaugeLabel">0%</text>
-      <!-- PLACEHOLDER: JS will update this from data-width -->
-      <text x="80" y="90" text-anchor="middle"
-        font-family="'Inter', sans-serif" font-size="7.5"
-        fill="#9AAAB8" letter-spacing="1.5">COMPLETE</text>
+        font-size="22" font-weight="800" fill="#DFC573" id="gaugeLabel">90%</text>
+      <text x="80" y="83" text-anchor="middle"
+        font-family="'Inter', sans-serif" font-size="6.5"
+        fill="#9AAAB8" letter-spacing="1.2">COMBINED</text>
+      <text x="80" y="92" text-anchor="middle"
+        font-family="'Inter', sans-serif" font-size="6.5"
+        fill="#9AAAB8" letter-spacing="1.2">COMPLETE</text>
     </svg>
-    <div class="gauge-caption">Project Health</div>
+    <div class="gauge-caption">Overall Progress</div>
   </div>
 </section>
-
-<!-- ============================================================
-     STATUS LEGEND
-     ============================================================ -->
+ 
+<!-- STATUS LEGEND -->
 <div class="status-bar">
   <div class="status-pill"><span class="pill-dot complete"></span> Complete</div>
   <div class="status-pill"><span class="pill-dot active"></span> In Progress</div>
   <div class="status-pill"><span class="pill-dot pending"></span> Pending</div>
   <div class="status-pill"><span class="pill-dot issue"></span> Issue / Delayed</div>
 </div>
-
+ 
 <!-- ============================================================
      MAIN CONTENT
      ============================================================ -->
 <main class="main">
-
+ 
   <!-- ——————————————————————————————————————
-       SECTION: PHASE BREAKDOWN
+       EASELY 1 — PHASE BREAKDOWN
        —————————————————————————————————————— -->
-  <div class="section-heading">Phase Breakdown</div>
+  <div class="project-block-header" id="easely1">
+    <div class="project-block-label">Project 1</div>
+    <div class="project-block-title">Easely 1 <span class="project-block-status complete-badge">Completed</span></div>
+  </div>
+ 
+  <div class="section-heading">Phase Breakdown — Easely 1</div>
   <div class="phases">
-
-    <!-- PHASE CARD — COMPLETE
-         To use: keep class="phase-card complete"
-         Update name, dates, tasks, and data-width percentage -->
+ 
     <div class="phase-card complete">
       <div class="phase-info">
         <div class="phase-name">Phase 1 · [Phase Name Placeholder]</div>
@@ -134,20 +170,15 @@
           <span class="task-chip done">[Task Name]</span>
           <span class="task-chip done">[Task Name]</span>
         </div>
-        <div class="phase-bar-track">
-          <div class="phase-bar-fill" data-width="100"></div>
-        </div>
+        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="100"></div></div>
       </div>
       <div class="phase-stat">
         <div class="phase-pct">100%</div>
         <div class="phase-status-badge">Complete</div>
       </div>
     </div>
-
-    <!-- PHASE CARD — IN PROGRESS
-         To use: change class to "phase-card active"
-         Mix task-chip classes: done / in-prog / queued / blocked -->
-    <div class="phase-card active">
+ 
+    <div class="phase-card complete">
       <div class="phase-info">
         <div class="phase-name">Phase 2 · [Phase Name Placeholder]</div>
         <div class="phase-dates">Mon DD – Mon DD, YYYY</div>
@@ -155,24 +186,19 @@
       <div class="phase-progress">
         <div class="phase-tasks">
           <span class="task-chip done">[Task Name]</span>
-          <span class="task-chip in-prog">[Task Name] (XX%)</span>
-          <span class="task-chip queued">[Task Name]</span>
-          <span class="task-chip blocked">[Task Name — Delay Reason]</span>
+          <span class="task-chip done">[Task Name]</span>
+          <span class="task-chip done">[Task Name]</span>
+          <span class="task-chip done">[Task Name]</span>
         </div>
-        <div class="phase-bar-track">
-          <div class="phase-bar-fill" data-width="50"></div>
-          <!-- PLACEHOLDER: Set data-width to match phase completion -->
-        </div>
+        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="100"></div></div>
       </div>
       <div class="phase-stat">
-        <div class="phase-pct">50%</div>
-        <div class="phase-status-badge">In Progress</div>
+        <div class="phase-pct">100%</div>
+        <div class="phase-status-badge">Complete</div>
       </div>
     </div>
-
-    <!-- PHASE CARD — ISSUE / DELAYED
-         To use: change class to "phase-card issue" -->
-    <div class="phase-card issue">
+ 
+    <div class="phase-card complete">
       <div class="phase-info">
         <div class="phase-name">Phase 3 · [Phase Name Placeholder]</div>
         <div class="phase-dates">Mon DD – Mon DD, YYYY</div>
@@ -180,271 +206,322 @@
       <div class="phase-progress">
         <div class="phase-tasks">
           <span class="task-chip done">[Task Name]</span>
-          <span class="task-chip blocked">[Task Name — Issue Description]</span>
-          <span class="task-chip queued">[Task Name]</span>
-          <span class="task-chip queued">[Task Name]</span>
+          <span class="task-chip done">[Task Name]</span>
+          <span class="task-chip done">[Task Name]</span>
+          <span class="task-chip done">[Task Name]</span>
         </div>
-        <div class="phase-bar-track">
-          <div class="phase-bar-fill" data-width="25"></div>
-        </div>
+        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="100"></div></div>
       </div>
       <div class="phase-stat">
-        <div class="phase-pct">25%</div>
-        <div class="phase-status-badge">Issue</div>
+        <div class="phase-pct">100%</div>
+        <div class="phase-status-badge">Complete</div>
       </div>
     </div>
-
-    <!-- PHASE CARD — PENDING
-         To use: change class to "phase-card pending" -->
+ 
+    <div class="phase-card complete">
+      <div class="phase-info">
+        <div class="phase-name">Phase 4 · Final Acceptance &amp; Closeout</div>
+        <div class="phase-dates">Mon DD – Mon DD, YYYY</div>
+      </div>
+      <div class="phase-progress">
+        <div class="phase-tasks">
+          <span class="task-chip done">As-Built Drawings</span>
+          <span class="task-chip done">Regulatory Sign-Off</span>
+          <span class="task-chip done">Client Handover</span>
+          <span class="task-chip done">Final Report</span>
+        </div>
+        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="100"></div></div>
+      </div>
+      <div class="phase-stat">
+        <div class="phase-pct">100%</div>
+        <div class="phase-status-badge">Complete</div>
+      </div>
+    </div>
+ 
+  </div><!-- /phases easely1 -->
+ 
+ 
+  <!-- ——————————————————————————————————————
+       EASELY 2 — PHASE BREAKDOWN
+       —————————————————————————————————————— -->
+  <div class="project-block-header" id="easely2">
+    <div class="project-block-label">Project 2</div>
+    <div class="project-block-title">Easely 2 <span class="project-block-status active-badge">80% Complete</span></div>
+  </div>
+ 
+  <div class="section-heading">Phase Breakdown — Easely 2</div>
+  <div class="phases">
+ 
+    <div class="phase-card complete">
+      <div class="phase-info">
+        <div class="phase-name">Phase 1 · [Phase Name Placeholder]</div>
+        <div class="phase-dates">Mon DD – Mon DD, YYYY</div>
+      </div>
+      <div class="phase-progress">
+        <div class="phase-tasks">
+          <span class="task-chip done">[Task Name]</span>
+          <span class="task-chip done">[Task Name]</span>
+          <span class="task-chip done">[Task Name]</span>
+          <span class="task-chip done">[Task Name]</span>
+        </div>
+        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="100"></div></div>
+      </div>
+      <div class="phase-stat">
+        <div class="phase-pct">100%</div>
+        <div class="phase-status-badge">Complete</div>
+      </div>
+    </div>
+ 
+    <div class="phase-card complete">
+      <div class="phase-info">
+        <div class="phase-name">Phase 2 · [Phase Name Placeholder]</div>
+        <div class="phase-dates">Mon DD – Mon DD, YYYY</div>
+      </div>
+      <div class="phase-progress">
+        <div class="phase-tasks">
+          <span class="task-chip done">[Task Name]</span>
+          <span class="task-chip done">[Task Name]</span>
+          <span class="task-chip done">[Task Name]</span>
+          <span class="task-chip done">[Task Name]</span>
+        </div>
+        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="100"></div></div>
+      </div>
+      <div class="phase-stat">
+        <div class="phase-pct">100%</div>
+        <div class="phase-status-badge">Complete</div>
+      </div>
+    </div>
+ 
+    <div class="phase-card active">
+      <div class="phase-info">
+        <div class="phase-name">Phase 3 · [Phase Name Placeholder]</div>
+        <div class="phase-dates">Mon DD – Mon DD, YYYY</div>
+      </div>
+      <div class="phase-progress">
+        <div class="phase-tasks">
+          <span class="task-chip done">[Task Name]</span>
+          <span class="task-chip done">[Task Name]</span>
+          <span class="task-chip in-prog">[Task Name] (XX%)</span>
+          <span class="task-chip queued">[Task Name]</span>
+        </div>
+        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="60"></div></div>
+      </div>
+      <div class="phase-stat">
+        <div class="phase-pct">60%</div>
+        <div class="phase-status-badge">In Progress</div>
+      </div>
+    </div>
+ 
     <div class="phase-card pending">
       <div class="phase-info">
-        <div class="phase-name">Phase 4 · [Phase Name Placeholder]</div>
+        <div class="phase-name">Phase 4 · Final Acceptance &amp; Closeout</div>
         <div class="phase-dates">Mon DD, YYYY – Mon DD, YYYY</div>
       </div>
       <div class="phase-progress">
         <div class="phase-tasks">
-          <span class="task-chip queued">[Task Name]</span>
-          <span class="task-chip queued">[Task Name]</span>
-          <span class="task-chip queued">[Task Name]</span>
-          <span class="task-chip queued">[Task Name]</span>
+          <span class="task-chip queued">As-Built Drawings</span>
+          <span class="task-chip queued">Regulatory Sign-Off</span>
+          <span class="task-chip queued">Client Handover</span>
+          <span class="task-chip queued">Final Report</span>
         </div>
-        <div class="phase-bar-track">
-          <div class="phase-bar-fill" data-width="0"></div>
-        </div>
+        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="0"></div></div>
       </div>
       <div class="phase-stat">
         <div class="phase-pct">0%</div>
         <div class="phase-status-badge">Pending</div>
       </div>
     </div>
-
-    <!-- PLACEHOLDER: Add more phase cards by copying any block above.
-         Available card classes: complete / active / issue / pending
-         Available task-chip classes: done / in-prog / queued / blocked -->
-
-  </div><!-- /phases -->
-
-
+ 
+    <!-- PLACEHOLDER: Add or remove phase cards.
+         Card classes: complete / active / issue / pending
+         Task chip classes: done / in-prog / queued / blocked -->
+ 
+  </div><!-- /phases easely2 -->
+ 
+ 
   <!-- ——————————————————————————————————————
-       SECTION: FIELD / PROJECT METRICS
+       SECTION: PROJECT METRICS
        —————————————————————————————————————— -->
-  <div class="section-heading">Project Metrics</div>
+  <div class="section-heading" id="metrics">Project Metrics</div>
   <div class="metrics">
-
+ 
     <div class="metric">
       <div class="metric-value">00<span class="unit">[unit]</span></div>
       <div class="metric-label">[Metric Label]</div>
       <div class="metric-delta pos">+ [Supporting note]</div>
-      <!-- PLACEHOLDER: direction classes: pos / neg / neu -->
     </div>
-
     <div class="metric">
       <div class="metric-value">00<span class="unit">[unit]</span></div>
       <div class="metric-label">[Metric Label]</div>
       <div class="metric-delta neu">— [Supporting note]</div>
     </div>
-
     <div class="metric">
       <div class="metric-value">00<span class="unit">[unit]</span></div>
       <div class="metric-label">[Metric Label]</div>
       <div class="metric-delta pos">+ [Supporting note]</div>
     </div>
-
     <div class="metric">
       <div class="metric-value">0<span class="unit"> </span></div>
       <div class="metric-label">[Metric Label]</div>
       <div class="metric-delta pos">+ [Supporting note]</div>
     </div>
-
     <div class="metric">
       <div class="metric-value">00<span class="unit">[unit]</span></div>
       <div class="metric-label">[Metric Label]</div>
       <div class="metric-delta neg">- [Supporting note]</div>
     </div>
-
     <div class="metric">
       <div class="metric-value">00<span class="unit">%</span></div>
       <div class="metric-label">[Metric Label]</div>
       <div class="metric-delta neu">— [Supporting note]</div>
     </div>
-
-    <!-- PLACEHOLDER: Copy any .metric block to add more metrics.
-         Adjust .unit text, value, label, and delta class + text. -->
-
-  </div><!-- /metrics -->
-
-
+ 
+  </div>
+ 
+ 
   <!-- ——————————————————————————————————————
        SECTION: OPEN ISSUES
        —————————————————————————————————————— -->
-  <div class="section-heading">Open Issues</div>
+  <div class="section-heading" id="issues">Open Issues</div>
   <div class="issues">
-
+ 
     <div class="issue-row">
       <div class="issue-id">ISS-001</div>
-      <div class="issue-desc">
-        <strong>[Issue Title]</strong> — [Description of the issue, its cause, and current resolution
-        steps being taken. Include affected area or scope where relevant.]
-      </div>
+      <div class="issue-desc"><strong>[Issue Title]</strong> — [Description of the issue, its cause, and current resolution steps being taken.]</div>
       <div class="issue-owner">Owner: [Name / Team]</div>
-      <!-- PLACEHOLDER: Replace all three fields above -->
     </div>
-
     <div class="issue-row">
       <div class="issue-id">ISS-002</div>
-      <div class="issue-desc">
-        <strong>[Issue Title]</strong> — [Description of the issue.]
-      </div>
+      <div class="issue-desc"><strong>[Issue Title]</strong> — [Description of the issue.]</div>
       <div class="issue-owner">Owner: [Name / Team]</div>
     </div>
-
     <div class="issue-row">
       <div class="issue-id">ISS-003</div>
-      <div class="issue-desc">
-        <strong>[Issue Title]</strong> — [Description of the issue.]
-      </div>
+      <div class="issue-desc"><strong>[Issue Title]</strong> — [Description of the issue.]</div>
       <div class="issue-owner">Owner: [Name / Team]</div>
     </div>
-
-    <!-- PLACEHOLDER: Add or remove .issue-row blocks as needed. -->
-
-  </div><!-- /issues -->
-
-
+ 
+  </div>
+ 
+ 
   <!-- ——————————————————————————————————————
        SECTION: MILESTONE TIMELINE
-       Each .tl-event represents one milestone.
        Classes: done / now / future
-       The "now" event gets highlighted as current.
-       "image" events include a photo slot — see below.
+       Add "tl-has-image" to any event for the image block.
        —————————————————————————————————————— -->
-  <div class="section-heading">Key Milestones</div>
+  <div class="section-heading" id="milestones">Key Milestones</div>
   <div class="timeline">
-
-    <!-- STANDARD TIMELINE BLOCK — COMPLETE -->
+ 
     <div class="tl-event done">
       <div class="tl-date">Mon DD, YYYY</div>
-      <div class="tl-title">[Milestone Name Placeholder]</div>
-      <div class="tl-desc">[Brief description of what was accomplished at this milestone. One to two sentences.]</div>
+      <div class="tl-title">[Milestone — Easely 1 Start]</div>
+      <div class="tl-desc">[Brief description of what was accomplished.]</div>
     </div>
-
-    <!-- STANDARD TIMELINE BLOCK — COMPLETE -->
+ 
     <div class="tl-event done">
       <div class="tl-date">Mon DD, YYYY</div>
-      <div class="tl-title">[Milestone Name Placeholder]</div>
-      <div class="tl-desc">[Brief description of what was accomplished at this milestone.]</div>
+      <div class="tl-title">[Milestone — Easely 1 Substantial Completion]</div>
+      <div class="tl-desc">[Description of work completed at this stage.]</div>
     </div>
-
-    <!-- ============================================================
-         SAMPLE TIMELINE BLOCK WITH IMAGE INSERTION
-         To use: copy this block and replace the placeholder content.
-         Swap the src in <img> with your image file path or URL.
-         ============================================================ -->
+ 
+    <!-- SAMPLE TIMELINE BLOCK WITH IMAGE INSERTION
+         Copy this block to any milestone where you want a photo.
+         Uncomment the <img> tag and point src to your file. -->
     <div class="tl-event done tl-has-image">
       <div class="tl-date">Mon DD, YYYY</div>
-      <div class="tl-title">[Milestone Name — With Site Photo]</div>
-      <div class="tl-desc">[Description of this milestone. This block includes an image panel below for a site photo, progress shot, or diagram.]</div>
-
-      <!-- IMAGE BLOCK — replace src with your image path or URL -->
+      <div class="tl-title">[Milestone — With Site Photo]</div>
+      <div class="tl-desc">[Description of this milestone. The image block below accepts a site photo, progress shot, or engineering diagram.]</div>
+ 
       <div class="tl-image-wrap">
         <div class="tl-image-placeholder">
-          <!-- Option A: Uncomment and use a real image file -->
-          <!-- <img src="images/your-photo.jpg" alt="[Describe the image content]"> -->
-
-          <!-- Option B: This placeholder renders until you add a real image -->
+          <!-- Option A: Uncomment and point to your image file -->
+          <!-- <img src="images/your-photo.jpg" alt="[Describe the image content here]"> -->
+ 
+          <!-- Option B: Placeholder shown until a real image is added -->
           <div class="tl-image-slot">
             <div class="slot-icon">
               <svg width="36" height="36" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                aria-hidden="true">
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
                 <rect x="3" y="3" width="18" height="18" rx="2"/>
                 <circle cx="8.5" cy="8.5" r="1.5"/>
                 <polyline points="21 15 16 10 5 21"/>
               </svg>
             </div>
             <div class="slot-label">Site Photo / Diagram</div>
-            <div class="slot-hint">Replace src in &lt;img&gt; tag with your image path</div>
+            <div class="slot-hint">Uncomment the &lt;img&gt; tag above and set src to your image path</div>
           </div>
         </div>
-        <div class="tl-image-caption">[Caption: Describe what is shown in this image — location, date, phase, or subject.]</div>
+        <div class="tl-image-caption">[Caption: Location, date, and subject of the image shown here.]</div>
       </div>
-      <!-- END IMAGE BLOCK -->
-
     </div>
-    <!-- END SAMPLE IMAGE TIMELINE BLOCK -->
-
-    <!-- CURRENT / TODAY BLOCK -->
+    <!-- END IMAGE TIMELINE BLOCK -->
+ 
+    <div class="tl-event done">
+      <div class="tl-date">Mon DD, YYYY</div>
+      <div class="tl-title">[Milestone — Easely 1 Final Acceptance]</div>
+      <div class="tl-desc">[Easely 1 achieved full acceptance. Regulatory sign-off received. Project handed to client.]</div>
+    </div>
+ 
+    <div class="tl-event done">
+      <div class="tl-date">Mon DD, YYYY</div>
+      <div class="tl-title">[Milestone — Easely 2 Start]</div>
+      <div class="tl-desc">[Description of Easely 2 mobilization and project kick-off.]</div>
+    </div>
+ 
     <div class="tl-event now">
-      <div class="tl-date">[Mon DD, YYYY] · TODAY</div>
-      <div class="tl-title">Active: [Current Work Description]</div>
-      <div class="tl-desc">[Summary of active work, current status, and any items in progress or under resolution.]</div>
-      <!-- PLACEHOLDER: Update date and description -->
+      <div class="tl-date">Jun 23, 2026 · TODAY</div>
+      <div class="tl-title">Active: Easely 2 — [Current Work Description]</div>
+      <div class="tl-desc">[Summary of active work on Easely 2. Current phase status, items in progress, and any open issues under resolution.]</div>
     </div>
-
-    <!-- FUTURE MILESTONE BLOCKS -->
+ 
     <div class="tl-event future">
       <div class="tl-date">Mon DD, YYYY</div>
-      <div class="tl-title">[Upcoming Milestone Placeholder]</div>
+      <div class="tl-title">[Upcoming Milestone — Easely 2]</div>
       <div class="tl-desc">[What needs to be complete by this date. Note any dependencies.]</div>
     </div>
-
+ 
     <div class="tl-event future">
       <div class="tl-date">Mon DD, YYYY</div>
-      <div class="tl-title">[Upcoming Milestone Placeholder]</div>
+      <div class="tl-title">[Upcoming Milestone — Easely 2]</div>
       <div class="tl-desc">[What needs to be complete by this date.]</div>
     </div>
-
+ 
     <div class="tl-event future">
       <div class="tl-date">Mon DD, YYYY</div>
-      <div class="tl-title">[Upcoming Milestone Placeholder]</div>
-      <div class="tl-desc">[What needs to be complete by this date.]</div>
+      <div class="tl-title">Easely 2 — Final Acceptance</div>
+      <div class="tl-desc">[Description of final handoff, sign-off criteria, and project closeout conditions for Easely 2.]</div>
     </div>
-
-    <div class="tl-event future">
-      <div class="tl-date">Mon DD, YYYY</div>
-      <div class="tl-title">Final Acceptance</div>
-      <div class="tl-desc">[Description of final handoff, sign-off criteria, and project closeout conditions.]</div>
-    </div>
-
-    <!-- PLACEHOLDER: Add more milestones by copying any .tl-event block.
-         Use class="tl-event done" for past, "tl-event now" for today, "tl-event future" for upcoming.
-         To add an image to any block, add class "tl-has-image" and copy the .tl-image-wrap section. -->
-
+ 
   </div><!-- /timeline -->
-
-
+ 
+ 
   <!-- ——————————————————————————————————————
-       SECTION: PROJECTED FINAL STATE / DELIVERABLES
+       SECTION: DELIVERABLES
        —————————————————————————————————————— -->
-  <div class="section-heading">Projected Final State</div>
+  <div class="section-heading" id="deliverables">Projected Final State</div>
   <div class="final-state">
-
+ 
     <div class="final-header">
       <div>
         <div class="final-badge">As-Built Target</div>
         <div class="final-title">Easely 1 &amp; 2<br>[Final Outcome Description]</div>
-        <!-- PLACEHOLDER: Replace with outcome summary (e.g. "Commissioned and Operational") -->
         <div class="final-subtitle">
           [One to two sentences describing the expected end state — what the completed project
           delivers, what standards it meets, and what it enables for the owner or end user.]
         </div>
       </div>
       <div class="final-projected">
-        <span class="proj-label">Projected Completion</span>
+        <span class="proj-label">Easely 2 Completion</span>
         <div class="proj-date">Mon DD<br>YYYY</div>
-        <!-- PLACEHOLDER: Set final completion date -->
         <div class="proj-note">+/- [X] days vs. baseline</div>
       </div>
     </div>
-
+ 
     <div class="deliverables">
-
-      <!-- DELIVERABLE CARD
-           Copy this block for each major deliverable.
-           Replace icon SVG path if desired. -->
+ 
       <div class="deliverable">
         <div class="deliv-icon-wrap">
-          <!-- Inline SVG icon — swap path for a relevant symbol -->
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
             stroke-linejoin="round" aria-hidden="true">
@@ -453,10 +530,10 @@
           </svg>
         </div>
         <div class="deliv-name">[Deliverable Name]</div>
-        <div class="deliv-spec">[Technical specification or description of this deliverable]</div>
-        <div class="deliv-status projected">Target: Mon YYYY</div>
+        <div class="deliv-spec">[Technical specification or description]</div>
+        <div class="deliv-status complete">Easely 1: Delivered</div>
       </div>
-
+ 
       <div class="deliverable">
         <div class="deliv-icon-wrap">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -469,9 +546,9 @@
         </div>
         <div class="deliv-name">[Deliverable Name]</div>
         <div class="deliv-spec">[Technical specification or description]</div>
-        <div class="deliv-status projected">Target: Mon YYYY</div>
+        <div class="deliv-status projected">Easely 2: Target Mon YYYY</div>
       </div>
-
+ 
       <div class="deliverable">
         <div class="deliv-icon-wrap">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -485,9 +562,9 @@
         </div>
         <div class="deliv-name">[Deliverable Name]</div>
         <div class="deliv-spec">[Technical specification or description]</div>
-        <div class="deliv-status projected">Target: Mon YYYY</div>
+        <div class="deliv-status projected">Easely 2: Target Mon YYYY</div>
       </div>
-
+ 
       <div class="deliverable">
         <div class="deliv-icon-wrap">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -499,9 +576,9 @@
         </div>
         <div class="deliv-name">[Deliverable Name]</div>
         <div class="deliv-spec">[Technical specification or description]</div>
-        <div class="deliv-status projected">Target: Mon YYYY</div>
+        <div class="deliv-status projected">Easely 2: Target Mon YYYY</div>
       </div>
-
+ 
       <div class="deliverable">
         <div class="deliv-icon-wrap">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -512,9 +589,9 @@
         </div>
         <div class="deliv-name">[Deliverable Name]</div>
         <div class="deliv-spec">[Technical specification or description]</div>
-        <div class="deliv-status projected">Target: Mon YYYY</div>
+        <div class="deliv-status complete">Easely 1: Delivered</div>
       </div>
-
+ 
       <div class="deliverable">
         <div class="deliv-icon-wrap">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -526,22 +603,19 @@
         </div>
         <div class="deliv-name">[Deliverable Name]</div>
         <div class="deliv-spec">[Technical specification or description]</div>
-        <div class="deliv-status projected">Target: Mon YYYY</div>
+        <div class="deliv-status projected">Easely 2: Target Mon YYYY</div>
       </div>
-
-      <!-- PLACEHOLDER: Add or remove .deliverable blocks as needed. -->
-
-    </div><!-- /deliverables -->
-  </div><!-- /final-state -->
-
+ 
+    </div>
+  </div>
+ 
 </main>
-
+ 
 <!-- ============================================================
      FOOTER
      ============================================================ -->
 <footer>
   <p>Easely 1 &amp; 2 · Engineering Project Showcase · [Organization Name]</p>
-  <!-- PLACEHOLDER: Replace organization name above -->
   <span class="update-tag">Last Updated: <span id="footer-date">—</span></span>
 </footer>
 
