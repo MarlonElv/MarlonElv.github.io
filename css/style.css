@@ -989,3 +989,76 @@ footer {
 #verticalLog .tl-event {
   scroll-margin-top: calc(var(--nav-h) + var(--htl-h) + 16px);
 }
+
+/* ============================================================
+   COLLAPSIBLE SECTIONS
+   ============================================================ */
+
+.collapsible-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  margin-top: 3.5rem;
+  color: var(--text-primary);
+  font-family: inherit;
+  transition: border-color 0.2s, background 0.2s;
+  position: relative;
+}
+
+.collapsible-header:hover {
+  border-color: rgba(223,197,115,0.3);
+  background: #151f2b;
+}
+
+/* Plain variant for Open Issues (no project label) */
+.collapsible-plain {
+  margin-top: 2.5rem;
+  border-radius: var(--radius-lg);
+}
+
+.collapsible-header .project-block-label {
+  flex-shrink: 0;
+}
+
+.collapsible-header .project-block-title {
+  flex: 1;
+}
+
+/* Chevron — rotates when collapsed */
+.collapse-chevron {
+  flex-shrink: 0;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.collapsible-header[aria-expanded="false"] .collapse-chevron {
+  transform: rotate(180deg);
+}
+
+/* Body — slides open/closed */
+.collapsible-body {
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity   0.3s ease;
+  max-height: 2000px; /* open state — large enough for any content */
+  opacity: 1;
+}
+
+.collapsible-body.collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* Remove the top margin from section-heading when inside collapsible body */
+.collapsible-body .section-heading:first-child {
+  margin-top: 1rem;
+}

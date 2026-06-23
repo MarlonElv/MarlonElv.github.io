@@ -308,6 +308,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* ============================================================
+     COLLAPSIBLE SECTIONS
+     ============================================================ */
+  document.querySelectorAll('.collapsible-header').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const targetId = btn.dataset.target;
+      const body     = document.getElementById(targetId);
+      if (!body) return;
+
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      if (isOpen) {
+        body.classList.add('collapsed');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        body.classList.remove('collapsed');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
   /* ---- SCROLL REVEAL --------------------------------------- */
   const revealTargets = document.querySelectorAll(
     '.tl-event, .phase-card, .metric, .deliverable, .issue-row'

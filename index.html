@@ -3,14 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Easely 1 &amp; 2 — Engineering Project Showcase</title>
+  <title>Easely I &amp; II — Project Incident Log</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-
 
 <!-- ============================================================
      NAV BAR
@@ -18,50 +16,50 @@
 <nav class="site-nav" id="siteNav">
   <div class="nav-logo">
     <span class="nav-logo-mark">E</span>
-    <span class="nav-logo-text">Easely <span class="nav-logo-dim">1 &amp; 2</span></span>
+    <span class="nav-logo-text">Easely <span class="nav-logo-dim">I &amp; II</span></span>
   </div>
   <ul class="nav-links">
-    <li><a href="#overview"    class="nav-link active">Overview</a></li>
-    <li><a href="#easely1"     class="nav-link">Easely 1</a></li>
-    <li><a href="#easely2"     class="nav-link">Easely 2</a></li>
-    <li><a href="#metrics"     class="nav-link">Metrics</a></li>
-    <li><a href="#issues"      class="nav-link">Issues</a></li>
-    <li><a href="#milestones"  class="nav-link">Milestones</a></li>
-    <li><a href="#deliverables" class="nav-link">Deliverables</a></li>
+    <li><a href="#overview"      class="nav-link active">Overview</a></li>
+    <li><a href="#incidents-e1"  class="nav-link">Easely I</a></li>
+    <li><a href="#incidents-e2"  class="nav-link">Easely II</a></li>
+    <li><a href="#metrics"       class="nav-link">Metrics</a></li>
+    <li><a href="#open-issues"   class="nav-link">Open Issues</a></li>
+    <li><a href="#log"           class="nav-link">Full Log</a></li>
+    <li><a href="#deliverables"  class="nav-link">Deliverables</a></li>
   </ul>
   <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
     <span></span><span></span><span></span>
   </button>
-</nav>  
+</nav>
 
 <!-- ============================================================
      HEADER
      ============================================================ -->
-<header class="site-header">
+<header class="site-header" id="overview">
   <div class="header-brand">
-    <div class="header-eyebrow">Engineering Project Showcase</div>
+    <div class="header-eyebrow">Engineering Project Showcase · Incident &amp; Event Log</div>
     <div class="header-title">Easely I &amp; II</div>
   </div>
   <div class="header-meta">
     <div class="meta-item">
       <span class="meta-label">Project No.</span>
-      <span class="meta-value">EASLEY I- 55133</span>
-      <!-- PLACEHOLDER: Replace with your project number -->
+      <span class="meta-value">EASLEY I — 55133</span>
     </div>
     <div class="meta-item">
       <span class="meta-label">Project No.</span>
-      <span class="meta-value">EASLEY II - 55134</span>
-      <!-- PLACEHOLDER: Replace with your project number -->
+      <span class="meta-value">EASLEY II — 55134</span>
     </div>
     <div class="meta-item">
       <span class="meta-label">Senior Manager</span>
       <span class="meta-value">Halston Rowe</span>
-      <!-- PLACEHOLDER: Replace with lead engineer name -->
     </div>
     <div class="meta-item">
       <span class="meta-label">Project Manager</span>
       <span class="meta-value">Anthony Rochin</span>
-      <!-- PLACEHOLDER: Replace with lead engineer name -->
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Last Updated</span>
+      <span class="meta-value" id="report-date">—</span>
     </div>
   </div>
 </header>
@@ -74,15 +72,15 @@
     <div class="hero-label">Combined Project Completion</div>
     <div class="hero-heading">84%<span class="hero-dot">.</span><br>In Progress</div>
     <p class="hero-summary">
-      Incident and event log for the Easely 1 &amp; 2 construction projects. Records span
+      Incident and event log for the Easely I &amp; II construction projects. Records span
       security incidents, mechanical delays, electrical issues, civil hold events, site
       weather standdowns, and quality events from project start through current date.
-      Easely 1 is fully complete. Easely 2 is 80% complete and in active work.
+      Easely I is fully complete. Easely II is 68% complete and in active work.
     </p>
     <div class="dual-bars">
       <div class="dual-bar-row">
         <div class="dual-bar-label-group">
-          <span class="dual-bar-name">Easely 1</span>
+          <span class="dual-bar-name">Easely I</span>
           <span class="dual-bar-tag complete-tag">Complete</span>
         </div>
         <div class="dual-bar-track">
@@ -92,7 +90,7 @@
       </div>
       <div class="dual-bar-row">
         <div class="dual-bar-label-group">
-          <span class="dual-bar-name">Easely 2</span>
+          <span class="dual-bar-name">Easely II</span>
           <span class="dual-bar-tag active-tag">In Progress</span>
         </div>
         <div class="dual-bar-track">
@@ -121,7 +119,7 @@
     <div class="gauge-caption">Overall Progress</div>
   </div>
 </section>
- 
+
 <!-- STATUS LEGEND -->
 <div class="status-bar">
   <div class="status-pill"><span class="pill-dot dept-security"></span> Security / Theft</div>
@@ -131,12 +129,12 @@
   <div class="status-pill"><span class="pill-dot dept-civil"></span> Civil</div>
   <div class="status-pill"><span class="pill-dot dept-quality"></span> Quality</div>
 </div>
- 
+
 <!-- ============================================================
      MAIN
      ============================================================ -->
 <main class="main">
- 
+
   <!-- ——————————————————————————————————————
        INCIDENT SUMMARY METRICS
        —————————————————————————————————————— -->
@@ -173,19 +171,23 @@
       <div class="metric-delta neg">- QM departure, PRE process issues</div>
     </div>
   </div>
- 
- 
+
+
   <!-- ——————————————————————————————————————
        EASELY 1 INCIDENT BREAKDOWN BY CATEGORY
        —————————————————————————————————————— -->
-  <div class="project-block-header" id="incidents-e1">
+  <button class="collapsible-header" id="incidents-e1" data-target="collapse-e1" aria-expanded="true">
     <div class="project-block-label">Project 1</div>
-    <div class="project-block-title">Easely 1 <span class="project-block-status complete-badge">Completed</span></div>
-  </div>
- 
-  <div class="section-heading">Incident Categories — Easely 1</div>
+    <div class="project-block-title">Easely I <span class="project-block-status complete-badge">Completed</span></div>
+    <span class="collapse-chevron" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </span>
+  </button>
+
+  <div class="collapsible-body" id="collapse-e1">
+  <div class="section-heading">Incident Categories — Easely I</div>
   <div class="phases">
- 
+
     <div class="phase-card complete">
       <div class="phase-info">
         <div class="phase-name">Security / Theft</div>
@@ -207,7 +209,7 @@
         <div class="phase-status-badge">Events</div>
       </div>
     </div>
- 
+
     <div class="phase-card complete">
       <div class="phase-info">
         <div class="phase-name">Mechanical</div>
@@ -230,7 +232,7 @@
         <div class="phase-status-badge">Events</div>
       </div>
     </div>
- 
+
     <div class="phase-card complete">
       <div class="phase-info">
         <div class="phase-name">Electrical</div>
@@ -252,7 +254,7 @@
         <div class="phase-status-badge">Events</div>
       </div>
     </div>
- 
+
     <div class="phase-card complete">
       <div class="phase-info">
         <div class="phase-name">Civil / Site / UXO</div>
@@ -274,21 +276,26 @@
         <div class="phase-status-badge">Events</div>
       </div>
     </div>
- 
+
   </div><!-- /phases e1 -->
- 
- 
+  </div><!-- /collapse-e1 -->
+
+
   <!-- ——————————————————————————————————————
        EASELY 2 INCIDENT BREAKDOWN BY CATEGORY
        —————————————————————————————————————— -->
-  <div class="project-block-header" id="incidents-e2">
+  <button class="collapsible-header" id="incidents-e2" data-target="collapse-e2" aria-expanded="true">
     <div class="project-block-label">Project 2</div>
-    <div class="project-block-title">Easely 2 <span class="project-block-status active-badge">68% Complete</span></div>
-  </div>
- 
-  <div class="section-heading">Incident Categories — Easely 2</div>
+    <div class="project-block-title">Easely II <span class="project-block-status active-badge">68% Complete</span></div>
+    <span class="collapse-chevron" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </span>
+  </button>
+
+  <div class="collapsible-body" id="collapse-e2">
+  <div class="section-heading">Incident Categories — Easely II</div>
   <div class="phases">
- 
+
     <div class="phase-card issue">
       <div class="phase-info">
         <div class="phase-name">Security / Theft</div>
@@ -310,7 +317,7 @@
         <div class="phase-status-badge">Events</div>
       </div>
     </div>
- 
+
     <div class="phase-card active">
       <div class="phase-info">
         <div class="phase-name">Mechanical</div>
@@ -341,7 +348,7 @@
         <div class="phase-status-badge">Events</div>
       </div>
     </div>
- 
+
     <div class="phase-card active">
       <div class="phase-info">
         <div class="phase-name">Electrical</div>
@@ -364,7 +371,7 @@
         <div class="phase-status-badge">Events</div>
       </div>
     </div>
- 
+
     <div class="phase-card active">
       <div class="phase-info">
         <div class="phase-name">Site / Weather / Civil</div>
@@ -388,7 +395,7 @@
         <div class="phase-status-badge">Events</div>
       </div>
     </div>
- 
+
     <div class="phase-card issue">
       <div class="phase-info">
         <div class="phase-name">Quality</div>
@@ -408,24 +415,32 @@
         <div class="phase-status-badge">Events</div>
       </div>
     </div>
- 
+
   </div><!-- /phases e2 -->
- 
- 
+  </div><!-- /collapse-e2 -->
+
+
   <!-- ——————————————————————————————————————
        OPEN ISSUES
        —————————————————————————————————————— -->
-  <div class="section-heading" id="open-issues">Open Issues</div>
+  <button class="collapsible-header collapsible-plain" id="open-issues" data-target="collapse-issues" aria-expanded="true">
+    <div class="project-block-title" style="font-size:18px;">Open Issues</div>
+    <span class="collapse-chevron" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </span>
+  </button>
+
+  <div class="collapsible-body" id="collapse-issues">
   <div class="issues">
- 
+
     <div class="issue-row">
       <div class="issue-id">SEC</div>
-      <div class="issue-desc"><strong>Ongoing theft and vandalism</strong> — Multiple UTVs, fencing, tools, and trailers stolen across Easely 1 and 2 zones. Latest report 5/27/2026, RUTV2939 not located during inventory audit. Police report filed A261380004.</div>
+      <div class="issue-desc"><strong>Ongoing theft and vandalism</strong> — Multiple UTVs, fencing, tools, and trailers stolen across Easely I and II zones. Latest report 5/27/2026, RUTV2939 not located during inventory audit. Police report filed A261380004.</div>
       <div class="issue-owner">Owner: Security Team</div>
     </div>
     <div class="issue-row">
       <div class="issue-id">MECH</div>
-      <div class="issue-desc"><strong>Drive time completion gap</strong> — As of 3/31/2026, team only had 25% drive times for Easely 2 and 35% for Easely 1. Jeremiah Rodman finished processing: E1 72%, E2 58% as of 5/5/2026. Final gap still open.</div>
+      <div class="issue-desc"><strong>Drive time completion gap</strong> — As of 3/31/2026, team only had 25% drive times for Easely II and 35% for Easely I. Jeremiah Rodman finished processing: E1 72%, E2 58% as of 5/5/2026. Final gap still open.</div>
       <div class="issue-owner">Owner: Mechanical / Sam Alamin</div>
     </div>
     <div class="issue-row">
@@ -443,16 +458,16 @@
       <div class="issue-desc"><strong>UXO discovery delays</strong> — Multiple zones affected across project life. Most recent: IPX halted Zones 1, J, and Hutnil on 2/21/2026. Civil unable to work in E2 for 10 days per 2/24/2026 email confirmation.</div>
       <div class="issue-owner">Owner: Civil / Anthony Esparza</div>
     </div>
- 
+
   </div>
- 
- 
- 
+
+
+
   <!-- ——————————————————————————————————————
        FULL CHRONOLOGICAL INCIDENT LOG / TIMELINE
        —————————————————————————————————————— -->
   <div class="section-heading" id="log">Full Chronological Incident Log</div>
- 
+
   <!-- FILTER BAR -->
   <div class="filter-bar">
     <span class="filter-label">Filter:</span>
@@ -464,7 +479,7 @@
     <button class="filter-btn" data-filter="civil">Civil</button>
     <button class="filter-btn" data-filter="quality">Quality</button>
   </div>
- 
+
   <!-- ============================================================
        HORIZONTAL OVERVIEW TIMELINE
        Dots are built by JS — one per incident, color-coded by dept.
@@ -488,470 +503,470 @@
     <div class="htl-tooltip" id="htlTooltip"></div>
     <div class="htl-hint">Scroll horizontally to browse &nbsp;&middot;&nbsp; Click any dot to jump to the full entry below</div>
   </div>
- 
+
   <!-- ============================================================
        VERTICAL LOG
        ============================================================ -->
   <div class="timeline" id="verticalLog">
- 
+
     <div class="tl-event done" id="inc-1" data-dept="security">
       <div class="tl-meta"><span class="tl-date">7/23/2025</span><span class="tl-dept security">Security/Theft</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Subcontractor - Ecobilt: Theft/Fuel Pump to Fuel Cell</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-2" data-dept="security">
       <div class="tl-meta"><span class="tl-date">7/26/2025</span><span class="tl-dept security">Security/Theft</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Subcontractor - C&amp;W: Theft/UTV</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-3" data-dept="site">
       <div class="tl-meta"><span class="tl-date">7/31/2025</span><span class="tl-dept site">Site</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Jason Richardson introduces new system to request equipment</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-4" data-dept="site">
       <div class="tl-meta"><span class="tl-date">8/9/2025</span><span class="tl-dept site">Site</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Work halted in zone 8/11/12/13 due to UXO discovery</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-5" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">8/11/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Sean claims Gerdua will deliver 8/13 citing Gerdua fabrication issues as the reason</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-6" data-dept="site">
       <div class="tl-meta"><span class="tl-date">8/12/2025</span><span class="tl-dept site">Site</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">B2W Training on site</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-7" data-dept="electrical">
       <div class="tl-meta"><span class="tl-date">8/14/2025</span><span class="tl-dept electrical">Electrical</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">Electrical Skid Placement Pre-Task (Internal)</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-8" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">8/18/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">Gerdau piles begin arriving — two weeks late</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-9" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">8/18/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Non-Tracker install begins in Easely II</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-10" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">8/18/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">Pre-Task for Electrical Skid Placement / Sub-Contractor Kick-Off / Mr. Crane</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-11" data-dept="site">
       <div class="tl-meta"><span class="tl-date">8/19/2025</span><span class="tl-dept site">Site</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Inverters arrive and placed in the main laydown yard</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-12" data-dept="electrical">
       <div class="tl-meta"><span class="tl-date">8/19/2025</span><span class="tl-dept electrical">Electrical</span><span class="tl-loc">Site</span></div>
       <div class="tl-title">First MV cable arrives on site</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-13" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">8/21/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">Pile Prioritization for Delivery — Easely I &amp; II Projects meeting, Gerdau promises 7 trucks a day</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-14" data-dept="site">
       <div class="tl-meta"><span class="tl-date">8/25/2025</span><span class="tl-dept site">Site</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">Safety issues a weather standdown due to lightning — 6:38–9:06 AM</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-15" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">8/26/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">PO process changes — Mechanical tool request sent to Michael Dihn</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-16" data-dept="site">
       <div class="tl-meta"><span class="tl-date">8/26/2025</span><span class="tl-dept site">Site</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">Safety issues a weather standdown due to lightning — 1:33–3:30 PM</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-17" data-dept="site">
       <div class="tl-meta"><span class="tl-date">8/27/2025</span><span class="tl-dept site">Site</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">Safety issues a weather standdown due to lightning — 4:42–8:54 AM &amp; 9:53–10:33 AM</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-18" data-dept="civil">
       <div class="tl-meta"><span class="tl-date">Throughout</span><span class="tl-dept civil">Civil</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">IPX would stop backfill operations every day — failed to understand that we clean the trench as we shade the cable</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-19" data-dept="site">
       <div class="tl-meta"><span class="tl-date">9/2/2025</span><span class="tl-dept site">Site</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">Safety issues a weather standdown due to lightning — 9:53–10:33 AM</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-20" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">9/3/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">E1</span></div>
       <div class="tl-title">First Pile alignment — Piles Zone 7/F Block F68B-1</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-21" data-dept="site">
       <div class="tl-meta"><span class="tl-date">9/4/2025</span><span class="tl-dept site">Site</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">Safety issues a weather standdown due to lightning — 12:40–2:09 PM</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-22" data-dept="civil">
       <div class="tl-meta"><span class="tl-date">9/8/2025</span><span class="tl-dept civil">Civil</span><span class="tl-loc">E1</span></div>
       <div class="tl-title">Cultural Buffer prevented all civil work in Zone 2: F66A-5</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-23" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">9/17/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Mechanical submits second equipment request for UTVs and forklifts</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-24" data-dept="site">
       <div class="tl-meta"><span class="tl-date">9/17/2025</span><span class="tl-dept site">Site</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">Safety issues a weather standdown due to lightning — 12:50–3:53 PM</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-25" data-dept="site">
       <div class="tl-meta"><span class="tl-date">9/18/2025</span><span class="tl-dept site">Site</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">Safety issues a weather standdown due to lightning — 5:00–3:30 PM</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-26" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">9/18/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">Easely</span></div>
-      <div class="tl-title">Pre-Task — Tracker Assembly Install Easely 1 &amp; 2 (In-person)</div>
+      <div class="tl-title">Pre-Task — Tracker Assembly Install Easely I &amp; II (In-person)</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-27" data-dept="site">
       <div class="tl-meta"><span class="tl-date">9/25/2025</span><span class="tl-dept site">Site</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Work halted in zone 13 due to UXO</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-28" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">9/25/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">Easely — NEXTracker design rev on additional seismic piles meeting with NXTracker</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-29" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">10/1/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Tracker Pile Install begins in Easely II</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-30" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">10/8/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">E1</span></div>
       <div class="tl-title">First Install — Tracker Piles (In-Person), Zone 7 Block F68B-2 section 1 row 9</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-31" data-dept="electrical">
       <div class="tl-meta"><span class="tl-date">10/16/2025</span><span class="tl-dept electrical">Electrical</span><span class="tl-loc">E1</span></div>
       <div class="tl-title">Wholesale MV cable deliveries sporadic. Easely 2 ran out of 750Kcmil cable on 10/16/2025. Told delivery coming 10/16 — that was not the case, cable arrived on 10/21/2025.</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-32" data-dept="electrical">
       <div class="tl-meta"><span class="tl-date">10/20/2025</span><span class="tl-dept electrical">Electrical</span><span class="tl-loc">E1</span></div>
       <div class="tl-title">Easely 1 Module delivery of the wrong wattage for area installing. Have to stage areas we are not installing in.</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-33" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">10/20/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Inverters set in Easely II</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-34" data-dept="quality">
       <div class="tl-meta"><span class="tl-date">10/21/2025</span><span class="tl-dept quality">Quality</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">John Ruiz abandons Easely leaving the site without a quality manager</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-35" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">10/22/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">E1</span></div>
       <div class="tl-title">Tracker Pile First Install Assessment</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-36" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">10/22/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">Mech team FIA for tracker pile fails — tape measure stretching leads to wrong measurements</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-37" data-dept="site">
       <div class="tl-meta"><span class="tl-date">10/22/2025</span><span class="tl-dept site">Site</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">Module Staging meeting — team discussed the module staging strategy between mechanical and electrical</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-38" data-dept="electrical">
       <div class="tl-meta"><span class="tl-date">10/22/2025</span><span class="tl-dept electrical">Electrical</span><span class="tl-loc">E1</span></div>
       <div class="tl-title">Difficulty getting fleet trucks, buggies, vans. Employee ID required before requesting trucks. Onboarded employees had no vehicles. Still an issue on 12/4/2025.</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-39" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">10/29/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Racking installation begins in Easely II</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-40" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">10/29/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">NXTracker FIA Easely II first row of the north-west section of block F52A-4</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-41" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">11/4/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Mechanical submits equipment request for UTVs and forklifts after discovering previous reqs had not been processed</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-42" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">11/5/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Nestor sends first photo showing pile deviations in the Preliminary Piles Per Block document and PPP</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-43" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">11/6/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Missing Piles Email</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-44" data-dept="electrical">
       <div class="tl-meta"><span class="tl-date">11/9/2025</span><span class="tl-dept electrical">Electrical</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">First Install — Module Installation</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-45" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">11/11/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">Main yard</span></div>
       <div class="tl-title">Mechanical team sends email to fleet requesting confirmation that requests had been received. Jason Wicke responds that they had not received them.</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-46" data-dept="electrical">
       <div class="tl-meta"><span class="tl-date">11/14/2025</span><span class="tl-dept electrical">Electrical</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">Westwood drawings have issues in latest revisions. Single line does not match scenarios listed in drawings. Civil digging up cable for IP to verify spacing and # of circuits within trenches.</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-47" data-dept="quality">
       <div class="tl-meta"><span class="tl-date">11/14/2025</span><span class="tl-dept quality">Quality</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">George Hemingway takes over as site quality manager</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-48" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">11/18/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Mechanical team finally receives access to Smartsheets to review equipment</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-49" data-dept="electrical">
       <div class="tl-meta"><span class="tl-date">11/18/2025</span><span class="tl-dept electrical">Electrical</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">2nd Velociwrapper delivery delayed — supposed to be delivered 6 weeks ago. Still no MV cable production for second velociwrapper due to no truck.</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-50" data-dept="quality">
       <div class="tl-meta"><span class="tl-date">11/18/2025</span><span class="tl-dept quality">Quality</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Quality on-site manager not understanding the PRE process and quality department needs. Unable to turn over the proper 120 rows necessary to hit the 12/12 MC date for the first 4 circuits.</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-51" data-dept="electrical">
       <div class="tl-meta"><span class="tl-date">11/18/2025</span><span class="tl-dept electrical">Electrical</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Wholesale delivered MV cable of 500Kcmil that were damaged and not able to be used. Remained unnoticed until cable was installed — had to be pulled out of trench by hand.</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-52" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">11/20/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Steven Gamboa completes a count of pile in Easely I</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-53" data-dept="site">
       <div class="tl-meta"><span class="tl-date">11/22/2025</span><span class="tl-dept site">Site</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">Safety issues a weather standdown due to lightning — 5:00–3:30 PM</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-54" data-dept="site">
       <div class="tl-meta"><span class="tl-date">11/23/2025</span><span class="tl-dept site">Site</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">Safety issues a weather standdown due to lightning — 5:00–3:30 PM</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-55" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">11/24/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">Easely</span></div>
       <div class="tl-title">Pile Deficiency Log Training meeting with Cameron Taylor</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-56" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">11/25/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Nestor Galvon completes a count of piles in Easely II</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-57" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">12/3/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Mechanical team has a team meeting with WW to discuss pile discrepancies (Type Allocation)</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-58" data-dept="security">
       <div class="tl-meta"><span class="tl-date">12/4/2025</span><span class="tl-dept security">Security/Theft</span><span class="tl-loc">E1</span></div>
       <div class="tl-title">Theft — mandrill and reel missing from trailer and clipped lock from connex, Easely 1, Zone 7</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-59" data-dept="security">
       <div class="tl-meta"><span class="tl-date">12/4/2025</span><span class="tl-dept security">Security/Theft</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Theft — 2 stolen UTVs, cut fencing, multiple chargers, and trailer stolen, Easely 2, Zone 11</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-60" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">12/18/2025</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Mechanical team submits equipment request for the ramp up schedule</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-61" data-dept="security">
       <div class="tl-meta"><span class="tl-date">12/18/2025</span><span class="tl-dept security">Security/Theft</span><span class="tl-loc">E1</span></div>
       <div class="tl-title">Security/Vandalism/Property Damage/Equipment Damage</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-62" data-dept="security">
       <div class="tl-meta"><span class="tl-date">12/18/2025</span><span class="tl-dept security">Security/Theft</span><span class="tl-loc">E1 &amp; E2</span></div>
       <div class="tl-title">Theft — skid steer left in different zone, 1 UTV vandalized, 1 other UTV possibly stolen, Easely 1 and 2</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-63" data-dept="electrical">
       <div class="tl-meta"><span class="tl-date">12/31/2025</span><span class="tl-dept electrical">Electrical</span><span class="tl-loc">Site</span></div>
       <div class="tl-title">Easely 1 — FAI Above Ground DC</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-64" data-dept="site">
       <div class="tl-meta"><span class="tl-date">1/5/2026</span><span class="tl-dept site">Site</span><span class="tl-loc">Site</span></div>
       <div class="tl-title">Meeting Easely I &amp; II Circuits 1 &amp; 2 acceleration plan to achieve MC 2/2/26. Ramp up to 10,000 modules/day, equipment to support 10,000 modules/day.</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-65" data-dept="security">
       <div class="tl-meta"><span class="tl-date">1/12/2026</span><span class="tl-dept security">Security/Theft</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Security/Property Damage/Fence &amp; UTV</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-66" data-dept="security">
       <div class="tl-meta"><span class="tl-date">1/12/2026</span><span class="tl-dept security">Security/Theft</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Theft/Security Breach — 1 UTV found caught in fence line, 1 UTV stolen, 1 UTV vandalized, Easely 2</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-67" data-dept="site">
       <div class="tl-meta"><span class="tl-date">1/12/2026</span><span class="tl-dept site">Site</span><span class="tl-loc">Site</span></div>
       <div class="tl-title">Ryan Dodson quality manager arrives on site — taking over responsibility for E2</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-68" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">1/20/2026</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Mechanical team has a team meeting with WW to discuss motor pile issues (Motor Hole Mounts?)</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-69" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">1/23/2026</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">OT Hours: 166, DT Hours: 40 — Mechanical team begins torque checks in zone 8/9 E2</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-70" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">1/23/2026</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Torque Checks 300 hours</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-71" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">1/26/2026</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Torque checks end in zone 8/9 E2 — Hours: 210 OT Hours: 3.5</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-72" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">1/27/2026</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Torque Checks 220 hours</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-73" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">1/28/2026</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">BJ Parmelee starts sending emails to Judy Duran to add equipment to B2W</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-74" data-dept="security">
       <div class="tl-meta"><span class="tl-date">1/30/2026</span><span class="tl-dept security">Security/Theft</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Security/Theft — Fence line cut out, 1 stolen UTV, stolen tools, 2 stolen generators, and 3 stolen water truck keys, Easely 2, Zone 13</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-75" data-dept="security">
       <div class="tl-meta"><span class="tl-date">2/2/2026</span><span class="tl-dept security">Security/Theft</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Security/Theft — Fence was torn down, 1 trailer and 1 UTV was stolen, Easely 2, Zone 13</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-76" data-dept="civil">
       <div class="tl-meta"><span class="tl-date">2/13/2026</span><span class="tl-dept civil">Civil / UXO</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">UXO discovered — IPX halts work in zones 1, J, &amp; Hutnil, a sweep is conducted</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-77" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">2/23/2026</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Easely II Missing Yellow pile arrives</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-78" data-dept="civil">
       <div class="tl-meta"><span class="tl-date">2/24/2026</span><span class="tl-dept civil">Civil / Site</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Anthony Esparza email confirms that civil has been unable to work in E2 for 10 days due to UXO discoveries</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-79" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">2/25/2026</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Easely I missing Black pile arrives</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-80" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">3/2/2026</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Missing piles arrive on site</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-81" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">3/9/2026</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Mech team submits dispatch for last ramp up</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-82" data-dept="security">
       <div class="tl-meta"><span class="tl-date">3/23/2026</span><span class="tl-dept security">Security/Theft</span><span class="tl-loc">E2</span></div>
       <div class="tl-title">Security/Theft — Easely 2, Zone 16 fence cut, 1 UTV reported stolen and Reach Lift damaged</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-83" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">3/31/2026</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Mechanical team sends email to Sam Alamin requesting missing drive times — team only had 25% for Easely II and about 35% for Easely I</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-84" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">4/15/2026</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Sam Alamin finishes Easely II drive times and uploads them to Egnyite</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-85" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">4/16/2026</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Mechanical team processes PRE Survey data to obtain a pile refusal count: 3,542 piles</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-86" data-dept="security">
       <div class="tl-meta"><span class="tl-date">5/3/2026</span><span class="tl-dept security">Security/Theft</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Theft in Zone 13</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-87" data-dept="mechanical">
       <div class="tl-meta"><span class="tl-date">5/5/2026</span><span class="tl-dept mechanical">Mechanical</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Jeremiah Rodman finishes processing drive times for both sites: E1: 72% &amp; E2: 58%</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-88" data-dept="security">
       <div class="tl-meta"><span class="tl-date">5/5/2026</span><span class="tl-dept security">Security/Theft</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Security/Theft — Stolen UTV RUTV2505 – Easely BESS/PV Area – Police Report # A261410007</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-89" data-dept="security">
       <div class="tl-meta"><span class="tl-date">5/18/2026</span><span class="tl-dept security">Security/Theft</span><span class="tl-loc">E1</span></div>
       <div class="tl-title">Security/Theft — Theft of Polaris UTV and Trailer from O-F Corridor, Easely 1</div>
     </div>
- 
+
     <div class="tl-event done" id="inc-90" data-dept="site">
       <div class="tl-meta"><span class="tl-date">5/29/2026</span><span class="tl-dept site">Site</span><span class="tl-loc">NA</span></div>
       <div class="tl-title">Harith extends NXTPower tooling contract</div>
     </div>
- 
+
     <div class="tl-event now" id="inc-91" data-dept="security">
       <div class="tl-meta"><span class="tl-date">5/27/2026 · LATEST REPORT</span><span class="tl-dept security">Security/Theft</span><span class="tl-loc">Easely ARB</span></div>
       <div class="tl-title">Late Report — Report Only: UTV RUTV2939 Not Located During Inventory Audit — Easely Police Report # A261380004</div>
     </div>
- 
+
   </div><!-- /timeline -->
- 
- 
+
+
   <!-- ——————————————————————————————————————
        DELIVERABLES
        —————————————————————————————————————— -->
@@ -960,7 +975,7 @@
     <div class="final-header">
       <div>
         <div class="final-badge">As-Built Target</div>
-        <div class="final-title">Easely 1 &amp; 2<br>[Final Outcome Description]</div>
+        <div class="final-title">Easely I &amp; II<br>[Final Outcome Description]</div>
         <div class="final-subtitle">[One to two sentences describing the expected end state — what the completed project delivers, what standards it meets, and what it enables for the owner or end user.]</div>
       </div>
       <div class="final-projected">
@@ -1020,11 +1035,11 @@
       </div>
     </div>
   </div>
- 
+
 </main>
- 
+
 <footer>
-  <p>Easely 1 &amp; 2 · Engineering Project Showcase · [Organization Name]</p>
+  <p>Easely I &amp; II · Engineering Project Showcase · [Organization Name]</p>
   <span class="update-tag">Last Updated: <span id="footer-date">—</span></span>
 </footer>
 
