@@ -13,33 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (el) el.textContent = today;
   });
 
-  /* ---- DUAL HERO BARS -------------------------------------- */
-  document.querySelectorAll('.dual-bar-fill').forEach(function (bar) {
-    const w = parseFloat(bar.dataset.width) || 0;
-    requestAnimationFrame(() => setTimeout(() => { bar.style.width = w + '%'; }, 200));
-  });
-
-  /* ---- GAUGE ----------------------------------------------- */
-  const gaugeFill  = document.getElementById('gaugeFill');
-  const gaugeLabel = document.getElementById('gaugeLabel');
-  const COMBINED   = 84;
-  if (gaugeFill) {
-    const offset = 201 - (201 * COMBINED / 100);
-    if (gaugeLabel) gaugeLabel.textContent = COMBINED + '%';
-    requestAnimationFrame(() => {
-      setTimeout(() => {
-        gaugeFill.style.transition = 'stroke-dashoffset 1.4s cubic-bezier(0.4,0,0.2,1)';
-        gaugeFill.style.strokeDashoffset = offset;
-      }, 300);
-    });
-  }
-
-  /* ---- PHASE BAR ANIMATIONS -------------------------------- */
-  document.querySelectorAll('.phase-bar-fill').forEach(function (bar) {
-    const w = parseFloat(bar.dataset.width) || 0;
-    requestAnimationFrame(() => setTimeout(() => { bar.style.width = w + '%'; }, 450));
-  });
-
   /* ============================================================
      HORIZONTAL TIMELINE
      ============================================================ */

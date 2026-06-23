@@ -67,56 +67,13 @@
 <!-- ============================================================
      HERO
      ============================================================ -->
-<section class="hero">
+<section class="hero hero-simple">
   <div class="hero-text">
-    <div class="hero-label">Combined Project Completion</div>
-    <div class="hero-heading">84%<span class="hero-dot">.</span><br>In Progress</div>
     <p class="hero-summary">
       Incident and event log for the Easely I &amp; II construction projects. Records span
       security incidents, mechanical delays, electrical issues, civil hold events, site
       weather standdowns, and quality events from project start through current date.
-      Easely I is fully complete. Easely II is 68% complete and in active work.
     </p>
-    <div class="dual-bars">
-      <div class="dual-bar-row">
-        <div class="dual-bar-label-group">
-          <span class="dual-bar-name">Easely I</span>
-          <span class="dual-bar-tag complete-tag">Complete</span>
-        </div>
-        <div class="dual-bar-track">
-          <div class="dual-bar-fill fill-complete" data-width="100"></div>
-        </div>
-        <span class="dual-bar-pct">100%</span>
-      </div>
-      <div class="dual-bar-row">
-        <div class="dual-bar-label-group">
-          <span class="dual-bar-name">Easely II</span>
-          <span class="dual-bar-tag active-tag">In Progress</span>
-        </div>
-        <div class="dual-bar-track">
-          <div class="dual-bar-fill fill-active" data-width="68" id="mainBar"></div>
-        </div>
-        <span class="dual-bar-pct">68%</span>
-      </div>
-    </div>
-  </div>
-  <div class="hero-gauge-wrap">
-    <svg class="gauge-svg" viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Combined project completion gauge">
-      <title>Combined Project Completion Gauge</title>
-      <path d="M 16 88 A 64 64 0 0 1 144 88" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="10" stroke-linecap="round"/>
-      <path id="gaugeFill" d="M 16 88 A 64 64 0 0 1 144 88" fill="none" stroke="#DFC573" stroke-width="10" stroke-linecap="round" stroke-dasharray="201" stroke-dashoffset="201"/>
-      <g stroke="rgba(255,255,255,0.18)" stroke-width="1.5">
-        <line x1="80" y1="24" x2="80" y2="32"/>
-        <line x1="18" y1="88" x2="25" y2="88"/>
-        <line x1="142" y1="88" x2="135" y2="88"/>
-        <line x1="36" y1="39" x2="41" y2="45"/>
-        <line x1="124" y1="39" x2="119" y2="45"/>
-      </g>
-      <text x="80" y="72" text-anchor="middle" font-family="'Barlow Condensed', sans-serif" font-size="22" font-weight="800" fill="#DFC573" id="gaugeLabel">84%</text>
-      <text x="80" y="83" text-anchor="middle" font-family="'Inter', sans-serif" font-size="6.5" fill="#9AAAB8" letter-spacing="1.2">COMBINED</text>
-      <text x="80" y="92" text-anchor="middle" font-family="'Inter', sans-serif" font-size="6.5" fill="#9AAAB8" letter-spacing="1.2">COMPLETE</text>
-    </svg>
-    <div class="gauge-caption">Overall Progress</div>
   </div>
 </section>
 
@@ -178,7 +135,7 @@
        —————————————————————————————————————— -->
   <button class="collapsible-header" id="incidents-e1" data-target="collapse-e1" aria-expanded="true">
     <div class="project-block-label">Project 1</div>
-    <div class="project-block-title">Easely I <span class="project-block-status complete-badge">Completed</span></div>
+    <div class="project-block-title">Easely I</div>
     <span class="collapse-chevron" aria-hidden="true">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
     </span>
@@ -202,11 +159,6 @@
           <span class="task-chip dept-sec-chip">UTV Theft, Polaris &amp; Trailer (5/18/26)</span>
           <span class="task-chip dept-sec-chip">Late Report - RUTV2939 (5/27/26)</span>
         </div>
-        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="100"></div></div>
-      </div>
-      <div class="phase-stat">
-        <div class="phase-pct">6</div>
-        <div class="phase-status-badge">Events</div>
       </div>
     </div>
 
@@ -225,11 +177,6 @@
           <span class="task-chip dept-mech-chip">Drive Times 72% E1 (3/31/26)</span>
           <span class="task-chip dept-mech-chip">PRE Survey 3542 Pile Refusal Count (4/16)</span>
         </div>
-        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="100"></div></div>
-      </div>
-      <div class="phase-stat">
-        <div class="phase-pct">7+</div>
-        <div class="phase-status-badge">Events</div>
       </div>
     </div>
 
@@ -247,11 +194,6 @@
           <span class="task-chip dept-elec-chip">FAI - Above Ground DC (12/31)</span>
           <span class="task-chip dept-elec-chip">First MV Cable on Site (8/19/25)</span>
         </div>
-        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="100"></div></div>
-      </div>
-      <div class="phase-stat">
-        <div class="phase-pct">6</div>
-        <div class="phase-status-badge">Events</div>
       </div>
     </div>
 
@@ -269,11 +211,6 @@
           <span class="task-chip dept-site-chip">Inverters Placed, Main Laydown Yard (8/19)</span>
           <span class="task-chip dept-site-chip">Jason Richardson — New Request System (7/31)</span>
         </div>
-        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="100"></div></div>
-      </div>
-      <div class="phase-stat">
-        <div class="phase-pct">6</div>
-        <div class="phase-status-badge">Events</div>
       </div>
     </div>
 
@@ -286,7 +223,7 @@
        —————————————————————————————————————— -->
   <button class="collapsible-header" id="incidents-e2" data-target="collapse-e2" aria-expanded="true">
     <div class="project-block-label">Project 2</div>
-    <div class="project-block-title">Easely II <span class="project-block-status active-badge">68% Complete</span></div>
+    <div class="project-block-title">Easely II</div>
     <span class="collapse-chevron" aria-hidden="true">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
     </span>
@@ -310,11 +247,6 @@
           <span class="task-chip dept-sec-chip">Zone 16 Fence Cut, UTV Stolen, Reach Lift Damaged (3/23/26)</span>
           <span class="task-chip dept-sec-chip">Theft Zone 13 (5/3/26)</span>
         </div>
-        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="75"></div></div>
-      </div>
-      <div class="phase-stat">
-        <div class="phase-pct">6+</div>
-        <div class="phase-status-badge">Events</div>
       </div>
     </div>
 
@@ -341,11 +273,6 @@
           <span class="task-chip dept-mech-chip">Sam Alamin Finishes E2 Drive Times (4/15)</span>
           <span class="task-chip dept-mech-chip">Drive Time Processing E1 72% E2 58% (5/5)</span>
         </div>
-        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="80"></div></div>
-      </div>
-      <div class="phase-stat">
-        <div class="phase-pct">15+</div>
-        <div class="phase-status-badge">Events</div>
       </div>
     </div>
 
@@ -364,11 +291,6 @@
           <span class="task-chip dept-elec-chip">MC 12/12 Date — 120 Rows Required (11/18)</span>
           <span class="task-chip dept-elec-chip">MC Acceleration Plan 10k Modules/Day (1/5/26)</span>
         </div>
-        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="80"></div></div>
-      </div>
-      <div class="phase-stat">
-        <div class="phase-pct">7</div>
-        <div class="phase-status-badge">Events</div>
       </div>
     </div>
 
@@ -388,11 +310,6 @@
           <span class="task-chip dept-civil-chip">E2 Civil Unable to Work — UXO 10 Days (2/24/26)</span>
           <span class="task-chip dept-civil-chip">UXO IPX Halt Zones 1, J, Hutnil (2/21/26)</span>
         </div>
-        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="70"></div></div>
-      </div>
-      <div class="phase-stat">
-        <div class="phase-pct">10+</div>
-        <div class="phase-status-badge">Events</div>
       </div>
     </div>
 
@@ -408,11 +325,6 @@
           <span class="task-chip dept-qual-chip">George Hemingway Takes Over as Site QM (11/14)</span>
           <span class="task-chip dept-qual-chip">Ryan Dodson Arrives — Takes E2 Responsibility (1/12/26)</span>
         </div>
-        <div class="phase-bar-track"><div class="phase-bar-fill" data-width="80"></div></div>
-      </div>
-      <div class="phase-stat">
-        <div class="phase-pct">4</div>
-        <div class="phase-status-badge">Events</div>
       </div>
     </div>
 
