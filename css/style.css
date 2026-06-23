@@ -26,6 +26,7 @@
   --radius:      6px;
   --radius-lg:   10px;
   --nav-h:       56px;
+  --htl-h:       160px; /* height of sticky horizontal timeline strip */
 }
 
 html { scroll-behavior: smooth; }
@@ -979,7 +980,12 @@ footer {
 }
 
 /* ---- SCROLL ANCHOR OFFSET ---------------------------------- */
-/* Prevents fixed nav from covering the target section on click */
+/* Nav bar clearance for all anchor targets */
 [id] {
   scroll-margin-top: calc(var(--nav-h) + 12px);
+}
+
+/* Vertical log events sit below both the nav AND the sticky timeline */
+#verticalLog .tl-event {
+  scroll-margin-top: calc(var(--nav-h) + var(--htl-h) + 16px);
 }

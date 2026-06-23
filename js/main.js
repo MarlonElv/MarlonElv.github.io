@@ -163,9 +163,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const target = document.getElementById(ev.id);
       if (target) {
-        const navH  = 52;
-        const extra = 16;
-        const top   = target.getBoundingClientRect().top + window.scrollY - navH - extra;
+        const navH    = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 56;
+        const htlH    = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--htl-h')) || 160;
+        const offset  = navH + htlH + 16;
+        const top     = target.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top: top, behavior: 'smooth' });
 
         target.classList.add('htl-highlight');
