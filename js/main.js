@@ -294,61 +294,6 @@ document.addEventListener('DOMContentLoaded', function () {
     revealTargets.forEach(el => obs.observe(el));
   }
 
-  /* ============================================================
-     PHOTO UPLOAD — preview cards using .preview / showImage()
-     ============================================================ */
-  document.querySelectorAll('.photo-file-input').forEach(function (input) {
-    input.addEventListener('change', function () {
-      const previewId = input.id.replace('photo-', 'preview-');
-      const grid = document.getElementById(previewId);
-      if (!grid) return;
-
-      Array.from(input.files).forEach(function (file) {
-        if (!file.type.startsWith('image/')) return;
-
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          const dataUrl = e.target.result;
-
-          // Give each image a unique key so showImage() can find it
-          const imgKey = 'img_' + Date.now() + '_' + Math.random().toString(36).slice(2);
-          photoStore[imgKey] = { src: dataUrl, name: file.name };
-
-          // Build the .preview card
-          const card = document.createElement('div');
-          card.className = 'preview';
-          card.setAttribute('onclick', 'showImage("' + imgKey + '")');
-
-          const img = document.createElement('img');
-          img.src = dataUrl;
-          img.alt = file.name;
-
-          const desc = document.createElement('p');
-          desc.className = 'desc';
-          desc.textContent = file.name;
-
-          // Small remove button sitting outside the card flow
-          const removeBtn = document.createElement('button');
-          removeBtn.className = 'preview-remove';
-          removeBtn.innerHTML = '&times;';
-          removeBtn.setAttribute('aria-label', 'Remove photo');
-          removeBtn.addEventListener('click', function (ev) {
-            ev.stopPropagation(); // don't trigger showImage
-            delete photoStore[imgKey];
-            card.remove();
-          });
-
-          card.appendChild(img);
-          card.appendChild(desc);
-          card.appendChild(removeBtn);
-          grid.appendChild(card);
-        };
-        reader.readAsDataURL(file);
-      });
-
-      input.value = ''; // allow re-selecting same file
-    });
-  });
 
 }); // end DOMContentLoaded
 
