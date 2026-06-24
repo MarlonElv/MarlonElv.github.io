@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easely I &amp; II — Risk Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/stylerisk.css">
+</head>
+<body>
+
+<!-- NAV BAR -->
+<nav class="site-nav">
+  <div class="nav-logo">
+    <span class="nav-logo-mark">E</span>
+    <span class="nav-logo-text">Easely <span class="nav-logo-dim">I &amp; II</span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html"      class="nav-link">Incident Log</a></li>
+    <li><a href="Finance.html"    class="nav-link">Finance</a></li>
+    <li><a href="#overview"       class="nav-link active">Risk</a></li>
+    <li><a href="#estimation"     class="nav-link">Estimation</a></li>
+    <li><a href="#pile-proc"      class="nav-link">Pile Procurement</a></li>
+    <li><a href="#uxo"            class="nav-link">UXO Impact</a></li>
+    <li><a href="#lessons"        class="nav-link">Lessons Learned</a></li>
+  </ul>
+  <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HEADER -->
+<header class="site-header" id="overview">
+  <div class="header-brand">
+    <div class="header-eyebrow">Engineering Project Showcase · Risk Management</div>
+    <div class="header-title">Easely I &amp; II — Risk Register</div>
+  </div>
+  <div class="header-meta">
+    <div class="meta-item">
+      <span class="meta-label">Project No.</span>
+      <span class="meta-value">EASLEY I — 55133</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Project No.</span>
+      <span class="meta-value">EASLEY II — 55134</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Senior Manager</span>
+      <span class="meta-value">Halston Rowe</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Project Manager</span>
+      <span class="meta-value">Anthony Rochin</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Last Updated</span>
+      <span class="meta-value" id="report-date">—</span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-summary">
+    Risk management log for Easely I &amp; II covering estimation and budget failures,
+    pile procurement breakdowns, and the operational impact of UXO team mobilization.
+    Includes actionable insights and lessons learned for future project execution.
+  </p>
+</section>
+
+<!-- RISK SUMMARY BANNER -->
+<section class="risk-banner">
+  <div class="risk-banner-card critical">
+    <div class="rb-eyebrow">Estimation Risk</div>
+    <div class="rb-value">768,048</div>
+    <div class="rb-label">Brackets Required (Estimate)</div>
+    <div class="rb-delta">vs 764,472 per Design Summary · Δ 3,576</div>
+  </div>
+  <div class="risk-banner-card high">
+    <div class="rb-eyebrow">Pile Procurement</div>
+    <div class="rb-value">~14 Days</div>
+    <div class="rb-label">Gerdau Delivery Delay</div>
+    <div class="rb-delta">Arrived 8/18 · 2 weeks late · cascaded to racking &amp; tracker install</div>
+  </div>
+  <div class="risk-banner-card high">
+    <div class="rb-eyebrow">UXO Impact</div>
+    <div class="rb-value">10 Days</div>
+    <div class="rb-label">E2 Civil Work Stoppage</div>
+    <div class="rb-delta">Confirmed 2/24/2026 · Zones 1, J, Hutnil halted</div>
+  </div>
+  <div class="risk-banner-card medium">
+    <div class="rb-eyebrow">Budget MH/U</div>
+    <div class="rb-value">Unattainable</div>
+    <div class="rb-label">Module Bracket Target</div>
+    <div class="rb-delta">Mod rail qty incorrectly bid → high budgeted MH/U impossible to hit</div>
+  </div>
+</section>
+
+<main class="main">
+
+  <!-- ================================================================
+       RISK 1 — ESTIMATION & BUDGET ISSUES
+       ================================================================ -->
+  <div class="risk-section-header" id="estimation">
+    <div class="rsh-icon rsh-critical">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    </div>
+    <div>
+      <div class="rsh-label">Risk Category 01 · Critical</div>
+      <div class="rsh-title">Estimation &amp; Budget Issues</div>
+    </div>
+    <div class="rsh-badge critical">CRITICAL</div>
+  </div>
+
+  <!-- Bracket discrepancy callout -->
+  <div class="risk-callout critical-callout">
+    <div class="rc-headline">Module Bracket Quantity Discrepancy — Easely II</div>
+    <div class="rc-body">Mod rail quantities were incorrectly estimated. Modules require <strong>two brackets</strong> in this system. Using the estimated quantities of modules there should be <strong>768,048 module brackets</strong> for Easely II. Using the Design Summary there should be <strong>764,472 module brackets</strong> — a discrepancy of <strong>3,576 brackets</strong>.</div>
+    <div class="rc-figures">
+      <div class="rc-fig">
+        <div class="rc-fig-val">384,024</div>
+        <div class="rc-fig-label">Modules (Estimate Detail)</div>
+        <div class="rc-fig-sub">Phase 13646 · Module Install (1)P Rivet</div>
+      </div>
+      <div class="rc-arrow">×2</div>
+      <div class="rc-fig">
+        <div class="rc-fig-val">768,048</div>
+        <div class="rc-fig-label">Brackets Required (Estimate)</div>
+        <div class="rc-fig-sub">2 brackets per module</div>
+      </div>
+      <div class="rc-arrow">≠</div>
+      <div class="rc-fig rc-fig-alt">
+        <div class="rc-fig-val">764,472</div>
+        <div class="rc-fig-label">Brackets per Design Summary</div>
+        <div class="rc-fig-sub">382,236 modules × 2 · SUM from Design Summary</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Estimation data table -->
+  <button class="collapsible-header" data-target="collapse-est-data" aria-expanded="false">
+    <div class="project-block-label">Easely II</div>
+    <div class="project-block-title">Module &amp; Bracket Quantity — Estimate vs Design Summary</div>
+    <span class="collapse-chevron" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </span>
+  </button>
+  <div class="collapsible-body collapsed" id="collapse-est-data">
+    <p class="table-note" style="padding:0 0 1rem;">Easely II estimated quantities of modules pulled from the Estimate Detail · Module bracket quantities from Easely II Design Summary</p>
+    <div class="table-wrap">
+      <table class="cost-table">
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th>Phase / Reference</th>
+            <th class="col-cost">Quantity</th>
+            <th class="col-cost">Brackets (×2)</th>
+            <th class="col-hours">Delta vs Design</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="src-badge estimate">Estimate Detail</span></td>
+            <td>Phase 13646 — Module Install (1)P Rivet</td>
+            <td style="text-align:right;font-variant-numeric:tabular-nums;">384,024</td>
+            <td style="text-align:right;font-variant-numeric:tabular-nums;color:var(--risk-critical);">768,048</td>
+            <td style="text-align:right;color:var(--risk-high);">+3,576</td>
+          </tr>
+          <tr>
+            <td><span class="src-badge design">Design Summary</span></td>
+            <td>Easely II Solar Design Summary — SUM of all blocks</td>
+            <td style="text-align:right;font-variant-numeric:tabular-nums;">382,236</td>
+            <td style="text-align:right;font-variant-numeric:tabular-nums;color:var(--text-primary);">764,472</td>
+            <td style="text-align:right;color:var(--text-muted);">—</td>
+          </tr>
+          <tr>
+            <td><span class="src-badge estimate">Estimate Detail</span></td>
+            <td>Phase 13635 — NXT Install Module Bracket (435,744 each)</td>
+            <td style="text-align:right;font-variant-numeric:tabular-nums;">435,744</td>
+            <td style="text-align:right;color:var(--risk-critical);">Overbid vs actual need</td>
+            <td style="text-align:right;color:var(--risk-critical);">High MH/U</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Design Summary block breakdown -->
+    <p class="table-note" style="padding:1.5rem 0 0.5rem;">Easely II Solar Design Summary — Block totals (First Solar Series 7 TR1 · NexTracker Horizon)</p>
+    <div class="table-wrap">
+      <table class="cost-table">
+        <thead>
+          <tr>
+            <th>Circuit</th>
+            <th>Block</th>
+            <th class="col-cost">Wattage (W)</th>
+            <th class="col-cost">Modules/String</th>
+            <th class="col-hours">Qty Strings</th>
+            <th class="col-hours">Qty Modules</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>F51A</td><td>F51A-1-1</td><td style="text-align:right">525</td><td style="text-align:right">6</td><td style="text-align:right">18</td><td style="text-align:right">1,728</td></tr>
+          <tr><td>F51A</td><td>F51A-1-2</td><td style="text-align:right">525</td><td style="text-align:right">6</td><td style="text-align:right">13</td><td style="text-align:right">1,638</td></tr>
+          <tr><td>F51A</td><td>F51A-1-3</td><td style="text-align:right">525</td><td style="text-align:right">6</td><td style="text-align:right">18</td><td style="text-align:right">1,728</td></tr>
+          <tr><td>F51A</td><td>F51A-1-4</td><td style="text-align:right">525</td><td style="text-align:right">6</td><td style="text-align:right">21</td><td style="text-align:right">1,638</td></tr>
+          <tr><td>F51A</td><td>F51A-1-5</td><td style="text-align:right">525</td><td style="text-align:right">6</td><td style="text-align:right">17</td><td style="text-align:right">1,632</td></tr>
+          <tr class="subtotal-row"><td colspan="5">F51A subtotal (all blocks) — Design Summary total</td><td style="text-align:right;color:var(--gold);">see totals</td></tr>
+          <tr class="grand-total"><td colspan="4">Design Summary Grand Total</td><td style="text-align:right">63,706 strings</td><td style="text-align:right">382,236 modules</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Actionable insights — Estimation -->
+  <div class="insights-grid" id="estimation-insights">
+    <div class="insight-card critical-card">
+      <div class="insight-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </div>
+      <div class="insight-body">
+        <div class="insight-title">Incorrect Mod Rail Qty Led to Impossible MH/U Target</div>
+        <div class="insight-desc">Estimating incorrectly bid the mod rail quantities, producing a budgeted MH/U that was mathematically impossible to achieve on-site. The field team was benchmarked against a number that no level of productivity could reach.</div>
+      </div>
+      <div class="insight-tag critical-tag">Budget Impact</div>
+    </div>
+    <div class="insight-card high-card">
+      <div class="insight-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      </div>
+      <div class="insight-body">
+        <div class="insight-title">No Phase Code for Trash Removal &amp; Remediation</div>
+        <div class="insight-desc">No phase code was established for activities such as trash removal or remediation. Hours consumed by these tasks were absorbed into other phase codes, distorting productivity data across the project.</div>
+      </div>
+      <div class="insight-tag high-tag">Phase Code Gap</div>
+    </div>
+    <div class="insight-card medium-card">
+      <div class="insight-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+      <div class="insight-body">
+        <div class="insight-title">Undefined Phase Code — Install Pile Caps/BHA</div>
+        <div class="insight-desc">Phase <code>PHASE: 01048100M32 — INSTALL PILE CAPS/BHA</code> lacks a clear definition and the quantities do not align with any identifiable field activity, creating a reconciliation gap in the cost report.</div>
+      </div>
+      <div class="insight-tag medium-tag">Phase Code Gap</div>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       RISK 2 — PILE PROCUREMENT FAILURE
+       ================================================================ -->
+  <div class="risk-section-header" id="pile-proc">
+    <div class="rsh-icon rsh-high">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    </div>
+    <div>
+      <div class="rsh-label">Risk Category 02 · High</div>
+      <div class="rsh-title">Pile Procurement Failure</div>
+    </div>
+    <div class="rsh-badge high">HIGH</div>
+  </div>
+
+  <!-- Cascade timeline -->
+  <div class="cascade-timeline">
+    <div class="ct-heading">Procurement Cascade — Impact Chain</div>
+    <div class="ct-track">
+      <div class="ct-node critical-node">
+        <div class="ct-date">8/11/2025</div>
+        <div class="ct-event">Gerdau Fabrication Delay Announced</div>
+        <div class="ct-detail">Sean claims Gerdau will deliver 8/13 — fabrication issues cited. Delay already ~2 weeks at this point.</div>
+      </div>
+      <div class="ct-arrow">→</div>
+      <div class="ct-node high-node">
+        <div class="ct-date">8/18/2025</div>
+        <div class="ct-event">Piles Begin Arriving — 2 Weeks Late</div>
+        <div class="ct-detail">Non-tracker pile install begins same day. Tracker pile install delayed until 10/1 for E2, 10/8 for E1.</div>
+      </div>
+      <div class="ct-arrow">→</div>
+      <div class="ct-node high-node">
+        <div class="ct-date">11/5/2025</div>
+        <div class="ct-event">Pile Deviations Documented</div>
+        <div class="ct-detail">Nestor sends first photos of pile deviations in the Preliminary Piles Per Block (PPP) document.</div>
+      </div>
+      <div class="ct-arrow">→</div>
+      <div class="ct-node medium-node">
+        <div class="ct-date">11/6/2025</div>
+        <div class="ct-event">Missing Piles Email Sent</div>
+        <div class="ct-detail">Formal notification of missing pile inventory. Discrepancy meeting with WW held 12/3.</div>
+      </div>
+      <div class="ct-arrow">→</div>
+      <div class="ct-node medium-node">
+        <div class="ct-date">1/23–1/27/2026</div>
+        <div class="ct-event">Torque Check Remediation</div>
+        <div class="ct-detail">Zone 8/9 E2 torque checks: 220–300 hours consumed. OT: 166 hrs, DT: 40 hrs at start. Direct cost consequence of pile install issues.</div>
+      </div>
+      <div class="ct-arrow">→</div>
+      <div class="ct-node low-node">
+        <div class="ct-date">2/23–3/2/2026</div>
+        <div class="ct-event">Missing Piles Finally Arrive</div>
+        <div class="ct-detail">E2 yellow pile arrives 2/23. E1 black pile arrives 2/25. Remaining missing piles arrive 3/2.</div>
+      </div>
+      <div class="ct-arrow">→</div>
+      <div class="ct-node low-node">
+        <div class="ct-date">4/16/2026</div>
+        <div class="ct-event">PRE Survey — 3,542 Pile Refusals</div>
+        <div class="ct-detail">Mechanical team processes PRE survey data and identifies 3,542 pile refusals. Rework plan pending.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Actionable insights — Pile Procurement -->
+  <button class="collapsible-header" data-target="collapse-pile-insights" aria-expanded="false">
+    <div class="project-block-label">Pile Procurement</div>
+    <div class="project-block-title">Actionable Insights &amp; Impact Analysis</div>
+    <span class="collapse-chevron" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </span>
+  </button>
+  <div class="collapsible-body collapsed" id="collapse-pile-insights">
+    <div class="insights-grid">
+      <div class="insight-card critical-card">
+        <div class="insight-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-title">2-Week Delay Cascaded Across All Mechanical Scopes</div>
+          <div class="insight-desc">The initial Gerdau fabrication delay on 8/11 pushed the entire pile install schedule by two weeks, directly delaying tracker pile install (10/1 E2, 10/8 E1), racking install (10/29), and module install (11/9). Every downstream mechanical scope absorbed compounding schedule pressure.</div>
+        </div>
+        <div class="insight-tag critical-tag">Schedule Impact</div>
+      </div>
+      <div class="insight-card high-card">
+        <div class="insight-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-title">Torque Check Remediation Cost — 220–300 Hours</div>
+          <div class="insight-desc">Zone 8/9 torque checks ran from 1/23 to 1/27/2026 accumulating 210–300 labor hours with additional OT (166 hrs) and DT (40 hrs). This cost was a direct consequence of pile installation quality issues downstream of the procurement failure.</div>
+        </div>
+        <div class="insight-tag high-tag">Cost Impact</div>
+      </div>
+      <div class="insight-card high-card">
+        <div class="insight-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-title">3,542 Pile Refusals Identified — Rework Plan Pending</div>
+          <div class="insight-desc">PRE survey data processed 4/16/2026 revealed 3,542 pile refusals across both sites. No resolution or rework plan has been finalized. This represents a significant outstanding risk to structural completion and final inspections.</div>
+        </div>
+        <div class="insight-tag high-tag">Open Risk</div>
+      </div>
+      <div class="insight-card medium-card">
+        <div class="insight-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-title">Equipment Requests Not Processed Until 11/4</div>
+          <div class="insight-desc">Multiple equipment requests (UTVs, forklifts) submitted earlier were never processed. The team only discovered this on 11/4/2025 after following up and confirming fleet had not received them. Contributed to ramp-up inefficiencies during peak install.</div>
+        </div>
+        <div class="insight-tag medium-tag">Process Gap</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       RISK 3 — UXO OPERATIONAL IMPACT
+       ================================================================ -->
+  <div class="risk-section-header" id="uxo">
+    <div class="rsh-icon rsh-high">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    </div>
+    <div>
+      <div class="rsh-label">Risk Category 03 · High</div>
+      <div class="rsh-title">UXO Team Mobilization — 10-Day Operational Impact</div>
+    </div>
+    <div class="rsh-badge high">HIGH</div>
+  </div>
+
+  <!-- UXO impact tracker -->
+  <div class="uxo-tracker">
+    <div class="uxo-header">
+      <div class="uxo-title">E2 Civil Work Stoppage Tracker</div>
+      <div class="uxo-confirmed">Confirmed via Anthony Esparza email · 2/24/2026</div>
+    </div>
+
+    <div class="uxo-bar-wrap">
+      <div class="uxo-bar-label">10-Day Stoppage — Zones 1, J &amp; Hutnil</div>
+      <div class="uxo-bar-track">
+        <div class="uxo-bar-fill" style="width:100%"></div>
+      </div>
+      <div class="uxo-bar-dates">
+        <span>~2/13/2026 · UXO Discovered</span>
+        <span>2/24/2026 · Confirmed 10 days lost</span>
+      </div>
+    </div>
+
+    <div class="uxo-events">
+      <div class="uxo-event">
+        <div class="uxo-ev-date">8/9/2025</div>
+        <div class="uxo-ev-zone">Zone 8 / 11 / 12 / 13</div>
+        <div class="uxo-ev-desc">Work halted in zones 8, 11, 12, and 13 due to UXO discovery. First major UXO stoppage on project.</div>
+        <div class="uxo-ev-badge">E1 &amp; E2</div>
+      </div>
+      <div class="uxo-event">
+        <div class="uxo-ev-date">9/25/2025</div>
+        <div class="uxo-ev-zone">Zone 13</div>
+        <div class="uxo-ev-desc">Work halted in zone 13 due to UXO discovery. Second stoppage impacting civil scope.</div>
+        <div class="uxo-ev-badge">E2</div>
+      </div>
+      <div class="uxo-event">
+        <div class="uxo-ev-date">9/8/2025</div>
+        <div class="uxo-ev-zone">Zone 2 — F66A-5</div>
+        <div class="uxo-ev-desc">Cultural buffer prevented all civil work in Zone 2: F66A-5. Compounded by civil IPX backfill stoppage issues throughout the project.</div>
+        <div class="uxo-ev-badge">E1</div>
+      </div>
+      <div class="uxo-event uxo-event-critical">
+        <div class="uxo-ev-date">2/13/2026</div>
+        <div class="uxo-ev-zone">Zones 1, J &amp; Hutnil</div>
+        <div class="uxo-ev-desc">UXO discovered. IPX halts all work in zones 1, J, and Hutnil. Full sweep conducted. Civil team unable to work for 10 consecutive days.</div>
+        <div class="uxo-ev-badge critical-ev-badge">E2 · 10 Days Lost</div>
+      </div>
+      <div class="uxo-event">
+        <div class="uxo-ev-date">2/21/2026</div>
+        <div class="uxo-ev-zone">Zone J / 11</div>
+        <div class="uxo-ev-desc">IPX unable to enter Zone J/11. Backfill operations remain suspended pending clearance.</div>
+        <div class="uxo-ev-badge">E1</div>
+      </div>
+      <div class="uxo-event">
+        <div class="uxo-ev-date">2/24/2026</div>
+        <div class="uxo-ev-zone">E2 Confirmation</div>
+        <div class="uxo-ev-desc">Anthony Esparza email formally confirms that civil has been unable to work in E2 for 10 days due to UXO discoveries. Total UXO civil hold across project: 4 discrete events.</div>
+        <div class="uxo-ev-badge">Confirmed</div>
+      </div>
+    </div>
+
+    <!-- Impact summary -->
+    <div class="uxo-impact-grid">
+      <div class="uxo-impact-card">
+        <div class="uic-val">4</div>
+        <div class="uic-label">Discrete UXO Events</div>
+      </div>
+      <div class="uxo-impact-card">
+        <div class="uic-val">10+</div>
+        <div class="uic-label">Civil Work-Days Lost (E2 alone)</div>
+      </div>
+      <div class="uxo-impact-card">
+        <div class="uic-val">5</div>
+        <div class="uic-label">Zones Affected</div>
+        <div class="uic-sub">1, 2, J, 11, 13, Hutnil</div>
+      </div>
+      <div class="uxo-impact-card">
+        <div class="uic-val">Open</div>
+        <div class="uic-label">Rework Plan Status</div>
+        <div class="uic-sub">IPX backfill / trench cleaning protocol unresolved throughout project</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Actionable insights — UXO -->
+  <div class="insights-grid">
+    <div class="insight-card high-card">
+      <div class="insight-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="insight-body">
+        <div class="insight-title">Site UXO Risk Was Not Pre-Surveyed Comprehensively</div>
+        <div class="insight-desc">Four separate UXO discovery events across different zones throughout the project suggests the pre-construction UXO survey did not cover all areas comprehensively, or phased clearing was not coordinated with civil scope sequencing.</div>
+      </div>
+      <div class="insight-tag high-tag">Planning Gap</div>
+    </div>
+    <div class="insight-card high-card">
+      <div class="insight-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <div class="insight-body">
+        <div class="insight-title">IPX Backfill Protocol Caused Recurring Daily Stoppages</div>
+        <div class="insight-desc">IPX stopped backfill operations daily throughout the project — failing to understand that trench cleaning occurs simultaneously with cable shading. This process misalignment caused recurring, preventable stoppages beyond the formal UXO hold events.</div>
+      </div>
+      <div class="insight-tag high-tag">Process Gap</div>
+    </div>
+    <div class="insight-card medium-card">
+      <div class="insight-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </div>
+      <div class="insight-body">
+        <div class="insight-title">Contingency Float Should Be Built Into Civil Schedule</div>
+        <div class="insight-desc">Given the known UXO risk profile of this site (4 events, multiple zones), future projects on similar sites should include explicit UXO contingency float in the civil CPM schedule — minimum 2 weeks per zone based on observed impact.</div>
+      </div>
+      <div class="insight-tag medium-tag">Schedule Rec.</div>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       LESSONS LEARNED
+       ================================================================ -->
+  <div class="risk-section-header" id="lessons">
+    <div class="rsh-icon rsh-green">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    </div>
+    <div>
+      <div class="rsh-label">Output · All Risk Categories</div>
+      <div class="rsh-title">Lessons Learned &amp; Suggestions</div>
+    </div>
+    <div class="rsh-badge green-badge">LESSONS</div>
+  </div>
+
+  <div class="lessons-grid">
+    <div class="lesson-col">
+      <div class="lesson-col-header">Key Takeaways</div>
+      <div class="lesson-item">
+        <div class="lesson-num">01</div>
+        <div class="lesson-body">
+          <div class="lesson-title">Estimating Incorrectly Bid Mod Rail Quantities</div>
+          <div class="lesson-desc">This led to a high budgeted MH/U — a target impossible to hit. The result was field teams being measured against an unachievable baseline from day one.</div>
+        </div>
+      </div>
+      <div class="lesson-item">
+        <div class="lesson-num">02</div>
+        <div class="lesson-body">
+          <div class="lesson-title">No Phase Code Established for Remediation Activities</div>
+          <div class="lesson-desc">Activities such as trash removal and remediation had no designated phase code, causing hours to bleed into unrelated codes and distorting all productivity reporting.</div>
+        </div>
+      </div>
+      <div class="lesson-item">
+        <div class="lesson-num">03</div>
+        <div class="lesson-body">
+          <div class="lesson-title">Undefined Phase Codes with Misaligned Quantities</div>
+          <div class="lesson-desc">Phase codes such as <code>PHASE: 01048100M32 — INSTALL PILE CAPS/BHA</code> lack clear definitions and the quantities don't align with any field activity, creating reconciliation problems in cost reporting.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lesson-col">
+      <div class="lesson-col-header">Lessons Learned &amp; Suggestions</div>
+      <div class="lesson-item green-lesson">
+        <div class="lesson-num green-num">01</div>
+        <div class="lesson-body">
+          <div class="lesson-title">Estimating Must Work Closer with Experienced Field Teams</div>
+          <div class="lesson-desc">Estimators should partner with experienced field superintendents and PMs during bid development — particularly for novel system types or repeat vendors where historical productivity data exists.</div>
+        </div>
+      </div>
+      <div class="lesson-item green-lesson">
+        <div class="lesson-num green-num">02</div>
+        <div class="lesson-body">
+          <div class="lesson-title">Document Estimating Process so Field Teams Can Interpret Phase Codes</div>
+          <div class="lesson-desc">A written estimating narrative should accompany every project phase code list so on-site teams can correctly interpret scope boundaries, unit of measure, and productivity assumptions.</div>
+        </div>
+      </div>
+      <div class="lesson-item green-lesson">
+        <div class="lesson-num green-num">03</div>
+        <div class="lesson-body">
+          <div class="lesson-title">There Needs to Be Better Kick-Offs</div>
+          <div class="lesson-desc">A more rigorous pre-construction kick-off process — including subcontractor alignment, phase code walkthroughs, procurement lead-time review, and UXO/civil risk identification — would prevent the cascading issues observed on this project.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>Easely I &amp; II · Risk Management · Primoris Renewable Energy</p>
+  <span class="update-tag">Last Updated: <span id="footer-date">—</span></span>
+</footer>
+
+<script src="js/riskman.js"></script>
+</body>
+</html>

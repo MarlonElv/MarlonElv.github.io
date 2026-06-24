@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easely I &amp; II — Mechanical Schedule Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/stylerisk.css">
+</head>
+<body>
+
+<!-- NAV BAR -->
+<nav class="site-nav">
+  <div class="nav-logo">
+    <span class="nav-logo-mark">E</span>
+    <span class="nav-logo-text">Easely <span class="nav-logo-dim">I &amp; II</span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html"     class="nav-link">Incident Log</a></li>
+    <li><a href="Finance.html"   class="nav-link">Finance</a></li>
+    <li><a href="RiskMan.html"   class="nav-link">Risk</a></li>
+    <li><a href="#overview"      class="nav-link active">Schedule</a></li>
+    <li><a href="#easely-i"      class="nav-link">Easely I</a></li>
+    <li><a href="#easely-ii"     class="nav-link">Easely II</a></li>
+  </ul>
+  <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HEADER -->
+<header class="site-header" id="overview">
+  <div class="header-brand">
+    <div class="header-eyebrow">Engineering Project Showcase · Mechanical Schedule Review</div>
+    <div class="header-title">Easely I &amp; II — Baseline &amp; Actual</div>
+  </div>
+  <div class="header-meta">
+    <div class="meta-item">
+      <span class="meta-label">Project No.</span>
+      <span class="meta-value">EASLEY I — 55133</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Project No.</span>
+      <span class="meta-value">EASLEY II — 55134</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Senior Manager</span>
+      <span class="meta-value">Halston Rowe</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Project Manager</span>
+      <span class="meta-value">Anthony Rochin</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Last Updated</span>
+      <span class="meta-value" id="report-date">—</span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-summary">
+    Mechanical schedule review comparing baseline target dates against actual historical completion dates
+    for Easely I &amp; II. Factors such as permitting delays, pile procurement failures, and EOR errors
+    significantly pushed schedules out across both projects.
+  </p>
+</section>
+
+<!-- LEGEND BANNER -->
+<div class="sched-legend-bar">
+  <div class="sleg-item">
+    <span class="sleg-dot baseline-dot"></span>
+    <span>Baseline Schedule</span>
+  </div>
+  <div class="sleg-item">
+    <span class="sleg-dot actual-dot"></span>
+    <span>Actual Schedule</span>
+  </div>
+  <div class="sleg-divider"></div>
+  <div class="sleg-note">Key delay drivers: Permitting · Pile Delivery · EOR Errors</div>
+</div>
+
+<main class="main">
+
+  <!-- ================================================================
+       EASELY I
+       ================================================================ -->
+  <div class="project-divider" id="easely-i">
+    <span class="project-divider-label">Easely I</span>
+    <span class="project-divider-num">55133</span>
+  </div>
+
+  <button class="collapsible-header" data-target="collapse-e1-sched" aria-expanded="true">
+    <div class="project-block-label">Easely I</div>
+    <div class="project-block-title">Schedule Review — Baseline &amp; Actual</div>
+    <span class="collapse-chevron" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </span>
+  </button>
+  <div class="collapsible-body" id="collapse-e1-sched">
+
+    <!-- Image block -->
+    <div class="sched-img-block">
+      <div class="sched-img-wrap" id="sched-img-e1">
+        <div class="sched-img-placeholder" onclick="document.getElementById('upload-e1').click()">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>Click to add Easely I schedule image</span>
+          <span class="img-hint">assets/images/sched_e1.png</span>
+        </div>
+        <img id="sched-img-e1-preview" src="assets/images/sched_e1.png" alt="Easely I Schedule Review"
+             onerror="this.style.display='none'; document.getElementById('sched-img-e1').querySelector('.sched-img-placeholder').style.display='flex';"
+             onload="this.style.display='block'; document.getElementById('sched-img-e1').querySelector('.sched-img-placeholder').style.display='none';">
+      </div>
+      <input type="file" id="upload-e1" class="img-file-input" accept="image/*">
+    </div>
+
+    <!-- Caption -->
+    <p class="sched-caption">
+      The following schedule compares the target dates to the actual historical date for task completion;
+      factors such as permitting, pile delays and EOR errors significantly pushing the schedule out.
+    </p>
+
+    <!-- Date comparison table -->
+    <div class="sched-table-wrap">
+      <table class="sched-table">
+        <thead>
+          <tr>
+            <th class="st-task">Task</th>
+            <th class="st-dates">Baseline Start</th>
+            <th class="st-dates">Baseline End</th>
+            <th class="st-dates">Actual Start</th>
+            <th class="st-dates">Actual End</th>
+            <th class="st-delta">Slip</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="task-name">Pile Deliveries</td>
+            <td class="baseline-cell">Aug 6</td>
+            <td class="baseline-cell">Dec 12</td>
+            <td class="actual-cell">Aug 13</td>
+            <td class="actual-cell">Nov 10</td>
+            <td><span class="delta-badge delta-late">+1 wk start</span></td>
+          </tr>
+          <tr>
+            <td class="task-name">Non-Tracker Install</td>
+            <td class="baseline-cell">Aug 22</td>
+            <td class="baseline-cell">Oct 9</td>
+            <td class="actual-cell">Aug 21</td>
+            <td class="actual-cell">Nov 12</td>
+            <td><span class="delta-badge delta-late">~5 wk overrun</span></td>
+          </tr>
+          <tr>
+            <td class="task-name">Tracker Pile Install</td>
+            <td class="baseline-cell">Aug 15</td>
+            <td class="baseline-cell">Jan 12</td>
+            <td class="actual-cell">Oct 3</td>
+            <td class="actual-cell">Apr 9</td>
+            <td><span class="delta-badge delta-critical">~7 wk start slip</span></td>
+          </tr>
+          <tr>
+            <td class="task-name">Module Deliveries</td>
+            <td class="baseline-cell">Sep 2</td>
+            <td class="baseline-cell">Mar 25</td>
+            <td class="actual-cell">Sep 2</td>
+            <td class="actual-cell">Mar 25</td>
+            <td><span class="delta-badge delta-ok">On Schedule</span></td>
+          </tr>
+          <tr>
+            <td class="task-name">Stage &amp; Prep</td>
+            <td class="baseline-cell">Sep 12</td>
+            <td class="baseline-cell">Jan 20</td>
+            <td class="actual-cell">Oct 25</td>
+            <td class="actual-cell">Apr 25</td>
+            <td><span class="delta-badge delta-late">~6 wk slip</span></td>
+          </tr>
+          <tr>
+            <td class="task-name">Assemble &amp; Set</td>
+            <td class="baseline-cell">Sep 25</td>
+            <td class="baseline-cell">Feb 5</td>
+            <td class="actual-cell">Oct 20</td>
+            <td class="actual-cell">Apr 27</td>
+            <td><span class="delta-badge delta-late">~7 wk slip</span></td>
+          </tr>
+          <tr>
+            <td class="task-name">Torque &amp; Align</td>
+            <td class="baseline-cell">Oct 7</td>
+            <td class="baseline-cell">Feb 25</td>
+            <td class="actual-cell">Nov 5</td>
+            <td class="actual-cell">Apr 30</td>
+            <td><span class="delta-badge delta-late">~9 wk slip</span></td>
+          </tr>
+          <tr>
+            <td class="task-name">Install Drive Systems</td>
+            <td class="baseline-cell">Nov 5</td>
+            <td class="baseline-cell">Apr 8</td>
+            <td class="actual-cell">Oct 20</td>
+            <td class="actual-cell">May 5</td>
+            <td><span class="delta-badge delta-late">~4 wk overrun</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Delay driver tags -->
+    <div class="delay-drivers">
+      <span class="driver-label">Key Delay Drivers:</span>
+      <span class="driver-tag driver-pile">Gerdau Pile Delay — 2 Weeks Late (8/18)</span>
+      <span class="driver-tag driver-eor">EOR Design Errors — Tracker Pile Realignment</span>
+      <span class="driver-tag driver-permit">Permitting — Zone Access Restrictions</span>
+      <span class="driver-tag driver-uxo">UXO Holds — Zones 8/11/12/13</span>
+    </div>
+
+  </div><!-- /collapse-e1-sched -->
+
+
+  <!-- ================================================================
+       EASELY II
+       ================================================================ -->
+  <div class="project-divider" id="easely-ii">
+    <span class="project-divider-label">Easely II</span>
+    <span class="project-divider-num">55134</span>
+  </div>
+
+  <button class="collapsible-header" data-target="collapse-e2-sched" aria-expanded="true">
+    <div class="project-block-label">Easely II</div>
+    <div class="project-block-title">Schedule Review — Baseline &amp; Actual</div>
+    <span class="collapse-chevron" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </span>
+  </button>
+  <div class="collapsible-body" id="collapse-e2-sched">
+
+    <!-- Image block -->
+    <div class="sched-img-block">
+      <div class="sched-img-wrap" id="sched-img-e2">
+        <div class="sched-img-placeholder" onclick="document.getElementById('upload-e2').click()">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>Click to add Easely II schedule image</span>
+          <span class="img-hint">assets/images/sched_e2.png</span>
+        </div>
+        <img id="sched-img-e2-preview" src="assets/images/sched_e2.png" alt="Easely II Schedule Review"
+             onerror="this.style.display='none'; document.getElementById('sched-img-e2').querySelector('.sched-img-placeholder').style.display='flex';"
+             onload="this.style.display='block'; document.getElementById('sched-img-e2').querySelector('.sched-img-placeholder').style.display='none';">
+      </div>
+      <input type="file" id="upload-e2" class="img-file-input" accept="image/*">
+    </div>
+
+    <!-- Caption -->
+    <p class="sched-caption">
+      The following schedule compares the target dates to the actual historical date for task completion;
+      factors such as permitting, pile delays and EOR errors significantly pushing the schedule out.
+    </p>
+
+    <!-- Date comparison table -->
+    <div class="sched-table-wrap">
+      <table class="sched-table">
+        <thead>
+          <tr>
+            <th class="st-task">Task</th>
+            <th class="st-dates">Baseline Start</th>
+            <th class="st-dates">Baseline End</th>
+            <th class="st-dates">Actual Start</th>
+            <th class="st-dates">Actual End</th>
+            <th class="st-delta">Slip</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="task-name">Pile Deliveries</td>
+            <td class="baseline-cell">Aug 4</td>
+            <td class="baseline-cell">Dec 17</td>
+            <td class="actual-cell">Aug 18</td>
+            <td class="actual-cell">Dec 17</td>
+            <td><span class="delta-badge delta-late">~2 wk start slip</span></td>
+          </tr>
+          <tr>
+            <td class="task-name">Non-Tracker Install</td>
+            <td class="baseline-cell">Aug 15</td>
+            <td class="baseline-cell">Oct 9</td>
+            <td class="actual-cell">Aug 21</td>
+            <td class="actual-cell">Nov 14</td>
+            <td><span class="delta-badge delta-late">~5 wk overrun</span></td>
+          </tr>
+          <tr>
+            <td class="task-name">Tracker Pile Install</td>
+            <td class="baseline-cell">Aug 25</td>
+            <td class="baseline-cell">Jan 12</td>
+            <td class="actual-cell">Oct 10</td>
+            <td class="actual-cell">Apr 9</td>
+            <td><span class="delta-badge delta-critical">~6 wk start slip</span></td>
+          </tr>
+          <tr>
+            <td class="task-name">Module Deliveries</td>
+            <td class="baseline-cell">Sep 2</td>
+            <td class="baseline-cell">Mar 25</td>
+            <td class="actual-cell">Sep 2</td>
+            <td class="actual-cell">Mar 25</td>
+            <td><span class="delta-badge delta-ok">On Schedule</span></td>
+          </tr>
+          <tr>
+            <td class="task-name">Stage &amp; Prep</td>
+            <td class="baseline-cell">Sep 12</td>
+            <td class="baseline-cell">Jan 20</td>
+            <td class="actual-cell">Oct 26</td>
+            <td class="actual-cell">Apr 22</td>
+            <td><span class="delta-badge delta-late">~6 wk slip</span></td>
+          </tr>
+          <tr>
+            <td class="task-name">Assemble &amp; Set</td>
+            <td class="baseline-cell">Sep 22</td>
+            <td class="baseline-cell">Feb 5</td>
+            <td class="actual-cell">Oct 25</td>
+            <td class="actual-cell">Apr 27</td>
+            <td><span class="delta-badge delta-late">~7 wk slip</span></td>
+          </tr>
+          <tr>
+            <td class="task-name">Torque &amp; Align</td>
+            <td class="baseline-cell">Oct 7</td>
+            <td class="baseline-cell">Feb 25</td>
+            <td class="actual-cell">Nov 3</td>
+            <td class="actual-cell">Apr 30</td>
+            <td><span class="delta-badge delta-late">~9 wk slip</span></td>
+          </tr>
+          <tr>
+            <td class="task-name">Install Drive Systems</td>
+            <td class="baseline-cell">Nov 5</td>
+            <td class="baseline-cell">Apr 8</td>
+            <td class="actual-cell">Oct 20</td>
+            <td class="actual-cell">May 5</td>
+            <td><span class="delta-badge delta-late">~4 wk overrun</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Delay driver tags -->
+    <div class="delay-drivers">
+      <span class="driver-label">Key Delay Drivers:</span>
+      <span class="driver-tag driver-pile">Gerdau Pile Delay — 2 Weeks Late (8/18)</span>
+      <span class="driver-tag driver-eor">EOR Design Errors — Tracker Pile Realignment</span>
+      <span class="driver-tag driver-permit">Permitting — Zone Access Restrictions</span>
+      <span class="driver-tag driver-uxo">UXO Holds — Zones 1, J, Hutnil</span>
+    </div>
+
+  </div><!-- /collapse-e2-sched -->
+
+</main>
+
+<footer>
+  <p>Easely I &amp; II · Mechanical Schedule Review · Primoris</p>
+  <span class="update-tag">Last Updated: <span id="footer-date">—</span></span>
+</footer>
+
+<script src="js/mechsched.js"></script>
+</body>
+</html>
