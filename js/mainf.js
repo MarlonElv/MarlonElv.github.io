@@ -1,5 +1,5 @@
 /* ============================================================
-   EASELY I & II — finance.js
+   EASELY I & II — mainf.js
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -11,6 +11,25 @@ document.addEventListener('DOMContentLoaded', function () {
   ['report-date', 'footer-date'].forEach(function (id) {
     const el = document.getElementById(id);
     if (el) el.textContent = today;
+  });
+
+  /* ---- COLLAPSIBLE SECTIONS -------------------------------- */
+  document.querySelectorAll('.collapsible-header').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const targetId = btn.dataset.target;
+      const body     = document.getElementById(targetId);
+      if (!body) return;
+
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      if (isOpen) {
+        body.classList.add('collapsed');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        body.classList.remove('collapsed');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
   });
 
   /* ---- BAR ANIMATION ON SCROLL ----------------------------- */
@@ -52,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* ---- ACTIVE NAV ON SCROLL -------------------------------- */
-  const navLinks   = document.querySelectorAll('.nav-link');
+  const navLinks    = document.querySelectorAll('.nav-link');
   const allSections = document.querySelectorAll('[id]');
 
   window.addEventListener('scroll', function () {
