@@ -1,5 +1,5 @@
 /* ============================================================
-   EASELY 1 & 2 — main.js
+   EASELY I & II — main.js
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -16,16 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ============================================================
      HORIZONTAL TIMELINE
      ============================================================ */
-
-  // --- Parse all vertical events ---
   const vertEvents = Array.from(
     document.querySelectorAll('#verticalLog .tl-event[id]')
   );
 
-  // Date parsing — handles "M/D/YYYY", "Throughout" etc.
   function parseDate(str) {
     if (!str || str.toLowerCase().includes('throughout')) return null;
-    // Strip suffix like "· LATEST REPORT"
     const clean = str.split('·')[0].trim();
     const parts  = clean.split('/');
     if (parts.length === 3) {
@@ -34,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
     return null;
   }
 
-  // Build event data array
   const events = vertEvents.map(function (el) {
     const dateEl  = el.querySelector('.tl-date');
     const titleEl = el.querySelector('.tl-title');
@@ -51,22 +46,18 @@ document.addEventListener('DOMContentLoaded', function () {
     };
   });
 
-  // Filter to only dated events for the horizontal strip
   const datedEvents = events.filter(e => e.date !== null);
-
   if (datedEvents.length === 0) return;
 
-  // Date range
   const minDate = new Date(Math.min(...datedEvents.map(e => e.date)));
   const maxDate = new Date(Math.max(...datedEvents.map(e => e.date)));
   const totalMs = maxDate - minDate || 1;
 
-  // Layout constants
   const DOT_SIZE   = 18;
   const PAD_LEFT   = 48;
   const PAD_RIGHT  = 48;
-  const MIN_WIDTH  = 1800;  // px — wider minimum so months are well spaced
-  const PER_DAY    = 6.5;   // px per day — more stretch between incidents
+  const MIN_WIDTH  = 1800;
+  const PER_DAY    = 6.5;
 
   const spanDays  = totalMs / 86400000;
   const trackW    = Math.max(MIN_WIDTH, spanDays * PER_DAY + PAD_LEFT + PAD_RIGHT);
@@ -78,13 +69,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (!htlScroll || !htlDots || !htlMonths) return;
 
-  // Set container widths
   htlDots.style.width   = trackW + 'px';
   htlMonths.style.width = trackW + 'px';
   document.querySelector('.htl-track-wrap').style.width = trackW + 'px';
 
-  // --- Build dots ---
-  // Track x positions per date string to stagger overlapping dots
   const datePositions = {};
 
   datedEvents.forEach(function (ev) {
@@ -102,11 +90,9 @@ document.addEventListener('DOMContentLoaded', function () {
     dot.setAttribute('aria-label', ev.dateStr + ': ' + ev.title);
     dot.dataset.incId = ev.id;
 
-    // Alternate above/below spine for same-date stacking (spine is at top:24px)
     if (stackIndex % 2 === 1) dot.classList.add('below');
     else if (stackIndex > 0)  dot.classList.add('above');
 
-    // Tooltip on hover
     dot.addEventListener('mouseenter', function (e) {
       tooltip.innerHTML =
         '<div class="htl-tooltip-date">' + ev.dateStr + '</div>' +
@@ -120,13 +106,10 @@ document.addEventListener('DOMContentLoaded', function () {
       tooltip.classList.remove('visible');
     });
 
-    // Click — scroll to vertical entry
     dot.addEventListener('click', function () {
-      // Remove previous highlight
       document.querySelectorAll('.tl-event.htl-highlight').forEach(function (el) {
         el.classList.remove('htl-highlight');
       });
-      // Remove previous active dot
       document.querySelectorAll('.htl-dot.htl-active').forEach(function (d) {
         d.classList.remove('htl-active');
       });
@@ -136,10 +119,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const target = document.getElementById(ev.id);
       if (target) {
-        const navH    = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 56;
-        const htlH    = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--htl-h')) || 160;
-        const offset  = navH + htlH + 16;
-        const top     = target.getBoundingClientRect().top + window.scrollY - offset;
+        const navH   = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 56;
+        const htlH   = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--htl-h')) || 160;
+        const offset = navH + htlH + 16;
+        const top    = target.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top: top, behavior: 'smooth' });
 
         target.classList.add('htl-highlight');
@@ -150,10 +133,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     htlDots.appendChild(dot);
-    ev.dot = dot; // back-reference for filtering
+    ev.dot = dot;
   });
 
-  // --- Build month labels ---
   const months = [];
   const cursor = new Date(minDate.getFullYear(), minDate.getMonth(), 1);
   while (cursor <= maxDate) {
@@ -177,7 +159,6 @@ document.addEventListener('DOMContentLoaded', function () {
     htlMonths.appendChild(label);
   });
 
-  // --- Tooltip position ---
   function positionTooltip(e) {
     const tw = tooltip.offsetWidth  || 240;
     const th = tooltip.offsetHeight || 80;
@@ -189,24 +170,21 @@ document.addEventListener('DOMContentLoaded', function () {
     tooltip.style.top  = ly + 'px';
   }
 
-  // --- Wheel over timeline = horizontal scroll ---
   htlScroll.addEventListener('wheel', function (e) {
-    // Only hijack purely vertical wheel input
     if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
       e.preventDefault();
       htlScroll.scrollLeft += e.deltaY * 1.2;
     }
   }, { passive: false });
-  let isDown = false, startX = 0, scrollL = 0;
 
+  let isDown = false, startX = 0, scrollL = 0;
   htlScroll.addEventListener('mousedown', function (e) {
     isDown  = true;
     startX  = e.pageX - htlScroll.offsetLeft;
     scrollL = htlScroll.scrollLeft;
     htlScroll.style.userSelect = 'none';
   });
-
-  document.addEventListener('mouseup',   function () { isDown = false; htlScroll.style.userSelect = ''; });
+  document.addEventListener('mouseup',    function () { isDown = false; htlScroll.style.userSelect = ''; });
   document.addEventListener('mouseleave', function () { isDown = false; });
   htlScroll.addEventListener('mousemove', function (e) {
     if (!isDown) return;
@@ -216,11 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
     htlScroll.scrollLeft = scrollL - walk;
   });
 
-  // --- Scroll to show roughly the middle of the timeline on load ---
-  setTimeout(function () {
-    // Start at the beginning so the user sees the full range
-    htlScroll.scrollLeft = 0;
-  }, 400);
+  setTimeout(function () { htlScroll.scrollLeft = 0; }, 400);
 
   /* ============================================================
      FILTER BUTTONS
@@ -234,7 +208,6 @@ document.addEventListener('DOMContentLoaded', function () {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      // Vertical events
       tlEvents.forEach(function (ev) {
         if (filter === 'all' || ev.dataset.dept === filter) {
           ev.classList.remove('filtered-out');
@@ -243,7 +216,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
 
-      // Horizontal dots
       datedEvents.forEach(function (ev) {
         if (!ev.dot) return;
         if (filter === 'all' || ev.dept === filter) {
@@ -258,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ============================================================
      ACTIVE NAV + MOBILE TOGGLE
      ============================================================ */
-  const navLinks   = document.querySelectorAll('.nav-link');
+  const navLinks    = document.querySelectorAll('.nav-link');
   const allSections = document.querySelectorAll('[id]');
 
   window.addEventListener('scroll', function () {
@@ -289,9 +261,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const targetId = btn.dataset.target;
       const body     = document.getElementById(targetId);
       if (!body) return;
-
       const isOpen = btn.getAttribute('aria-expanded') === 'true';
-
       if (isOpen) {
         body.classList.add('collapsed');
         btn.setAttribute('aria-expanded', 'false');
@@ -324,4 +294,104 @@ document.addEventListener('DOMContentLoaded', function () {
     revealTargets.forEach(el => obs.observe(el));
   }
 
+  /* ============================================================
+     PHOTO UPLOAD — preview cards using .preview / showImage()
+     ============================================================ */
+  document.querySelectorAll('.photo-file-input').forEach(function (input) {
+    input.addEventListener('change', function () {
+      const previewId = input.id.replace('photo-', 'preview-');
+      const grid = document.getElementById(previewId);
+      if (!grid) return;
+
+      Array.from(input.files).forEach(function (file) {
+        if (!file.type.startsWith('image/')) return;
+
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const dataUrl = e.target.result;
+
+          // Give each image a unique key so showImage() can find it
+          const imgKey = 'img_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+          photoStore[imgKey] = { src: dataUrl, name: file.name };
+
+          // Build the .preview card
+          const card = document.createElement('div');
+          card.className = 'preview';
+          card.setAttribute('onclick', 'showImage("' + imgKey + '")');
+
+          const img = document.createElement('img');
+          img.src = dataUrl;
+          img.alt = file.name;
+
+          const desc = document.createElement('p');
+          desc.className = 'desc';
+          desc.textContent = file.name;
+
+          // Small remove button sitting outside the card flow
+          const removeBtn = document.createElement('button');
+          removeBtn.className = 'preview-remove';
+          removeBtn.innerHTML = '&times;';
+          removeBtn.setAttribute('aria-label', 'Remove photo');
+          removeBtn.addEventListener('click', function (ev) {
+            ev.stopPropagation(); // don't trigger showImage
+            delete photoStore[imgKey];
+            card.remove();
+          });
+
+          card.appendChild(img);
+          card.appendChild(desc);
+          card.appendChild(removeBtn);
+          grid.appendChild(card);
+        };
+        reader.readAsDataURL(file);
+      });
+
+      input.value = ''; // allow re-selecting same file
+    });
+  });
+
+}); // end DOMContentLoaded
+
+/* ============================================================
+   PHOTO STORE + LIGHTBOX  (global so onclick="" can reach them)
+   ============================================================ */
+var photoStore = {};
+
+function showImage(key) {
+  const photo = photoStore[key];
+  if (!photo) return;
+
+  // Build overlay if it doesn't exist yet
+  var overlay = document.getElementById('photoLightbox');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'photoLightbox';
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML =
+      '<div class="lightbox-inner">' +
+        '<button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>' +
+        '<img id="lightboxImg" src="" alt="">' +
+        '<p id="lightboxCaption" class="lightbox-caption"></p>' +
+      '</div>';
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeLightbox();
+    });
+    document.body.appendChild(overlay);
+  }
+
+  document.getElementById('lightboxImg').src     = photo.src;
+  document.getElementById('lightboxImg').alt     = photo.name;
+  document.getElementById('lightboxCaption').textContent = photo.name;
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  var overlay = document.getElementById('photoLightbox');
+  if (overlay) overlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeLightbox();
 });
