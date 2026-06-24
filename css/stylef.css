@@ -476,3 +476,49 @@ footer {
   max-height: 0;
   opacity: 0;
 }
+
+/* ---- 4-column summary banner for I & II ------------------- */
+.summary-banner {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.summary-card.e2.ot { background: #0a0e12; border-top: 2px solid rgba(224,123,57,0.3); }
+.summary-card.e2.st { background: #080d14; border-top: 2px solid rgba(0,111,185,0.3); }
+
+/* ---- Project divider -------------------------------------- */
+.project-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4rem;
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.project-divider-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+}
+
+.project-divider-num {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.05);
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+
+@media (max-width: 900px) {
+  .summary-banner { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px) {
+  .summary-banner { grid-template-columns: 1fr; }
+}
