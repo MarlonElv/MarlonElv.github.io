@@ -6,7 +6,7 @@
   <title>Easely I — Job Cost Detail · Finance</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/stylef.css">
+  <link rel="stylesheet" href="css/finance.css">
 </head>
 <body>
 
@@ -121,8 +121,15 @@
   <!-- ——————————————————————————————————————
        OVERTIME & DOUBLE TIME TABLE
        —————————————————————————————————————— -->
-  <div class="section-heading" id="ot-dt">Overtime &amp; Double Time — Job Cost Detail</div>
-  <p class="table-note">2 circuit overtime and double time hrs and cost between August and February · Provided by Obed Awaitey</p>
+  <button class="collapsible-header" data-target="collapse-ot" aria-expanded="false">
+    <div class="project-block-label">Easely I</div>
+    <div class="project-block-title">Overtime &amp; Double Time — Job Cost Detail</div>
+    <span class="collapse-chevron" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </span>
+  </button>
+  <div class="collapsible-body collapsed" id="collapse-ot">
+  <p class="table-note" style="padding:0 0 1rem;">2 circuit overtime and double time hrs and cost between August and February · Provided by Obed Awaitey</p>
 
   <div class="table-wrap">
     <table class="cost-table">
@@ -198,13 +205,21 @@
       </tfoot>
     </table>
   </div>
+  </div><!-- /collapse-ot -->
 
 
   <!-- ——————————————————————————————————————
        STRAIGHT TIME TABLE
        —————————————————————————————————————— -->
-  <div class="section-heading" id="straight">Straight Time — Job Cost Detail</div>
-  <p class="table-note">2 circuit straight time hrs and cost between August and February</p>
+  <button class="collapsible-header" data-target="collapse-st" aria-expanded="false">
+    <div class="project-block-label">Easely I</div>
+    <div class="project-block-title">Straight Time — Job Cost Detail</div>
+    <span class="collapse-chevron" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </span>
+  </button>
+  <div class="collapsible-body collapsed" id="collapse-st">
+  <p class="table-note" style="padding:0 0 1rem;">2 circuit straight time hrs and cost between August and February</p>
 
   <div class="table-wrap">
     <table class="cost-table">
@@ -281,12 +296,20 @@
       </tfoot>
     </table>
   </div>
+  </div><!-- /collapse-st -->
 
 
   <!-- ——————————————————————————————————————
        SIDE-BY-SIDE COMPARISON — TOP 10 BY COST
        —————————————————————————————————————— -->
-  <div class="section-heading" id="comparison">Top Categories by Cost — OT/DT vs Straight Time</div>
+  <button class="collapsible-header" data-target="collapse-comparison" aria-expanded="false">
+    <div class="project-block-label">Easely I</div>
+    <div class="project-block-title">Top Categories by Cost — OT/DT vs Straight Time</div>
+    <span class="collapse-chevron" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </span>
+  </button>
+  <div class="collapsible-body collapsed" id="collapse-comparison">
 
   <div class="comparison-grid">
 
@@ -320,6 +343,7 @@
 
   </div>
 
+  </div><!-- /collapse-comparison -->
 </main>
 
 <footer>
@@ -327,6 +351,6 @@
   <span class="update-tag">Last Updated: <span id="footer-date">—</span></span>
 </footer>
 
-<script src="js/mainf.js"></script>
+<script src="js/finance.js"></script>
 </body>
 </html>

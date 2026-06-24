@@ -406,3 +406,73 @@ footer {
     padding: 0.75rem 1.5rem 1rem; gap: 2px;
   }
 }
+
+/* ============================================================
+   COLLAPSIBLE SECTIONS
+   ============================================================ */
+
+.collapsible-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  margin-top: 3rem;
+  color: var(--text-primary);
+  font-family: inherit;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.collapsible-header:hover {
+  border-color: rgba(223,197,115,0.3);
+  background: #151f2b;
+}
+
+.collapsible-header .project-block-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.05);
+  padding: 3px 8px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.collapsible-header .project-block-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.collapse-chevron {
+  flex-shrink: 0;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.collapsible-header[aria-expanded="false"] .collapse-chevron {
+  transform: rotate(180deg);
+}
+
+.collapsible-body {
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  max-height: 9000px;
+  opacity: 1;
+}
+
+.collapsible-body.collapsed {
+  max-height: 0;
+  opacity: 0;
+}
