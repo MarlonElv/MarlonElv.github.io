@@ -127,19 +127,35 @@ body {
 .meta-label { font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); font-weight: 500; }
 .meta-value { font-size: 12px; font-weight: 500; color: var(--text-secondary); }
 
-/* ---- HERO -------------------------------------------------- */
+/* ---- HERO WITH BACKGROUND IMAGE ----------------------- */
 .hero {
   padding: 1.75rem 2.5rem;
-  background: linear-gradient(135deg, #172060 0%, #1d3a80 100%);
+  background: linear-gradient(180deg, rgba(23,32,96,0.55) 0%, rgba(23,32,96,0.7) 100%), url('/assets/images/BackGrd.png') center/cover no-repeat;
+  background-attachment: fixed;
   border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 10;
 }
-.hero-summary { font-size: 14px; color: var(--text-secondary); max-width: 680px; line-height: 1.75; }
+
+.hero-summary { 
+  font-size: 14px; 
+  color: var(--text-secondary); 
+  max-width: 680px; 
+  line-height: 1.75;
+  position: relative;
+  z-index: 2;
+}
 
 /* ---- STATUS BAR -------------------------------------------- */
 .status-bar {
   display: flex; gap: 1.5rem; padding: 0.75rem 2.5rem;
-  background: var(--bg-stripe); border-bottom: 1px solid var(--border); flex-wrap: wrap;
+  background: var(--bg-stripe); 
+  border-bottom: 1px solid var(--border); 
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 9;
 }
+
 .status-pill { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-muted); font-weight: 500; }
 .pill-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 .pill-dot.complete        { background: #38a169; }
@@ -153,8 +169,33 @@ body {
 .pill-dot.dept-civil      { background: #805ad5; }
 .pill-dot.dept-quality    { background: #dd6b20; }
 
-/* ---- MAIN -------------------------------------------------- */
-.main { max-width: 1100px; margin: 0 auto; padding: 3rem 2.5rem; }
+/* ---- MAIN WITH FADE BACKGROUND --------------------------------- */
+.main { 
+  max-width: 1100px; 
+  margin: 0 auto; 
+  padding: 3rem 2.5rem;
+  position: relative;
+}
+
+/* Fade overlay that transitions from image to dark background */
+.main::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 30%,
+    rgba(26, 66, 138, 0.3) 50%,
+    rgba(26, 66, 138, 0.7) 70%,
+    var(--bg-dark) 100%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
 
 .section-heading {
   font-family: 'Barlow Condensed', sans-serif;
@@ -162,6 +203,24 @@ body {
   color: var(--gold); border-left: 3px solid var(--gold);
   padding-left: 10px; margin-bottom: 1.5rem; margin-top: 2.5rem;
 }
+
+/* ---- METRICS WITH FADE ----------------------------------- */
+.metrics { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  gap: 12px;
+  position: relative;
+  z-index: 5;
+}
+
+.metric { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem 1rem; }
+.metric-value { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 800; color: var(--text-primary); line-height: 1; margin-bottom: 6px; }
+.metric-value .unit { font-size: 16px; font-weight: 400; color: var(--text-muted); margin-left: 2px; }
+.metric-label { font-size: 11px; color: var(--text-secondary); font-weight: 500; margin-bottom: 8px; }
+.metric-delta { font-size: 10px; font-weight: 500; }
+.metric-delta.pos { color: #68d391; }
+.metric-delta.neg { color: #fc8181; }
+.metric-delta.neu { color: var(--text-muted); }
 
 /* ---- COLLAPSIBLE ------------------------------------------ */
 .collapsible-header {
@@ -201,17 +260,6 @@ body {
 .dept-site-chip  { background: rgba(56,161,105,0.12);  color: #68d391; }
 .dept-civil-chip { background: rgba(128,90,213,0.15);  color: #b794f4; }
 .dept-qual-chip  { background: rgba(221,107,32,0.15);  color: #f6ad55; }
-
-/* ---- METRICS ----------------------------------------------- */
-.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
-.metric { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem 1rem; }
-.metric-value { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 800; color: var(--text-primary); line-height: 1; margin-bottom: 6px; }
-.metric-value .unit { font-size: 16px; font-weight: 400; color: var(--text-muted); margin-left: 2px; }
-.metric-label { font-size: 11px; color: var(--text-secondary); font-weight: 500; margin-bottom: 8px; }
-.metric-delta { font-size: 10px; font-weight: 500; }
-.metric-delta.pos { color: #68d391; }
-.metric-delta.neg { color: #fc8181; }
-.metric-delta.neu { color: var(--text-muted); }
 
 /* ---- OPEN ISSUES ------------------------------------------- */
 .issues { display: flex; flex-direction: column; gap: 1px; }
