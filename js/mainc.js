@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // Wrap content in expandable container
     const contentContainer = document.createElement('div');
-    contentContainer.className = 'section-content expanded';
+    contentContainer.className = 'section-content';
     content.forEach(function (el) { contentContainer.appendChild(el); });
     header.parentNode.insertBefore(contentContainer, header.nextSibling);
     
