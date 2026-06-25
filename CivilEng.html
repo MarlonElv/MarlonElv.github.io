@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easely I — Mechanical Velocity Metrics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/stylemv.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <div class="nav-logo">
+    <span class="nav-logo-mark">E</span>
+    <span class="nav-logo-text">Easely <span class="nav-logo-dim">I &amp; II</span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html"       class="nav-link">Overview</a></li>
+    <li><a href="Finance.html"     class="nav-link">Finance</a></li>
+    <li><a href="RiskMan.html"     class="nav-link">Risk</a></li>
+    <li><a href="MechSched.html"   class="nav-link">Schedule</a></li>
+    <li><a href="#overview"        class="nav-link active">Velocity</a></li>
+    <li><a href="#pile-proc"       class="nav-link">Pile Procurement</a></li>
+    <li><a href="#torque"          class="nav-link">Torque Checks</a></li>
+    <li><a href="#gerdau"          class="nav-link">Gerdau Deliveries</a></li>
+  </ul>
+  <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HEADER -->
+<header class="site-header" id="overview">
+  <div class="header-brand">
+    <div class="header-eyebrow">Engineering Project Showcase · Mechanical Velocity Metrics</div>
+    <div class="header-title">Easely I — Pile Velocity &amp; Labor</div>
+  </div>
+  <div class="header-meta">
+    <div class="meta-item"><span class="meta-label">Project No.</span><span class="meta-value">EASLEY I — 55133</span></div>
+    <div class="meta-item"><span class="meta-label">Senior Manager</span><span class="meta-value">Halston Rowe</span></div>
+    <div class="meta-item"><span class="meta-label">Project Manager</span><span class="meta-value">Anthony Rochin</span></div>
+    <div class="meta-item"><span class="meta-label">Last Updated</span><span class="meta-value" id="report-date">—</span></div>
+  </div>
+</header>
+
+<!-- HERO METRICS BANNER -->
+<section class="hero-metrics">
+  <div class="hm-card">
+    <div class="hm-val">59,499</div>
+    <div class="hm-label">Total Piles Driven</div>
+    <div class="hm-sub">Preliminary Plot Plan · Easely I</div>
+  </div>
+  <div class="hm-card">
+    <div class="hm-val">60,094</div>
+    <div class="hm-label">BOMM Total</div>
+    <div class="hm-sub">Bill of Materials vs Preliminary</div>
+  </div>
+  <div class="hm-card hm-card-warn">
+    <div class="hm-val">1,289</div>
+    <div class="hm-label">Overage (Prelim vs Final)</div>
+    <div class="hm-sub">Final PRE Count: 59,470 piles</div>
+  </div>
+  <div class="hm-card">
+    <div class="hm-val">966.5</div>
+    <div class="hm-label">Torque Check Hours</div>
+    <div class="hm-sub">Zone 8/9 E2 · Jan 23–27 2026</div>
+  </div>
+  <div class="hm-card hm-card-warn">
+    <div class="hm-val">3,542</div>
+    <div class="hm-label">Pile Refusals</div>
+    <div class="hm-sub">PRE Survey · Processed 4/16/2026</div>
+  </div>
+  <div class="hm-card">
+    <div class="hm-val">5,815</div>
+    <div class="hm-label">On-Site Inventory</div>
+    <div class="hm-sub">Remaining pile stock at close</div>
+  </div>
+</section>
+
+<main class="main">
+
+  <!-- ================================================================
+       SECTION 1 — PILE PROCUREMENT OVERVIEW
+       ================================================================ -->
+  <div class="section-header" id="pile-proc">
+    <div class="sh-label">Section 01</div>
+    <div class="sh-title">Pile Procurement &amp; Count Summary — Easely I</div>
+  </div>
+
+  <!-- Three-way comparison cards -->
+  <div class="three-col">
+
+    <div class="proc-card prelim-card">
+      <div class="pc-header">
+        <div class="pc-eyebrow">Westwood</div>
+        <div class="pc-title">Preliminary Plot Plan</div>
+        <div class="pc-note">PPP — Estimated quantities</div>
+      </div>
+      <div class="pc-total">59,499 <span class="pc-unit">total piles</span></div>
+      <div class="pc-bomm">BOMM Total: 60,094</div>
+      <table class="pile-table">
+        <thead><tr><th>Pile Shape</th><th>Color</th><th class="num">Total</th><th class="num">BOMM</th></tr></thead>
+        <tbody>
+          <tr><td>W8x15-13</td><td><span class="color-dot black"></span>Black</td><td class="num">666</td><td class="num">670</td></tr>
+          <tr><td>W8x8.5-11.75</td><td><span class="color-dot bwhite"></span>Black White</td><td class="num">10,274</td><td class="num">10,274</td></tr>
+          <tr><td>W8x15-13.25</td><td><span class="color-dot blue"></span>Blue</td><td class="num">3,753</td><td class="num">3,754</td></tr>
+          <tr><td>W8x12-12.75</td><td><span class="color-dot bblue"></span>Blue White</td><td class="num">787</td><td class="num">788</td></tr>
+          <tr><td>W8x5-13</td><td><span class="color-dot green"></span>Green</td><td class="num">3,452</td><td class="num">3,491</td></tr>
+          <tr><td>W8x9-12.5</td><td><span class="color-dot gwhite"></span>Green White</td><td class="num">92</td><td class="num">93</td></tr>
+          <tr><td>W8x7.75-13</td><td><span class="color-dot nocolor"></span>No Color</td><td class="num">7,947</td><td class="num">7,948</td></tr>
+          <tr><td>W8x7.75-13</td><td><span class="color-dot orange"></span>Orange</td><td class="num">1,661</td><td class="num">1,662</td></tr>
+          <tr><td>W8x8.5-13.5</td><td><span class="color-dot owhite"></span>Orange White</td><td class="num">8,242</td><td class="num">8,705</td></tr>
+          <tr><td>W8x12-12.75</td><td><span class="color-dot pink"></span>Pink</td><td class="num">608</td><td class="num">608</td></tr>
+          <tr><td>W8x7.75-11.75</td><td><span class="color-dot purple"></span>Purple</td><td class="num">965</td><td class="num">965</td></tr>
+          <tr><td>W8x20-14</td><td><span class="color-dot pwhite"></span>Purple White</td><td class="num">4,074</td><td class="num">4,079</td></tr>
+          <tr><td>W8x7.75-11.75</td><td><span class="color-dot red"></span>Red</td><td class="num">5,348</td><td class="num">5,349</td></tr>
+          <tr><td>W8x15-13.25</td><td><span class="color-dot rgreen"></span>Red Green</td><td class="num">1,341</td><td class="num">1,341</td></tr>
+          <tr><td>W8x20-14.25</td><td><span class="color-dot rpink"></span>Red Pink</td><td class="num">1,694</td><td class="num">1,718</td></tr>
+          <tr><td>W8x15-12.25</td><td><span class="color-dot rpurple"></span>Red Purple</td><td class="num">734</td><td class="num">752</td></tr>
+          <tr><td>W8x15-14.25</td><td><span class="color-dot rwhite"></span>Red White</td><td class="num">907</td><td class="num">909</td></tr>
+          <tr><td>W8x15-12</td><td><span class="color-dot white"></span>White</td><td class="num">812</td><td class="num">633</td></tr>
+          <tr><td>W8x8.5-12.75</td><td><span class="color-dot yellow"></span>Yellow</td><td class="num">3,140</td><td class="num">3,143</td></tr>
+          <tr><td>W8x15-14.25</td><td><span class="color-dot ywhite"></span>Yellow White</td><td class="num">517</td><td class="num">519</td></tr>
+          <tr><td>W8x9-12.5</td><td><span class="color-dot pinkw"></span>Pink White</td><td class="num">1,869</td><td class="num">2,077</td></tr>
+          <tr><td>W8x20-12</td><td><span class="color-dot byellow"></span>Blue Yellow</td><td class="num">525</td><td class="num">525</td></tr>
+          <tr><td>W8x20-14</td><td><span class="color-dot rblack"></span>Red Black</td><td class="num">91</td><td class="num">91</td></tr>
+          <tr class="total-row"><td colspan="2">Grand Total</td><td class="num">59,499</td><td class="num">60,094</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="proc-card final-card">
+      <div class="pc-header">
+        <div class="pc-eyebrow">Westwood / PRE</div>
+        <div class="pc-title">Final Plot Plan PRE Count</div>
+        <div class="pc-note">WW Count vs PRE Count</div>
+      </div>
+      <div class="pc-total">59,470 <span class="pc-unit">PRE count</span></div>
+      <div class="pc-bomm">WW Count: 59,471</div>
+      <table class="pile-table">
+        <thead><tr><th>Pile Shape</th><th>Color</th><th class="num">PRE</th><th class="num">WW</th></tr></thead>
+        <tbody>
+          <tr><td>W8x15-13</td><td><span class="color-dot black"></span>Black</td><td class="num">1,641</td><td class="num">1,641</td></tr>
+          <tr><td>W8x8.5-11.75</td><td><span class="color-dot bwhite"></span>Black White</td><td class="num">10,272</td><td class="num">10,274</td></tr>
+          <tr><td>W8x15-13.25</td><td><span class="color-dot blue"></span>Blue</td><td class="num">3,754</td><td class="num">3,754</td></tr>
+          <tr><td>W8x12-12.75</td><td><span class="color-dot bblue"></span>Blue White</td><td class="num">788</td><td class="num">788</td></tr>
+          <tr><td>W8x5-13</td><td><span class="color-dot green"></span>Green</td><td class="num">3,487</td><td class="num">3,487</td></tr>
+          <tr><td>W8x9-12.5</td><td><span class="color-dot gwhite"></span>Green White</td><td class="num">47</td><td class="num">47</td></tr>
+          <tr><td>W8x7.75-13</td><td><span class="color-dot nocolor"></span>No Color</td><td class="num">7,450</td><td class="num">7,450</td></tr>
+          <tr><td>W8x7.75-13</td><td><span class="color-dot orange"></span>Orange</td><td class="num">1,666</td><td class="num">1,666</td></tr>
+          <tr><td>W8x8.5-13.5</td><td><span class="color-dot owhite"></span>Orange White</td><td class="num">8,243</td><td class="num">8,243</td></tr>
+          <tr><td>W8x12-12.75</td><td><span class="color-dot pink"></span>Pink</td><td class="num">608</td><td class="num">608</td></tr>
+          <tr><td>W8x7.75-11.75</td><td><span class="color-dot purple"></span>Purple</td><td class="num">922</td><td class="num">922</td></tr>
+          <tr><td>W8x20-14</td><td><span class="color-dot pwhite"></span>Purple White</td><td class="num">3,729</td><td class="num">3,729</td></tr>
+          <tr><td>W8x7.75-11.75</td><td><span class="color-dot red"></span>Red</td><td class="num">5,044</td><td class="num">5,044</td></tr>
+          <tr><td>W8x15-13.25</td><td><span class="color-dot rgreen"></span>Red Green</td><td class="num">1,350</td><td class="num">1,350</td></tr>
+          <tr><td>W8x20-14.25</td><td><span class="color-dot rpink"></span>Red Pink</td><td class="num">1,668</td><td class="num">1,687</td></tr>
+          <tr><td>W8x15-12.25</td><td><span class="color-dot rpurple"></span>Red Purple</td><td class="num">752</td><td class="num">752</td></tr>
+          <tr><td>W8x15-14.25</td><td><span class="color-dot rwhite"></span>Red White</td><td class="num">909</td><td class="num">909</td></tr>
+          <tr><td>W8x15-12</td><td><span class="color-dot white"></span>White</td><td class="num">812</td><td class="num">812</td></tr>
+          <tr><td>W8x8.5-12.75</td><td><span class="color-dot yellow"></span>Yellow</td><td class="num">3,143</td><td class="num">3,143</td></tr>
+          <tr><td>W8x15-14.25</td><td><span class="color-dot ywhite"></span>Yellow White</td><td class="num">519</td><td class="num">519</td></tr>
+          <tr><td>W8x9-12.5</td><td><span class="color-dot pinkw"></span>Pink White</td><td class="num">2,077</td><td class="num">2,077</td></tr>
+          <tr><td>W8x20-12</td><td><span class="color-dot byellow"></span>Blue Yellow</td><td class="num">525</td><td class="num">525</td></tr>
+          <tr><td>W8x20-14</td><td><span class="color-dot rblack"></span>Red Black</td><td class="num">64</td><td class="num">64</td></tr>
+          <tr class="total-row"><td colspan="2">Grand Total</td><td class="num">59,470</td><td class="num">59,471</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="proc-card diff-card">
+      <div class="pc-header">
+        <div class="pc-eyebrow">Analysis</div>
+        <div class="pc-title">Difference: Prelim vs Final</div>
+        <div class="pc-note">Positive = Prelim over-counted · Negative = under-counted</div>
+      </div>
+      <div class="pc-total overage">+1,289 <span class="pc-unit">overage</span></div>
+      <div class="pc-bomm">BOMM Difference: +1,321</div>
+      <table class="pile-table diff-table">
+        <thead><tr><th>Pile Shape</th><th>Color</th><th class="num">Δ Totals</th><th class="num">Δ BOMM</th></tr></thead>
+        <tbody>
+          <tr class="diff-neg"><td>W8x15-13</td><td><span class="color-dot black"></span>Black</td><td class="num neg">-975</td><td class="num neg">-971</td></tr>
+          <tr class="diff-pos"><td>W8x8.5-11.75</td><td><span class="color-dot bwhite"></span>Black White</td><td class="num pos">+2</td><td class="num pos">+2</td></tr>
+          <tr class="diff-zero"><td>W8x15-13.25</td><td><span class="color-dot blue"></span>Blue</td><td class="num">-1</td><td class="num">0</td></tr>
+          <tr class="diff-zero"><td>W8x12-12.75</td><td><span class="color-dot bblue"></span>Blue White</td><td class="num">-1</td><td class="num">0</td></tr>
+          <tr class="diff-neg"><td>W8x5-13</td><td><span class="color-dot green"></span>Green</td><td class="num neg">-35</td><td class="num pos">+4</td></tr>
+          <tr class="diff-pos"><td>W8x9-12.5</td><td><span class="color-dot gwhite"></span>Green White</td><td class="num pos">+45</td><td class="num pos">+46</td></tr>
+          <tr class="diff-pos"><td>W8x7.75-13</td><td><span class="color-dot nocolor"></span>No Color</td><td class="num pos">+497</td><td class="num pos">+498</td></tr>
+          <tr class="diff-neg"><td>W8x7.75-13</td><td><span class="color-dot orange"></span>Orange</td><td class="num neg">-5</td><td class="num neg">-4</td></tr>
+          <tr class="diff-neg"><td>W8x8.5-13.5</td><td><span class="color-dot owhite"></span>Orange White</td><td class="num neg">-1</td><td class="num pos">+462</td></tr>
+          <tr class="diff-zero"><td>W8x12-12.75</td><td><span class="color-dot pink"></span>Pink</td><td class="num">0</td><td class="num">0</td></tr>
+          <tr class="diff-pos"><td>W8x7.75-11.75</td><td><span class="color-dot purple"></span>Purple</td><td class="num pos">+43</td><td class="num pos">+43</td></tr>
+          <tr class="diff-pos"><td>W8x20-14</td><td><span class="color-dot pwhite"></span>Purple White</td><td class="num pos">+345</td><td class="num pos">+350</td></tr>
+          <tr class="diff-pos"><td>W8x7.75-11.75</td><td><span class="color-dot red"></span>Red</td><td class="num pos">+304</td><td class="num pos">+305</td></tr>
+          <tr class="diff-neg"><td>W8x15-13.25</td><td><span class="color-dot rgreen"></span>Red Green</td><td class="num neg">-9</td><td class="num neg">-9</td></tr>
+          <tr class="diff-pos"><td>W8x20-14.25</td><td><span class="color-dot rpink"></span>Red Pink</td><td class="num pos">+26</td><td class="num pos">+50</td></tr>
+          <tr class="diff-neg"><td>W8x15-12.25</td><td><span class="color-dot rpurple"></span>Red Purple</td><td class="num neg">-18</td><td class="num">0</td></tr>
+          <tr class="diff-neg"><td>W8x15-14.25</td><td><span class="color-dot rwhite"></span>Red White</td><td class="num neg">-2</td><td class="num">0</td></tr>
+          <tr class="diff-zero"><td>W8x15-12</td><td><span class="color-dot white"></span>White</td><td class="num">0</td><td class="num neg">-179</td></tr>
+          <tr class="diff-neg"><td>W8x8.5-12.75</td><td><span class="color-dot yellow"></span>Yellow</td><td class="num neg">-3</td><td class="num">0</td></tr>
+          <tr class="diff-neg"><td>W8x15-14.25</td><td><span class="color-dot ywhite"></span>Yellow White</td><td class="num neg">-2</td><td class="num">0</td></tr>
+          <tr class="diff-neg"><td>W8x9-12.5</td><td><span class="color-dot pinkw"></span>Pink White</td><td class="num neg">-208</td><td class="num">0</td></tr>
+          <tr class="diff-zero"><td>W8x20-12</td><td><span class="color-dot byellow"></span>Blue Yellow</td><td class="num">0</td><td class="num">0</td></tr>
+          <tr class="diff-pos"><td>W8x20-14</td><td><span class="color-dot rblack"></span>Red Black</td><td class="num pos">+27</td><td class="num pos">+27</td></tr>
+          <tr class="total-row"><td colspan="2">OVERAGE</td><td class="num overage">+1,289</td><td class="num overage">+1,321</td></tr>
+        </tbody>
+      </table>
+
+      <!-- On-site inventory summary -->
+      <div class="inventory-block">
+        <div class="inv-header">On-Site Inventory Totals</div>
+        <div class="inv-grid">
+          <div class="inv-item"><span class="inv-label">Black</span><span class="inv-val">10</span></div>
+          <div class="inv-item"><span class="inv-label">Black White</span><span class="inv-val">245</span></div>
+          <div class="inv-item"><span class="inv-label">Blue White</span><span class="inv-val">2</span></div>
+          <div class="inv-item"><span class="inv-label">Green</span><span class="inv-val">204</span></div>
+          <div class="inv-item"><span class="inv-label">Green White</span><span class="inv-val">46</span></div>
+          <div class="inv-item"><span class="inv-label">No Color</span><span class="inv-val">471</span></div>
+          <div class="inv-item"><span class="inv-label">Orange</span><span class="inv-val">161</span></div>
+          <div class="inv-item inv-highlight"><span class="inv-label">Orange White</span><span class="inv-val">3,655</span></div>
+          <div class="inv-item"><span class="inv-label">Purple</span><span class="inv-val">33</span></div>
+          <div class="inv-item"><span class="inv-label">Purple White</span><span class="inv-val">3</span></div>
+          <div class="inv-item"><span class="inv-label">Red</span><span class="inv-val">272</span></div>
+          <div class="inv-item"><span class="inv-label">Red Pink</span><span class="inv-val">351</span></div>
+          <div class="inv-item"><span class="inv-label">Red Purple</span><span class="inv-val">24</span></div>
+          <div class="inv-item"><span class="inv-label">Red White</span><span class="inv-val">18</span></div>
+          <div class="inv-item"><span class="inv-label">White</span><span class="inv-val">2</span></div>
+          <div class="inv-item"><span class="inv-label">Yellow</span><span class="inv-val">13</span></div>
+          <div class="inv-item"><span class="inv-label">Yellow White</span><span class="inv-val">13</span></div>
+          <div class="inv-item"><span class="inv-label">Pink White</span><span class="inv-val">249</span></div>
+          <div class="inv-item"><span class="inv-label">Blue Yellow</span><span class="inv-val">0</span></div>
+          <div class="inv-item"><span class="inv-label">Red Black</span><span class="inv-val">42</span></div>
+          <div class="inv-total"><span class="inv-label">Grand Total</span><span class="inv-val">5,815</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /three-col -->
+
+
+  <!-- ================================================================
+       SECTION 2 — TORQUE CHECKS
+       ================================================================ -->
+  <div class="section-header" id="torque">
+    <div class="sh-label">Section 02</div>
+    <div class="sh-title">Racking Torque Checks — Zone 8/9 E2</div>
+  </div>
+
+  <div class="torque-context">
+    Torque check remediation on Zone 8/9 Easely II ran from 1/23/2026 to 1/27/2026. The work was a direct consequence of pile installation quality issues downstream of the Gerdau procurement delay. Total labor consumed: <strong>966.5 hours</strong> across straight time, overtime, and double time.
+  </div>
+
+  <div class="torque-grid">
+    <!-- Summary stats -->
+    <div class="torque-stats">
+      <div class="ts-card ts-total">
+        <div class="ts-val">966.5</div>
+        <div class="ts-label">Total Hours</div>
+        <div class="ts-sub">All categories combined</div>
+      </div>
+      <div class="ts-card ts-st">
+        <div class="ts-val">630</div>
+        <div class="ts-label">Straight Time</div>
+        <div class="ts-bar-wrap"><div class="ts-bar" style="width:65.2%"></div></div>
+        <div class="ts-pct">65.2%</div>
+      </div>
+      <div class="ts-card ts-ot">
+        <div class="ts-val">424.5</div>
+        <div class="ts-label">Overtime</div>
+        <div class="ts-bar-wrap"><div class="ts-bar ot-bar" style="width:43.9%"></div></div>
+        <div class="ts-pct">43.9%</div>
+      </div>
+      <div class="ts-card ts-dt">
+        <div class="ts-val">102</div>
+        <div class="ts-label">Double Time</div>
+        <div class="ts-bar-wrap"><div class="ts-bar dt-bar" style="width:10.6%"></div></div>
+        <div class="ts-pct">10.6%</div>
+      </div>
+    </div>
+
+    <!-- Detail table -->
+    <div class="torque-detail">
+      <div class="td-header">Daily Torque Check Breakdown</div>
+      <table class="torque-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Date</th>
+            <th class="num">Total Hrs</th>
+            <th class="num">ST Hrs</th>
+            <th class="num">OT Hrs</th>
+            <th class="num">DT Hrs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2" class="zone-cell">Zone 8/9 E2<br><span class="zone-sub">Torque Checks</span></td>
+            <td>1/23/2026</td>
+            <td class="num">206.0</td>
+            <td class="num zero">0</td>
+            <td class="num ot">166.0</td>
+            <td class="num dt">40.0</td>
+          </tr>
+          <tr>
+            <td>1/26/2026</td>
+            <td class="num">213.5</td>
+            <td class="num st">210.0</td>
+            <td class="num ot">3.5</td>
+            <td class="num zero">0</td>
+          </tr>
+          <tr>
+            <td rowspan="3" class="zone-cell">Additional<br><span class="zone-sub">Torque Hours</span></td>
+            <td>1/23/2026</td>
+            <td class="num">307.0</td>
+            <td class="num zero">—</td>
+            <td class="num ot">255.0</td>
+            <td class="num dt">62.0</td>
+          </tr>
+          <tr>
+            <td>1/26/2026</td>
+            <td class="num">220.0</td>
+            <td class="num st">220.0</td>
+            <td class="num zero">—</td>
+            <td class="num zero">—</td>
+          </tr>
+          <tr>
+            <td>1/27/2026</td>
+            <td class="num">20.0</td>
+            <td class="num zero">—</td>
+            <td class="num ot zero">—</td>
+            <td class="num zero">—</td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="2">Grand Total</td>
+            <td class="num">966.5</td>
+            <td class="num st">630.0</td>
+            <td class="num ot">424.5</td>
+            <td class="num dt">102.0</td>
+          </tr>
+          <tr class="cost-row">
+            <td colspan="2">Estimated Labor Cost</td>
+            <td class="num cost">$147,075</td>
+            <td class="num">$63,000</td>
+            <td class="num ot">$63,675</td>
+            <td class="num dt">$20,400</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="cost-note">Cost calc: ST×$100/hr · OT×$150/hr · DT×$200/hr (approx.)</div>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       SECTION 3 — GERDAU DELIVERY TIMELINE
+       ================================================================ -->
+  <div class="section-header" id="gerdau">
+    <div class="sh-label">Section 03</div>
+    <div class="sh-title">Gerdau Pile Delivery Timeline — Easely I</div>
+  </div>
+
+  <div class="torque-context">
+    Gerdau began delivering piles on 8/18/2025 — approximately two weeks late due to fabrication issues. Weekly pile counts across all blocks are tracked below. Data pulled from the Westwood Preliminary Plot Plan and weekly production reports.
+  </div>
+
+  <!-- Weekly delivery timeline -->
+  <div class="delivery-timeline">
+    <div class="dt-header">
+      <div class="dt-legend">
+        <span class="dl-dot dl-delivered"></span> Piles Driven (weekly)
+        <span class="dl-dot dl-cum" style="margin-left:1rem"></span> Cumulative
+      </div>
+    </div>
+
+    <div class="dt-bars">
+      <!-- Weekly data from sheet13 row totals (AC column = weekly total piles) -->
+      <!-- Weeks pulled from formula references: Aug 18-22 through Oct 27-Nov 2 -->
+      <div class="dt-week">
+        <div class="dt-bar-wrap">
+          <div class="dt-bar-fill" style="height:1.9%" title="172 piles"></div>
+        </div>
+        <div class="dt-week-label">Aug<br>18–22</div>
+        <div class="dt-week-val">172</div>
+      </div>
+      <div class="dt-week">
+        <div class="dt-bar-wrap">
+          <div class="dt-bar-fill" style="height:26.5%" title="2,417 piles"></div>
+        </div>
+        <div class="dt-week-label">Aug<br>25–29</div>
+        <div class="dt-week-val">2,417</div>
+      </div>
+      <div class="dt-week dt-week-zero">
+        <div class="dt-bar-wrap">
+          <div class="dt-bar-fill zero-fill" style="height:0.5%"></div>
+        </div>
+        <div class="dt-week-label">Sept<br>1–5</div>
+        <div class="dt-week-val zero-val">0</div>
+      </div>
+      <div class="dt-week">
+        <div class="dt-bar-wrap">
+          <div class="dt-bar-fill" style="height:50%" title="4,557 piles"></div>
+        </div>
+        <div class="dt-week-label">Sept<br>8–12</div>
+        <div class="dt-week-val">4,557</div>
+      </div>
+      <div class="dt-week">
+        <div class="dt-bar-wrap">
+          <div class="dt-bar-fill" style="height:51.8%" title="4,724 piles"></div>
+        </div>
+        <div class="dt-week-label">Sept<br>15–19</div>
+        <div class="dt-week-val">4,724</div>
+      </div>
+      <div class="dt-week">
+        <div class="dt-bar-wrap">
+          <div class="dt-bar-fill" style="height:46.2%" title="4,214 piles"></div>
+        </div>
+        <div class="dt-week-label">Sept<br>22–26</div>
+        <div class="dt-week-val">4,214</div>
+      </div>
+      <div class="dt-week">
+        <div class="dt-bar-wrap">
+          <div class="dt-bar-fill" style="height:45.8%" title="4,178 piles"></div>
+        </div>
+        <div class="dt-week-label">Sept 29<br>–Oct 3</div>
+        <div class="dt-week-val">4,178</div>
+      </div>
+      <div class="dt-week dt-week-peak">
+        <div class="dt-bar-wrap">
+          <div class="dt-bar-fill peak-fill" style="height:100%" title="9,121 piles — PEAK WEEK"></div>
+        </div>
+        <div class="dt-week-label">Oct<br>6–10</div>
+        <div class="dt-week-val peak-val">9,121 ★</div>
+      </div>
+      <div class="dt-week">
+        <div class="dt-bar-wrap">
+          <div class="dt-bar-fill" style="height:56.2%" title="5,130 piles"></div>
+        </div>
+        <div class="dt-week-label">Oct<br>13–17</div>
+        <div class="dt-week-val">5,130</div>
+      </div>
+      <div class="dt-week">
+        <div class="dt-bar-wrap">
+          <div class="dt-bar-fill" style="height:100%" title="9,904 piles"></div>
+        </div>
+        <div class="dt-week-label">Oct<br>20–24</div>
+        <div class="dt-week-val">9,904 ★</div>
+      </div>
+      <div class="dt-week">
+        <div class="dt-bar-wrap">
+          <div class="dt-bar-fill" style="height:42.7%" title="3,898 piles"></div>
+        </div>
+        <div class="dt-week-label">Oct 27<br>–Nov 2</div>
+        <div class="dt-week-val">3,898</div>
+      </div>
+      <div class="dt-week">
+        <div class="dt-bar-wrap">
+          <div class="dt-bar-fill" style="height:30.7%" title="2,803 piles"></div>
+        </div>
+        <div class="dt-week-label">Nov<br>3–7</div>
+        <div class="dt-week-val">2,803</div>
+      </div>
+      <div class="dt-week">
+        <div class="dt-bar-wrap">
+          <div class="dt-bar-fill" style="height:2.1%" title="192 piles"></div>
+        </div>
+        <div class="dt-week-label">Nov<br>8–14</div>
+        <div class="dt-week-val">192</div>
+      </div>
+    </div>
+
+    <div class="dt-total-row">
+      <div class="dt-total-item"><span class="dt-total-label">Total Piles (Prelim)</span><span class="dt-total-val">59,499</span></div>
+      <div class="dt-total-item"><span class="dt-total-label">Peak Week</span><span class="dt-total-val">Oct 20–24 · 9,904</span></div>
+      <div class="dt-total-item"><span class="dt-total-label">Avg per Week</span><span class="dt-total-val">~4,577</span></div>
+      <div class="dt-total-item warn"><span class="dt-total-label">Delivery Started</span><span class="dt-total-val warn-val">2 Weeks Late</span></div>
+    </div>
+
+    <!-- Key events overlay -->
+    <div class="gerdau-events">
+      <div class="ge-header">Key Delivery Events</div>
+      <div class="ge-list">
+        <div class="ge-item ge-late">
+          <div class="ge-date">8/11/2025</div>
+          <div class="ge-desc">Sean claims Gerdau will deliver 8/13 — fabrication issues cited. Delivery already ~2 weeks behind.</div>
+        </div>
+        <div class="ge-item">
+          <div class="ge-date">8/18/2025</div>
+          <div class="ge-desc">Piles begin arriving — 2 weeks late. 172 piles driven first week (Aug 18–22).</div>
+        </div>
+        <div class="ge-item">
+          <div class="ge-date">8/21/2025</div>
+          <div class="ge-desc">Pile Prioritization meeting — Gerdau promises 7 trucks/day going forward.</div>
+        </div>
+        <div class="ge-item ge-peak">
+          <div class="ge-date">Oct 6–24, 2025</div>
+          <div class="ge-desc">Peak driving weeks. Oct 20–24 highest single-week output: 9,904 piles across all blocks.</div>
+        </div>
+        <div class="ge-item ge-late">
+          <div class="ge-date">11/5/2025</div>
+          <div class="ge-desc">Pile deviation photos sent by Nestor — PPP discrepancies identified. Missing pile email follows 11/6.</div>
+        </div>
+        <div class="ge-item ge-late">
+          <div class="ge-date">2/23–3/2/2026</div>
+          <div class="ge-desc">Missing Yellow (E2) and Black (E1) piles finally arrive months after main delivery window.</div>
+        </div>
+        <div class="ge-item ge-late">
+          <div class="ge-date">4/16/2026</div>
+          <div class="ge-desc">PRE Survey processed — 3,542 pile refusals identified. Rework plan pending.</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /delivery-timeline -->
+
+
+  <!-- ================================================================
+       EASELY II SECTION — PILE PROCUREMENT
+       ================================================================ -->
+  <div class="project-divider-mv" id="easely-ii">
+    <span class="pdm-label">Easely II</span>
+    <span class="pdm-num">55134</span>
+  </div>
+
+  <div class="section-header">
+    <div class="sh-label">Section 04</div>
+    <div class="sh-title">Pile Procurement &amp; Count Summary — Easely II</div>
+  </div>
+
+  <!-- Easely II hero metrics -->
+  <div class="hero-metrics e2-metrics">
+    <div class="hm-card">
+      <div class="hm-val">59,931</div>
+      <div class="hm-label">Preliminary Total</div>
+      <div class="hm-sub">Westwood PPP — Easely II</div>
+    </div>
+    <div class="hm-card">
+      <div class="hm-val">60,145</div>
+      <div class="hm-label">BOMM Total</div>
+      <div class="hm-sub">Bill of Materials target</div>
+    </div>
+    <div class="hm-card hm-card-warn">
+      <div class="hm-val">5,475</div>
+      <div class="hm-label">Overage (Prelim vs Final)</div>
+      <div class="hm-sub">Final PRE Count: 59,936 · WW: 59,322</div>
+    </div>
+    <div class="hm-card hm-card-shortage">
+      <div class="hm-val">-5,478</div>
+      <div class="hm-label">SHORTAGE (BOMM vs Final)</div>
+      <div class="hm-sub">5,094 shortage vs BOMM</div>
+    </div>
+    <div class="hm-card hm-card-warn">
+      <div class="hm-val">12</div>
+      <div class="hm-label">Blocks Impacted</div>
+      <div class="hm-sub">Wrong material caused go-backs</div>
+    </div>
+    <div class="hm-card">
+      <div class="hm-val">4,690</div>
+      <div class="hm-label">Piles Missing</div>
+      <div class="hm-sub">Needed to complete project</div>
+    </div>
+  </div>
+
+  <!-- Three-way comparison -->
+  <div class="three-col">
+
+    <div class="proc-card prelim-card">
+      <div class="pc-header">
+        <div class="pc-eyebrow">Westwood</div>
+        <div class="pc-title">Preliminary Plot Plan — E2</div>
+        <div class="pc-note">PPP — Estimated quantities</div>
+      </div>
+      <div class="pc-total">59,931 <span class="pc-unit">total piles</span></div>
+      <div class="pc-bomm">BOMM Total: 60,145</div>
+      <table class="pile-table">
+        <thead><tr><th>Pile Shape</th><th>Color</th><th class="num">Total</th><th class="num">BOMM</th></tr></thead>
+        <tbody>
+          <tr><td>W8x12-12.75</td><td><span class="color-dot black"></span>Black</td><td class="num">1,540</td><td class="num">1,374</td></tr>
+          <tr><td>W8x20-14.5</td><td><span class="color-dot bwhite"></span>Black White</td><td class="num">4</td><td class="num">4</td></tr>
+          <tr><td>W8x8.5-12.75</td><td><span class="color-dot blue"></span>Blue</td><td class="num">5,686</td><td class="num">5,743</td></tr>
+          <tr><td>W8x15-14</td><td><span class="color-dot bblue"></span>Blue White</td><td class="num">290</td><td class="num">—</td></tr>
+          <tr><td>W8x8.5-13</td><td><span class="color-dot green"></span>Green</td><td class="num">2,441</td><td class="num">—</td></tr>
+          <tr><td>W8x8.5-13.5</td><td><span class="color-dot gwhite"></span>Green White</td><td class="num">202</td><td class="num">219</td></tr>
+          <tr><td>W8x7.75-11.75</td><td><span class="color-dot nocolor"></span>No Color</td><td class="num">20,540</td><td class="num">20,748</td></tr>
+          <tr><td>W8x7.75-11.75</td><td><span class="color-dot orange"></span>Orange</td><td class="num">2,678</td><td class="num">2,705</td></tr>
+          <tr><td>W8x15-14</td><td><span class="color-dot owhite"></span>Orange White</td><td class="num">234</td><td class="num">234</td></tr>
+          <tr><td>W8x15-13</td><td><span class="color-dot pink"></span>Pink</td><td class="num">1,140</td><td class="num">1,151</td></tr>
+          <tr><td>W8x7.75-13</td><td><span class="color-dot purple"></span>Purple</td><td class="num">1,977</td><td class="num">1,897</td></tr>
+          <tr><td>W8x20-14</td><td><span class="color-dot pwhite"></span>Purple White</td><td class="num">30</td><td class="num">31</td></tr>
+          <tr><td>W8x7.75-13</td><td><span class="color-dot red"></span>Red</td><td class="num">11,892</td><td class="num">12,011</td></tr>
+          <tr><td>W8x15-12.25</td><td><span class="color-dot rgreen"></span>Red Green</td><td class="num">2,372</td><td class="num">2,396</td></tr>
+          <tr><td>W8x20-14.25</td><td><span class="color-dot rpink"></span>Red Pink</td><td class="num">76</td><td class="num">77</td></tr>
+          <tr><td>W8x15-13.25</td><td><span class="color-dot rpurple"></span>Red Purple</td><td class="num">1,988</td><td class="num">1,966</td></tr>
+          <tr><td>W8x15-12</td><td><span class="color-dot rwhite"></span>Red White</td><td class="num">448</td><td class="num">448</td></tr>
+          <tr><td>W8x12-12.5</td><td><span class="color-dot white"></span>White</td><td class="num">1,320</td><td class="num">1,333</td></tr>
+          <tr><td>W8x15-13.25</td><td><span class="color-dot yellow"></span>Yellow</td><td class="num">5,037</td><td class="num">5,087</td></tr>
+          <tr><td>W8x8-12.5</td><td><span class="color-dot ywhite"></span>Yellow White</td><td class="num">242</td><td class="num">248</td></tr>
+          <tr class="total-row"><td colspan="2">Grand Total</td><td class="num">59,931</td><td class="num">60,145</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="proc-card final-card">
+      <div class="pc-header">
+        <div class="pc-eyebrow">Westwood / PRE</div>
+        <div class="pc-title">Final Plot Plan PRE Count — E2</div>
+        <div class="pc-note">PRE Count vs WW Count</div>
+      </div>
+      <div class="pc-total">59,936 <span class="pc-unit">PRE count</span></div>
+      <div class="pc-bomm">WW Count: 59,322</div>
+      <table class="pile-table">
+        <thead><tr><th>Pile Shape</th><th>Color</th><th class="num">PRE</th><th class="num">WW</th></tr></thead>
+        <tbody>
+          <tr><td>W8x12-12.75</td><td><span class="color-dot black"></span>Black</td><td class="num">1,374</td><td class="num">1,374</td></tr>
+          <tr><td>W8x20-14.5</td><td><span class="color-dot bwhite"></span>Black White</td><td class="num">0</td><td class="num">0</td></tr>
+          <tr><td>W8x8.5-12.75</td><td><span class="color-dot blue"></span>Blue</td><td class="num">2,524</td><td class="num">2,524</td></tr>
+          <tr><td>W8x15-14</td><td><span class="color-dot bblue"></span>Blue White</td><td class="num">293</td><td class="num">—</td></tr>
+          <tr><td>W8x8.5-13</td><td><span class="color-dot green"></span>Green</td><td class="num">2,451</td><td class="num">—</td></tr>
+          <tr><td>W8x8.5-13.5</td><td><span class="color-dot gwhite"></span>Green White</td><td class="num">55</td><td class="num">55</td></tr>
+          <tr><td>W8x7.75-11.75</td><td><span class="color-dot nocolor"></span>No Color</td><td class="num">20,748</td><td class="num">20,748</td></tr>
+          <tr><td>W8x7.75-11.75</td><td><span class="color-dot orange"></span>Orange</td><td class="num">2,705</td><td class="num">2,705</td></tr>
+          <tr><td>W8x15-14</td><td><span class="color-dot owhite"></span>Orange White</td><td class="num">833</td><td class="num">833</td></tr>
+          <tr><td>W8x15-13</td><td><span class="color-dot pink"></span>Pink</td><td class="num">1,151</td><td class="num">1,151</td></tr>
+          <tr><td>W8x7.75-13</td><td><span class="color-dot purple"></span>Purple</td><td class="num">1,897</td><td class="num">1,897</td></tr>
+          <tr><td>W8x20-14</td><td><span class="color-dot pwhite"></span>Purple White</td><td class="num">385</td><td class="num">385</td></tr>
+          <tr><td>W8x7.75-13</td><td><span class="color-dot red"></span>Red</td><td class="num">9,752</td><td class="num">9,752</td></tr>
+          <tr><td>W8x15-12.25</td><td><span class="color-dot rgreen"></span>Red Green</td><td class="num">2,396</td><td class="num">2,396</td></tr>
+          <tr><td>W8x20-14.25</td><td><span class="color-dot rpink"></span>Red Pink</td><td class="num">57</td><td class="num">57</td></tr>
+          <tr><td>W8x15-13.25</td><td><span class="color-dot rpurple"></span>Red Purple</td><td class="num">1,961</td><td class="num">1,961</td></tr>
+          <tr><td>W8x15-12</td><td><span class="color-dot rwhite"></span>Red White</td><td class="num">448</td><td class="num">448</td></tr>
+          <tr><td>W8x12-12.5</td><td><span class="color-dot white"></span>White</td><td class="num">1,333</td><td class="num">1,333</td></tr>
+          <tr><td>W8x15-13.25</td><td><span class="color-dot yellow"></span>Yellow</td><td class="num">9,228</td><td class="num">9,228</td></tr>
+          <tr><td>W8x8-12.5</td><td><span class="color-dot ywhite"></span>Yellow White</td><td class="num">244</td><td class="num">—</td></tr>
+          <tr class="total-row"><td colspan="2">Grand Total</td><td class="num">59,936</td><td class="num">59,322</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="proc-card diff-card">
+      <div class="pc-header">
+        <div class="pc-eyebrow">Analysis</div>
+        <div class="pc-title">Difference &amp; On-Site Count — E2</div>
+        <div class="pc-note">Prelim vs Final · Overage &amp; Shortage</div>
+      </div>
+      <div class="pc-total overage">+5,475 <span class="pc-unit">overage (prelim vs final)</span></div>
+      <div class="pc-bomm shortage-txt">SHORTAGE vs BOMM: -5,478 · BOMM shortage: -5,094</div>
+      <table class="pile-table diff-table">
+        <thead><tr><th>Pile Shape</th><th>Color</th><th class="num">Δ Total</th><th class="num">Δ BOMM</th></tr></thead>
+        <tbody>
+          <tr class="diff-pos"><td>W8x12-12.75</td><td><span class="color-dot black"></span>Black</td><td class="num neg">-14</td><td class="num pos">0</td></tr>
+          <tr><td>W8x20-14.5</td><td><span class="color-dot bwhite"></span>Black White</td><td class="num">0</td><td class="num">0</td></tr>
+          <tr class="diff-pos"><td>W8x8.5-12.75</td><td><span class="color-dot blue"></span>Blue</td><td class="num pos">3,162</td><td class="num pos">3,219</td></tr>
+          <tr><td>W8x15-14</td><td><span class="color-dot bblue"></span>Blue White</td><td class="num neg">-3</td><td class="num">—</td></tr>
+          <tr class="diff-neg"><td>W8x8.5-13</td><td><span class="color-dot green"></span>Green</td><td class="num neg">-10</td><td class="num">—</td></tr>
+          <tr class="diff-pos"><td>W8x8.5-13.5</td><td><span class="color-dot gwhite"></span>Green White</td><td class="num pos">147</td><td class="num pos">164</td></tr>
+          <tr><td>W8x7.75-11.75</td><td><span class="color-dot nocolor"></span>No Color</td><td class="num neg">-208</td><td class="num neg">-208</td></tr>
+          <tr><td>W8x7.75-11.75</td><td><span class="color-dot orange"></span>Orange</td><td class="num neg">-27</td><td class="num">0</td></tr>
+          <tr class="diff-neg"><td>W8x15-14</td><td><span class="color-dot owhite"></span>Orange White</td><td class="num neg">-599</td><td class="num neg">-599</td></tr>
+          <tr><td>W8x15-13</td><td><span class="color-dot pink"></span>Pink</td><td class="num neg">-11</td><td class="num">0</td></tr>
+          <tr><td>W8x7.75-13</td><td><span class="color-dot purple"></span>Purple</td><td class="num pos">80</td><td class="num pos">0</td></tr>
+          <tr class="diff-neg"><td>W8x20-14</td><td><span class="color-dot pwhite"></span>Purple White</td><td class="num neg">-355</td><td class="num neg">-354</td></tr>
+          <tr class="diff-pos"><td>W8x7.75-13</td><td><span class="color-dot red"></span>Red</td><td class="num pos">2,140</td><td class="num pos">2,259</td></tr>
+          <tr><td>W8x15-12.25</td><td><span class="color-dot rgreen"></span>Red Green</td><td class="num neg">-24</td><td class="num">0</td></tr>
+          <tr><td>W8x20-14.25</td><td><span class="color-dot rpink"></span>Red Pink</td><td class="num pos">19</td><td class="num pos">20</td></tr>
+          <tr><td>W8x15-13.25</td><td><span class="color-dot rpurple"></span>Red Purple</td><td class="num pos">27</td><td class="num pos">5</td></tr>
+          <tr><td>W8x15-12</td><td><span class="color-dot rwhite"></span>Red White</td><td class="num">0</td><td class="num">0</td></tr>
+          <tr class="diff-neg"><td>W8x12-12.5</td><td><span class="color-dot white"></span>White</td><td class="num neg">-13</td><td class="num">0</td></tr>
+          <tr class="diff-neg"><td>W8x15-13.25</td><td><span class="color-dot yellow"></span>Yellow</td><td class="num neg">-4,191</td><td class="num neg">-4,141</td></tr>
+          <tr><td>W8x8-12.5</td><td><span class="color-dot ywhite"></span>Yellow White</td><td class="num neg">-2</td><td class="num">—</td></tr>
+          <tr class="total-row"><td colspan="2">OVERAGE</td><td class="num overage">+5,475</td><td class="num overage">+5,687</td></tr>
+          <tr class="total-row shortage-total"><td colspan="2">SHORTAGE</td><td class="num shortage">-5,478</td><td class="num shortage">-5,094</td></tr>
+        </tbody>
+      </table>
+
+      <!-- E2 On-Site Inventory -->
+      <div class="inventory-block">
+        <div class="inv-header">Easely II On-Site Inventory &amp; Missing Piles</div>
+        <div class="e2-inv-grid">
+          <div class="e2-inv-header">
+            <span>Color</span><span>Inventory</span><span>Need</span><span>Missing</span>
+          </div>
+          <div class="e2-inv-row"><span>Black</span><span>129</span><span>140</span><span class="neg">-11</span></div>
+          <div class="e2-inv-row"><span>Black White</span><span>—</span><span>—</span><span>2</span></div>
+          <div class="e2-inv-row"><span>Blue</span><span>2,620</span><span>—</span><span>11</span></div>
+          <div class="e2-inv-row"><span>Blue White</span><span>—</span><span>—</span><span>—</span></div>
+          <div class="e2-inv-row"><span>Green</span><span>155</span><span>—</span><span>11</span></div>
+          <div class="e2-inv-row"><span>Green White</span><span>101</span><span>—</span><span>—</span></div>
+          <div class="e2-inv-row"><span>No Color</span><span>1,044</span><span>—</span><span>—</span></div>
+          <div class="e2-inv-row e2-warn"><span>Orange</span><span>—</span><span>—</span><span class="neg">-41</span></div>
+          <div class="e2-inv-row e2-warn"><span>Orange White</span><span>218</span><span>—</span><span class="neg">-281</span></div>
+          <div class="e2-inv-row"><span>Pink</span><span>—</span><span>—</span><span>—</span></div>
+          <div class="e2-inv-row"><span>Purple</span><span>263</span><span>—</span><span>—</span></div>
+          <div class="e2-inv-row"><span>Purple White</span><span>—</span><span>—</span><span>—</span></div>
+          <div class="e2-inv-row"><span>Red</span><span>654</span><span>—</span><span>—</span></div>
+          <div class="e2-inv-row"><span>Red Green</span><span>153</span><span>—</span><span>1</span></div>
+          <div class="e2-inv-row"><span>Red Pink</span><span>0</span><span>—</span><span>27</span></div>
+          <div class="e2-inv-row"><span>Red Purple</span><span>470</span><span>—</span><span>23</span></div>
+          <div class="e2-inv-row"><span>Red White</span><span>—</span><span>—</span><span>—</span></div>
+          <div class="e2-inv-row"><span>White</span><span>23</span><span>—</span><span>—</span></div>
+          <div class="e2-inv-row e2-warn"><span>Yellow</span><span>4,140</span><span>—</span><span class="neg">-4,191</span></div>
+          <div class="e2-inv-row"><span>Yellow White</span><span>55</span><span>—</span><span>—</span></div>
+          <div class="e2-inv-total"><span>Total Missing</span><span></span><span></span><span>4,690</span></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /three-col -->
+
+  <!-- Key Takeaways & Lessons Learned — applies to both projects -->
+  <div class="section-header" id="lessons-mv">
+    <div class="sh-label">Overall</div>
+    <div class="sh-title">Key Takeaways &amp; Lessons Learned — Easely I &amp; II</div>
+  </div>
+
+  <div class="mv-lessons-grid">
+    <div class="mv-lesson-col">
+      <div class="mvl-header">Key Takeaways</div>
+      <div class="mvl-item">
+        <div class="mvl-num">01</div>
+        <div class="mvl-body">
+          <div class="mvl-title">Total Pile Quantities Deviate Minorly from Preliminary Design</div>
+          <div class="mvl-desc">However the <strong>types of piles change significantly</strong> between preliminary and final — this mismatch drove procurement confusion, go-backs, and inventory counting errors across both sites.</div>
+        </div>
+      </div>
+      <div class="mvl-item">
+        <div class="mvl-num">02</div>
+        <div class="mvl-body">
+          <div class="mvl-title">Doubling of Seismic Pile Caused Shortage of Heavy Piles</div>
+          <div class="mvl-desc">Doubling of the seismic pile contributed to the shortage of heavy piles such as <strong>Yellow</strong> — a deficit of 4,191 piles in Easely II alone, with Yellow inventory at 4,140 against a massive demand shortfall.</div>
+        </div>
+      </div>
+      <div class="mvl-item">
+        <div class="mvl-num">03</div>
+        <div class="mvl-body">
+          <div class="mvl-title">Getting Inventory Counts On-Site Proved Extremely Difficult</div>
+          <div class="mvl-desc">Accurate pile inventory tracking was not achievable during active production. Piles move continuously during install, making real-time counts unreliable.</div>
+        </div>
+      </div>
+      <div class="mvl-item">
+        <div class="mvl-num">04</div>
+        <div class="mvl-body">
+          <div class="mvl-title">12 Blocks Impacted in Easely II — Thousands of Go-Backs</div>
+          <div class="mvl-desc">As a result of not having the correct material, <strong>12 blocks were impacted in Easely II</strong> and added thousands of go-back visits — compounding schedule and labor cost impact across the project.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mv-lesson-col">
+      <div class="mvl-header">Lessons Learned &amp; Suggestions</div>
+      <div class="mvl-item mvl-green">
+        <div class="mvl-num green-num">01</div>
+        <div class="mvl-body">
+          <div class="mvl-title">PPP Must Be Compared to BOMM and Preliminary Design at Release</div>
+          <div class="mvl-desc">The Preliminary Plot Plan needs to be reconciled against the BOMM and preliminary design as soon as it is released — not after procurement has already begun.</div>
+        </div>
+      </div>
+      <div class="mvl-item mvl-green">
+        <div class="mvl-num green-num">02</div>
+        <div class="mvl-body">
+          <div class="mvl-title">Mechanical Must Take Control of Material Counting Upon Receiving</div>
+          <div class="mvl-desc">Mechanical teams need to own and verify pile counts at the point of delivery — not rely on vendor or logistics counts that may not align with actual received quantities.</div>
+        </div>
+      </div>
+      <div class="mvl-item mvl-green">
+        <div class="mvl-num green-num">03</div>
+        <div class="mvl-body">
+          <div class="mvl-title">Leadership Should Personally Count Deliveries Periodically</div>
+          <div class="mvl-desc">To increase accountability, leadership should conduct independent counts at the truck — and a separate count by logistics. Two independent counts catch discrepancies before they compound.</div>
+        </div>
+      </div>
+      <div class="mvl-item mvl-green">
+        <div class="mvl-num green-num">04</div>
+        <div class="mvl-body">
+          <div class="mvl-title">Inventory Counts Must Happen During Zero-Production Windows</div>
+          <div class="mvl-desc">To accurately count piles in inventory and piles needed to finish a job, counting must be done <strong>during no production</strong>. During production, piles get moved around making it extremely difficult to get an accurate count.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>Easely I &amp; II &middot; Mechanical Velocity Metrics &middot; Primoris Renewable Energy</p>
+  <span class="update-tag">Last Updated: <span id="footer-date">&mdash;</span></span>
+</footer>
+
+<script src="js/mechvel.js"></script>
+</body>
+</html>
