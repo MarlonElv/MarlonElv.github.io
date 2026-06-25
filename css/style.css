@@ -127,13 +127,30 @@ body {
 .meta-label { font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); font-weight: 500; }
 .meta-value { font-size: 12px; font-weight: 500; color: var(--text-secondary); }
 
-/* ---- HERO -------------------------------------------------- */
+/* ---- HERO WITH BACKGROUND IMAGE ------------------------- */
 .hero {
   padding: 1.75rem 2.5rem;
-  background: linear-gradient(135deg, #172060 0%, #1d3a80 100%);
+  background-image: url('BackGrd.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   border-bottom: 1px solid var(--border);
+  position: relative;
 }
-.hero-summary { font-size: 14px; color: var(--text-secondary); max-width: 680px; line-height: 1.75; }
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(23,32,96,0.7) 0%, rgba(29,58,128,0.7) 100%);
+  pointer-events: none;
+  border-radius: 0;
+}
+
+.hero-summary, .hero-text {
+  position: relative;
+  z-index: 1;
+}
 
 /* ---- STATUS BAR -------------------------------------------- */
 .status-bar {
@@ -152,6 +169,29 @@ body {
 .pill-dot.dept-site       { background: #38a169; }
 .pill-dot.dept-civil      { background: #805ad5; }
 .pill-dot.dept-quality    { background: #dd6b20; }
+
+/* ---- METRICS WITH FADE TRANSITION ------------------------ */
+.metrics { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  gap: 12px;
+  padding: 0 2.5rem 3rem;
+  background: linear-gradient(to bottom, 
+    rgba(26, 66, 138, 0.1) 0%,
+    rgba(26, 66, 138, 0.3) 30%,
+    rgba(26, 66, 138, 0.6) 70%,
+    var(--bg-dark) 100%);
+  position: relative;
+}
+
+.metric { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem 1rem; }
+.metric-value { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 800; color: var(--text-primary); line-height: 1; margin-bottom: 6px; }
+.metric-value .unit { font-size: 16px; font-weight: 400; color: var(--text-muted); margin-left: 2px; }
+.metric-label { font-size: 11px; color: var(--text-secondary); font-weight: 500; margin-bottom: 8px; }
+.metric-delta { font-size: 10px; font-weight: 500; }
+.metric-delta.pos { color: #68d391; }
+.metric-delta.neg { color: #fc8181; }
+.metric-delta.neu { color: var(--text-muted); }
 
 /* ---- MAIN -------------------------------------------------- */
 .main { max-width: 1100px; margin: 0 auto; padding: 3rem 2.5rem; }
@@ -201,17 +241,6 @@ body {
 .dept-site-chip  { background: rgba(56,161,105,0.12);  color: #68d391; }
 .dept-civil-chip { background: rgba(128,90,213,0.15);  color: #b794f4; }
 .dept-qual-chip  { background: rgba(221,107,32,0.15);  color: #f6ad55; }
-
-/* ---- METRICS ----------------------------------------------- */
-.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
-.metric { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem 1rem; }
-.metric-value { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 800; color: var(--text-primary); line-height: 1; margin-bottom: 6px; }
-.metric-value .unit { font-size: 16px; font-weight: 400; color: var(--text-muted); margin-left: 2px; }
-.metric-label { font-size: 11px; color: var(--text-secondary); font-weight: 500; margin-bottom: 8px; }
-.metric-delta { font-size: 10px; font-weight: 500; }
-.metric-delta.pos { color: #68d391; }
-.metric-delta.neg { color: #fc8181; }
-.metric-delta.neu { color: var(--text-muted); }
 
 /* ---- OPEN ISSUES ------------------------------------------- */
 .issues { display: flex; flex-direction: column; gap: 1px; }
@@ -319,6 +348,7 @@ footer { display: flex; justify-content: space-between; align-items: center; pad
   .issue-owner { text-align: left; }
   .main { padding: 2rem 1.5rem; }
   .status-bar { padding: 0.6rem 1.5rem; }
+  .metrics { padding: 0 1.5rem 3rem; }
 }
 
 /* ============================================================
