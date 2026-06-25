@@ -1,5 +1,5 @@
 /* ============================================================
-   EASELY I & II — MECHANICAL VELOCITY METRICS (stylec.css)
+   EASELY I & II — Mechanical Constraints stylesheet (stylec.css)
    ============================================================ */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -749,21 +749,22 @@ footer {
   .e2-metrics       { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* ---- IMAGE BLOCKS ------------------------------------ */
+/* ---- IMAGE BLOCKS --------------------------------- */
 .image-block {
-  margin: 1.5rem 0;
+  margin: 1.5rem auto;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
+  max-width: 85%;
 }
-
+ 
 .image-block img {
   width: 100%;
   height: auto;
   display: block;
 }
-
+ 
 .image-caption {
   padding: 0.75rem 1.25rem;
   font-size: 11px;
