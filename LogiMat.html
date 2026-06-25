@@ -6,7 +6,7 @@
   <title>Logistics & Material — Easely I &amp; II</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/stylei.css">
+  <link rel="stylesheet" href="css/style.css">
   <style>
     .tabs-container { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 2rem; }
     .tab-btn { padding: 1rem 1.5rem; background: transparent; border: none; color: var(--text-muted); cursor: pointer; font-weight: 500; font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; transition: all 0.2s; border-bottom: 3px solid transparent; margin-bottom: -2px; }
@@ -65,18 +65,74 @@
 
   <!-- TAB: EXCESS MATERIAL -->
   <div id="excess-material" class="tab-content active">
-    <div class="section-heading">Excess Material Inventory</div>
-    <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem;">
-      <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem;">
-        Placeholder for excess material inventory tracking and management.
-      </p>
-      <ul style="color: var(--text-secondary); padding-left: 2rem;">
-        <li>Equipment surplus tracking</li>
-        <li>Storage location management</li>
-        <li>Reallocation opportunities</li>
-        <li>Disposal scheduling</li>
-      </ul>
+    <div class="section-heading">
+      Excess Materials — Cable & Inventory Surplus
     </div>
+
+    <p style="
+      color: var(--text-secondary); 
+      line-height: 1.8; 
+      margin-bottom: 1.5rem;
+      max-width: 860px;
+    ">
+      <strong>Overview:</strong> Post-installation excess material
+      inventory across Easely I and II projects. Significant cable
+      surplus documented including MV Cable spools and DC Cable
+      (Trench) materials. Total excess material value: 
+      $763,727.23 (Easely I) and $136,640.00 (Easely II). 
+      Materials cataloged for recycling and disposition.
+    </p>
+
+    <!-- Excess Materials Event Block -->
+    <div class="tl-event done has-photo" id="excess-001">
+      <div class="tl-meta">
+        <span class="tl-date">4/16/2026</span>
+        <span class="tl-dept mechanical">Material</span>
+        <span class="tl-loc">Site</span>
+      </div>
+      <div class="tl-title">
+        Excess cable inventory documented and cataloged for 
+        recycling disposition
+      </div>
+      <div class="tl-photo-block">
+        <div class="photo-preview-grid" id="preview-excess-001">
+          <div class="preview" onclick="showImage(
+            'eximage1')">
+            <img src="assets/images/eximage1.png" 
+              alt="Excess Cable Photo 1">
+            <p class="desc">Cable Spools On-Site</p>
+          </div>
+          <div class="preview" onclick="showImage(
+            'eximage2')">
+            <img src="assets/images/eximage2.png" 
+              alt="Excess Cable Photo 2">
+            <p class="desc">Easely I Inventory</p>
+          </div>
+          <div class="preview" onclick="showImage(
+            'eximage3')">
+            <img src="assets/images/eximage3.png" 
+              alt="Excess Cable Photo 3">
+            <p class="desc">Easely II Inventory</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p style="
+      color: var(--text-secondary); 
+      line-height: 1.8; 
+      margin-top: 1.5rem;
+      max-width: 860px;
+    ">
+      <strong>Key Findings:</strong> Excess materials primarily
+      consist of high-value cable inventory. Easely I shows
+      significant MV Cable overage due to preliminary design
+      variance. Easely II excess limited to DC Cable Trench
+      materials. All materials documented with reel IDs and
+      manufacturing dates for disposition tracking. Recycling
+      vendor engagement underway for material recovery and
+      environmental compliance.
+    </p>
   </div>
 
   <!-- TAB: INVERTERS -->
@@ -127,6 +183,16 @@
   <span class="update-tag">Last Updated: <span id="footer-date">&mdash;</span></span>
 </footer>
 
+<!-- LIGHTBOX OVERLAY -->
+<div id="lightbox-overlay" class="lightbox-overlay">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" 
+      onclick="closeLightbox()">×</button>
+    <img src="" alt="">
+    <div class="lightbox-caption"></div>
+  </div>
+</div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const today = new Date().toLocaleDateString('en-US', {
@@ -137,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (el) el.textContent = today;
   });
 
-  // Tab functionality
+  /* ---- TAB FUNCTIONALITY ----------------------------- */
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', function () {
       const tabName = this.dataset.tab;
@@ -157,6 +223,73 @@ document.addEventListener('DOMContentLoaded', function () {
       this.classList.add('active');
     });
   });
+
+  /* ---- MOBILE MENU TOGGLE ----------------------- */
+  const toggle = document.getElementById('mobileToggle');
+  const navLinksEl = document.querySelector('.nav-links');
+  if (toggle && navLinksEl) {
+    toggle.addEventListener('click', function () { 
+      navLinksEl.classList.toggle('open'); 
+    });
+    navLinksEl.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { 
+        navLinksEl.classList.remove('open'); 
+      });
+    });
+  }
+});
+
+/* ---- LIGHTBOX FUNCTIONALITY ----------------------- */
+function showImage(imageId) {
+  const overlay = document.getElementById(
+    'lightbox-overlay') || createLightbox();
+  const img = document.querySelector(
+    '[src*="' + imageId + '"]');
+  
+  if (!img) return;
+  
+  const lightboxImg = overlay.querySelector(
+    '.lightbox-inner img');
+  const lightboxCaption = overlay.querySelector(
+    '.lightbox-caption');
+  
+  lightboxImg.src = img.src;
+  lightboxImg.alt = img.alt;
+  lightboxCaption.textContent = img.alt;
+  
+  overlay.classList.add('active');
+}
+
+function closeLightbox() {
+  const overlay = document.getElementById(
+    'lightbox-overlay');
+  if (overlay) overlay.classList.remove('active');
+}
+
+function createLightbox() {
+  const overlay = document.createElement('div');
+  overlay.id = 'lightbox-overlay';
+  overlay.className = 'lightbox-overlay';
+  overlay.innerHTML = `
+    <div class="lightbox-inner">
+      <button class="lightbox-close" 
+        onclick="closeLightbox()">×</button>
+      <img src="" alt="">
+      <div class="lightbox-caption"></div>
+    </div>
+  `;
+  
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) closeLightbox();
+  });
+  
+  document.body.appendChild(overlay);
+  return overlay;
+}
+
+// Close lightbox on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
 });
 </script>
 </body>
