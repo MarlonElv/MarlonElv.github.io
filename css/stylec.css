@@ -1,20 +1,20 @@
 /* ============================================================
-   EASELY I & II — MECHANICAL VELOCITY METRICS (stylemv.css)
+   EASELY I & II — MECHANICAL VELOCITY METRICS (stylec.css)
    ============================================================ */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
   --gold:       #DFC573;
-  --blue:       #006FB9;
-  --blue-light: #1a84cc;
-  --bg-dark:    #0d1117;
-  --bg-panel:   #111820;
-  --bg-card:    #16202b;
-  --bg-stripe:  #131c26;
+  --blue:       #7EC8FF;
+  --blue-light: #93d4ff;
+  --bg-dark:    #1A428A;
+  --bg-panel:   #162158;
+  --bg-card:    #1b2d6e;
+  --bg-stripe:  #152050;
   --text-primary:   #e8eef4;
   --text-secondary: #8fa4b8;
-  --text-muted:     #5a7080;
+  --text-muted:     #a0b8d0;
   --border:     rgba(223,197,115,0.12);
   --radius:     6px;
   --radius-lg:  10px;
@@ -25,7 +25,7 @@
   --warn: #e07b39;
   --ot:   #e07b39;
   --dt:   #e53e3e;
-  --st:   #006FB9;
+  --st:   #7EC8FF;
 }
 
 html { scroll-behavior: smooth; }
@@ -44,7 +44,7 @@ body {
 .site-nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
   height: var(--nav-h);
-  background: rgba(13,17,23,0.98);
+  background: rgba(26,66,138,0.98);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   display: flex; align-items: center;
@@ -54,7 +54,7 @@ body {
 .nav-logo { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
 
 .nav-logo-mark {
-  width: 26px; height: 26px; background: var(--gold); color: #0d1117;
+  width: 26px; height: 26px; background: var(--gold); color: #1A428A;
   font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 800;
   display: flex; align-items: center; justify-content: center;
   border-radius: 4px; line-height: 1;
@@ -624,7 +624,7 @@ footer {
   .nav-links.open {
     display: flex; flex-direction: column;
     position: absolute; top: var(--nav-h); left: 0; right: 0;
-    background: rgba(13,17,23,0.98);
+    background: rgba(26,66,138,0.98);
     border-bottom: 1px solid var(--border);
     padding: 0.75rem 1.5rem 1rem; gap: 2px;
   }

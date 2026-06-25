@@ -1,23 +1,23 @@
 /* ============================================================
    EASELY I & II — RISK MANAGEMENT PAGE
    Primoris Gold  #DFC573
-   Primoris Blue  #006FB9
+   Primoris Blue  #7EC8FF
    ============================================================ */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
   --gold:        #DFC573;
-  --blue:        #006FB9;
-  --blue-light:  #1a84cc;
+  --blue:        #7EC8FF;
+  --blue-light:  #93d4ff;
   --gray:        #4C5966;
-  --bg-dark:     #0d1117;
-  --bg-panel:    #111820;
-  --bg-card:     #16202b;
-  --bg-stripe:   #131c26;
+  --bg-dark:     #1A428A;
+  --bg-panel:    #162158;
+  --bg-card:     #1b2d6e;
+  --bg-stripe:   #152050;
   --text-primary:   #e8eef4;
   --text-secondary: #8fa4b8;
-  --text-muted:     #5a7080;
+  --text-muted:     #a0b8d0;
   --border:      rgba(223,197,115,0.12);
   --radius:      6px;
   --radius-lg:   10px;
@@ -48,7 +48,7 @@ body {
   top: 0; left: 0; right: 0;
   z-index: 200;
   height: var(--nav-h);
-  background: rgba(13,17,23,0.98);
+  background: rgba(26,66,138,0.98);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
@@ -63,7 +63,7 @@ body {
 .nav-logo-mark {
   width: 26px; height: 26px;
   background: var(--gold);
-  color: #0d1117;
+  color: #1A428A;
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 16px; font-weight: 800;
   display: flex; align-items: center; justify-content: center;
@@ -120,7 +120,7 @@ body {
 /* ---- HERO -------------------------------------------------- */
 .hero {
   padding: 1.5rem 2.5rem;
-  background: linear-gradient(135deg, #0d1520 0%, #0f1e2e 100%);
+  background: linear-gradient(135deg, #172060 0%, #1d3a80 100%);
   border-bottom: 1px solid var(--border);
 }
 
@@ -140,9 +140,9 @@ body {
 
 .risk-banner-card:last-child { border-right: none; }
 
-.risk-banner-card.critical { background: #130808; border-top: 3px solid var(--risk-critical); }
-.risk-banner-card.high     { background: #120a04; border-top: 3px solid var(--risk-high); }
-.risk-banner-card.medium   { background: #110f03; border-top: 3px solid var(--risk-medium); }
+.risk-banner-card.critical { background: #1a2860; border-top: 3px solid var(--risk-critical); }
+.risk-banner-card.high     { background: #192560; border-top: 3px solid var(--risk-high); }
+.risk-banner-card.medium   { background: #1a2860; border-top: 3px solid var(--risk-medium); }
 
 .rb-eyebrow {
   font-size: 9px; font-weight: 700;
@@ -322,7 +322,7 @@ tfoot tr.grand-total td {
 }
 
 .src-badge.estimate { background: rgba(224,123,57,0.15); color: var(--risk-high); }
-.src-badge.design   { background: rgba(0,111,185,0.15);  color: var(--blue-light); }
+.src-badge.design   { background: rgba(126,200,255,0.15);  color: var(--blue-light); }
 
 code {
   font-family: 'Inter', monospace;
@@ -574,7 +574,7 @@ code {
   transition: border-color 0.2s, background 0.2s;
 }
 
-.collapsible-header:hover { border-color: rgba(223,197,115,0.3); background: #151f2b; }
+.collapsible-header:hover { border-color: rgba(223,197,115,0.3); background: #1c2d70; }
 
 .collapsible-header .project-block-label {
   font-size: 9px; font-weight: 600; letter-spacing: 2px;
@@ -685,10 +685,250 @@ footer {
   .nav-links.open {
     display: flex; flex-direction: column;
     position: absolute; top: var(--nav-h); left: 0; right: 0;
-    background: rgba(13,17,23,0.98);
+    background: rgba(26,66,138,0.98);
     border-bottom: 1px solid var(--border);
     padding: 0.75rem 1.5rem 1rem; gap: 2px;
   }
   .rc-figures      { flex-direction: column; }
   .uxo-impact-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ============================================================
+   MECHANICAL SCHEDULE PAGE
+   ============================================================ */
+
+/* ---- Legend bar ------------------------------------------- */
+.sched-legend-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.75rem 2.5rem;
+  background: var(--bg-stripe);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.sleg-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.sleg-dot {
+  width: 14px; height: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.baseline-dot { background: #7ec850; }
+.actual-dot   { background: #3b82c4; }
+
+.sleg-divider {
+  width: 1px; height: 18px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.sleg-note {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ---- Project divider (reused from finance) ---------------- */
+.project-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4rem;
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.project-divider-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px; font-weight: 800;
+  color: var(--gold); letter-spacing: 0.5px;
+}
+
+.project-divider-num {
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.05);
+  padding: 3px 10px; border-radius: 3px;
+}
+
+/* ---- Image block ------------------------------------------ */
+.sched-img-block {
+  margin-bottom: 0;
+}
+
+.img-file-input { display: none; }
+
+.sched-img-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-stripe);
+  min-height: 200px;
+}
+
+.sched-img-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 200px;
+  padding: 2rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 13px;
+  transition: background 0.15s;
+}
+
+.sched-img-placeholder:hover {
+  background: rgba(255,255,255,0.03);
+  color: var(--text-secondary);
+}
+
+.sched-img-placeholder svg { opacity: 0.4; }
+
+.img-hint {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-family: monospace;
+  background: rgba(255,255,255,0.05);
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+.sched-img-wrap img {
+  width: 100%;
+  display: none;
+  border-radius: var(--radius-lg);
+}
+
+/* ---- Caption --------------------------------------------- */
+.sched-caption {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.65;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid rgba(223,197,115,0.3);
+  background: rgba(223,197,115,0.04);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: 1rem 0 1.25rem;
+}
+
+/* ---- Schedule table --------------------------------------- */
+.sched-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+
+.sched-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+
+.sched-table thead tr {
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+}
+
+.sched-table th {
+  padding: 10px 14px;
+  font-size: 9px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--text-muted); text-align: left; white-space: nowrap;
+}
+
+.st-dates { text-align: center; }
+.st-delta { text-align: center; }
+
+.sched-table tbody tr {
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  transition: background 0.1s;
+}
+
+.sched-table tbody tr:hover { background: rgba(255,255,255,0.03); }
+.sched-table tbody tr:last-child { border-bottom: none; }
+
+.sched-table td { padding: 10px 14px; vertical-align: middle; }
+
+.task-name {
+  font-size: 13px; font-weight: 500;
+  color: var(--text-primary);
+}
+
+.baseline-cell {
+  text-align: center;
+  color: #7ec850;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.actual-cell {
+  text-align: center;
+  color: #3b82c4;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Slip badges */
+.delta-badge {
+  display: inline-block;
+  font-size: 9px; font-weight: 700;
+  letter-spacing: 0.5px; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 3px;
+  white-space: nowrap;
+}
+
+.delta-ok       { background: rgba(56,161,105,0.15);  color: #68d391; }
+.delta-late     { background: rgba(224,123,57,0.15);  color: var(--risk-high); }
+.delta-critical { background: rgba(229,62,62,0.15);   color: var(--risk-critical); }
+
+/* ---- Delay driver tags ------------------------------------ */
+.delay-drivers {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0.75rem 0 1.5rem;
+}
+
+.driver-label {
+  font-size: 9px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--text-muted); flex-shrink: 0;
+}
+
+.driver-tag {
+  font-size: 10px; font-weight: 500;
+  padding: 3px 10px; border-radius: 3px;
+}
+
+.driver-pile   { background: rgba(229,62,62,0.12);   color: #fc8181; }
+.driver-eor    { background: rgba(224,123,57,0.12);  color: #f6ad55; }
+.driver-permit { background: rgba(128,90,213,0.12);  color: #b794f4; }
+.driver-uxo    { background: rgba(212,160,23,0.12);  color: #f6cc5c; }
+
+/* ---- Responsive ------------------------------------------- */
+@media (max-width: 700px) {
+  .sched-legend-bar { padding: 0.6rem 1.5rem; }
+  .sched-table th.st-dates,
+  .sched-table td.baseline-cell,
+  .sched-table td.actual-cell { display: none; }
 }
