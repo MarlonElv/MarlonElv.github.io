@@ -1,5 +1,6 @@
 /* ============================================================
-   EASELY I & II — mechvel.js
+   EASELY I & II — Mechanical Constraints JS
+   Collapsible sections + Animations + Tab switching
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -11,6 +12,42 @@ document.addEventListener('DOMContentLoaded', function () {
   ['report-date', 'footer-date'].forEach(function (id) {
     const el = document.getElementById(id);
     if (el) el.textContent = today;
+  });
+
+  /* ---- COLLAPSIBLE SECTIONS -------------------------------- */
+  const sectionHeaders = document.querySelectorAll('.section-header');
+  sectionHeaders.forEach(function (header) {
+    // Skip project dividers
+    if (header.classList.contains('project-divider-mv')) return;
+    
+    // Create toggle button
+    const toggleBtn = document.createElement('button');
+    toggleBtn.className = 'section-toggle';
+    toggleBtn.innerHTML = '<span class="toggle-icon">▼</span>';
+    toggleBtn.setAttribute('aria-label', 'Toggle section');
+    header.insertBefore(toggleBtn, header.firstChild);
+    
+    // Find and collect content until next section-header
+    let content = [];
+    let current = header.nextElementSibling;
+    while (current && !current.classList.contains('section-header') && current.tagName !== 'FOOTER') {
+      content.push(current);
+      current = current.nextElementSibling;
+    }
+    
+    // Wrap content in expandable container
+    const contentContainer = document.createElement('div');
+    contentContainer.className = 'section-content expanded';
+    content.forEach(function (el) { contentContainer.appendChild(el); });
+    header.parentNode.insertBefore(contentContainer, header.nextSibling);
+    
+    // Toggle on button click
+    toggleBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      contentContainer.classList.toggle('expanded');
+      toggleBtn.classList.toggle('collapsed');
+    });
   });
 
   /* ---- ANIMATE TORQUE BARS ON SCROLL ----------------------- */
@@ -94,5 +131,26 @@ document.addEventListener('DOMContentLoaded', function () {
       if (link.getAttribute('href') === '#' + current) link.classList.add('active');
     });
   }, { passive: true });
+
+  /* ---- TAB FUNCTIONALITY --------------------------------- */
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const tabName = this.dataset.tab;
+      
+      // Hide all tabs
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      
+      // Remove active class from all buttons
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        b.classList.remove('active');
+      });
+      
+      // Show selected tab and activate button
+      document.getElementById(tabName).classList.add('active');
+      this.classList.add('active');
+    });
+  });
 
 });
