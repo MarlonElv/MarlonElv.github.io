@@ -262,5 +262,16 @@
   <span class="update-tag">Last Updated: <span id="footer-date">&mdash;</span></span>
 </footer>
 
+<script src="js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  for (var i = 1; i <= 20; i++) {
+    photoStore['placeholder_' + i] = {
+      src: 'assets/images/image' + i + '.png',
+      name: 'Photo ' + i
+    };
+  }
+});
+</script>
 </body>
 </html>
