@@ -1,0 +1,178 @@
+/* ============================================================
+   QUALTOR PAGE STYLESHEET
+   Quality tracking styling
+   ============================================================ */
+
+:root {
+  --gold:        #DFC573;
+  --gold-dim:    #b89d4a;
+  --blue:        #7EC8FF;
+  --blue-light:  #93d4ff;
+  --gray:        #4C5966;
+  --gray-light:  #6b7d8c;
+  --bg-dark:     #1A428A;
+  --bg-panel:    #162158;
+  --bg-card:     #1b2d6e;
+  --bg-stripe:   #152050;
+  --text-primary:   #e8eef4;
+  --text-secondary: #8fa4b8;
+  --text-muted:     #a0b8d0;
+  --border:      rgba(223,197,115,0.12);
+  --border-blue: rgba(126,200,255,0.25);
+  --border-warn: rgba(221,107,32,0.3);
+  --radius:      6px;
+  --radius-lg:   10px;
+  --nav-h:       56px;
+}
+
+/* ---- CONTENT BOXES --------------------------------- */
+.content-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.content-box.warning {
+  border: 1px solid var(--border-warn);
+  border-left: 4px solid #dd6b20;
+}
+
+.content-box h3 {
+  color: var(--gold);
+  margin-bottom: 1rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.content-box p {
+  margin-bottom: 1rem;
+}
+
+.content-box ul {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content-box li {
+  margin-bottom: 0.5rem;
+}
+
+/* ---- METRICS ---------------------------------------- */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.metric {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.metric-value {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* ---- TEAM BOX -------------------------------------- */
+.team-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.team-member {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.team-member:last-child {
+  border-bottom: none;
+}
+
+.team-info {
+  color: var(--text-secondary);
+}
+
+.team-name {
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.team-role {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.team-dates {
+  color: var(--blue);
+  font-size: 12px;
+  text-align: right;
+}
+
+/* ---- ISSUE BOX -------------------------------------- */
+.issue-box {
+  background: var(--bg-card);
+  border-left: 3px solid #e53e3e;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.issue-title {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.issue-desc {
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.issue-owner {
+  color: var(--text-muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ---- HIGHLIGHT BOX --------------------------------- */
+.highlight-box {
+  background: linear-gradient(135deg, rgba(223,197,115,0.1) 0%, rgba(126,200,255,0.1) 100%);
+  border: 1px solid rgba(223,197,115,0.25);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.highlight-box strong {
+  color: var(--gold);
+}

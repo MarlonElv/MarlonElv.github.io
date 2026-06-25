@@ -1,0 +1,129 @@
+/* ============================================================
+   LOGIMAT PAGE STYLESHEET
+   Matches main website design
+   ============================================================ */
+
+:root {
+  --gold:        #DFC573;
+  --gold-dim:    #b89d4a;
+  --blue:        #7EC8FF;
+  --blue-light:  #93d4ff;
+  --gray:        #4C5966;
+  --gray-light:  #6b7d8c;
+  --bg-dark:     #1A428A;
+  --bg-panel:    #162158;
+  --bg-card:     #1b2d6e;
+  --bg-stripe:   #152050;
+  --text-primary:   #e8eef4;
+  --text-secondary: #8fa4b8;
+  --text-muted:     #a0b8d0;
+  --border:      rgba(223,197,115,0.12);
+  --border-blue: rgba(126,200,255,0.25);
+  --radius:      6px;
+  --radius-lg:   10px;
+  --nav-h:       56px;
+}
+
+/* ---- TABS -------------------------------------------- */
+.tabs-container { 
+  display: flex; 
+  gap: 0; 
+  border-bottom: 2px solid var(--border); 
+  margin-bottom: 2rem; 
+  overflow-x: auto;
+  flex-wrap: wrap;
+}
+
+.tab-btn { 
+  padding: 1rem 1.5rem; 
+  background: transparent; 
+  border: none; 
+  color: var(--text-muted); 
+  cursor: pointer; 
+  font-weight: 500; 
+  font-size: 12px; 
+  letter-spacing: 0.5px; 
+  text-transform: uppercase; 
+  transition: all 0.2s; 
+  border-bottom: 3px solid transparent; 
+  margin-bottom: -2px;
+  white-space: nowrap;
+}
+
+.tab-btn:hover { 
+  color: var(--text-primary); 
+}
+
+.tab-btn.active { 
+  color: var(--gold); 
+  border-bottom-color: var(--gold); 
+}
+
+.tab-content { 
+  display: none; 
+}
+
+.tab-content.active { 
+  display: block; 
+}
+
+/* ---- CONTENT BOXES --------------------------------- */
+.content-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.content-box h3 {
+  color: var(--gold);
+  margin-bottom: 1rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.content-box p {
+  margin-bottom: 1rem;
+}
+
+.content-box ul {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content-box li {
+  margin-bottom: 0.5rem;
+}
+
+/* ---- GRAPH PLACEHOLDER ----------------------------- */
+.graph-placeholder {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* ---- STATUS BOX ------------------------------------ */
+.status-box {
+  background: var(--bg-card);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.status-box strong {
+  color: var(--gold);
+}
