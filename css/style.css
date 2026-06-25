@@ -34,7 +34,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Inter', sans-serif;
-  background: var(--bg-dark);
+  background: linear-gradient(180deg, rgba(23,32,96,0.55) 0%, rgba(23,32,96,0.7) 100%), url('assets/images/BackGrd.png') center/cover no-repeat fixed;
   color: var(--text-primary);
   font-size: 14px;
   line-height: 1.6;
@@ -174,11 +174,10 @@ body {
   margin: 0 auto; 
   padding: 3rem 2.5rem;
   position: relative;
-  background: linear-gradient(180deg, rgba(23,32,96,0.55) 0%, rgba(23,32,96,0.7) 100%), url('../assets/images/BackGrd.png') center/cover no-repeat;
-  background-attachment: fixed;
+  background: transparent;
 }
 
-/* Fade overlay that transitions from image to dark background */
+/* Fade overlay that transitions from transparent to dark background */
 .main::before {
   content: '';
   position: fixed;
@@ -189,13 +188,13 @@ body {
   background: linear-gradient(
     180deg,
     transparent 0%,
-    transparent 35%,
-    rgba(26, 66, 138, 0.3) 55%,
-    rgba(26, 66, 138, 0.7) 75%,
+    transparent 40%,
+    rgba(26, 66, 138, 0.2) 60%,
+    rgba(26, 66, 138, 0.5) 75%,
     var(--bg-dark) 100%
   );
   pointer-events: none;
-  z-index: -1;
+  z-index: 1;
 }
 
 .section-heading {
@@ -203,6 +202,8 @@ body {
   font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
   color: var(--gold); border-left: 3px solid var(--gold);
   padding-left: 10px; margin-bottom: 1.5rem; margin-top: 2.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 /* ---- METRICS WITH FADE ----------------------------------- */
@@ -211,7 +212,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
   gap: 12px;
   position: relative;
-  z-index: 5;
+  z-index: 2;
 }
 
 .metric { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem 1rem; }
