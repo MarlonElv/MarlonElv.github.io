@@ -130,8 +130,7 @@ body {
 /* ---- HERO WITH BACKGROUND IMAGE ----------------------- */
 .hero {
   padding: 1.75rem 2.5rem;
-  background: linear-gradient(180deg, rgba(23,32,96,0.55) 0%, rgba(23,32,96,0.7) 100%), url('/assets/images/BackGrd.png') center/cover no-repeat;
-  background-attachment: fixed;
+  background: linear-gradient(180deg, rgba(23,32,96,0.55) 0%, rgba(23,32,96,0.7) 100%);
   border-bottom: 1px solid var(--border);
   position: relative;
   z-index: 10;
@@ -149,7 +148,7 @@ body {
 /* ---- STATUS BAR -------------------------------------------- */
 .status-bar {
   display: flex; gap: 1.5rem; padding: 0.75rem 2.5rem;
-  background: var(--bg-stripe); 
+  background: transparent; 
   border-bottom: 1px solid var(--border); 
   flex-wrap: wrap;
   position: relative;
@@ -175,6 +174,8 @@ body {
   margin: 0 auto; 
   padding: 3rem 2.5rem;
   position: relative;
+  background: linear-gradient(180deg, rgba(23,32,96,0.55) 0%, rgba(23,32,96,0.7) 100%), url('../assets/images/BackGrd.png') center/cover no-repeat;
+  background-attachment: fixed;
 }
 
 /* Fade overlay that transitions from image to dark background */
@@ -188,9 +189,9 @@ body {
   background: linear-gradient(
     180deg,
     transparent 0%,
-    transparent 30%,
-    rgba(26, 66, 138, 0.3) 50%,
-    rgba(26, 66, 138, 0.7) 70%,
+    transparent 35%,
+    rgba(26, 66, 138, 0.3) 55%,
+    rgba(26, 66, 138, 0.7) 75%,
     var(--bg-dark) 100%
   );
   pointer-events: none;
