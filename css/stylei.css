@@ -1,7 +1,7 @@
-/* ============================================================
-   LOGIMAT PAGE STYLESHEET
-   Matches main website design
-   ============================================================ */
+/* ========================================================
+   LOGISTICS & MATERIAL PAGE STYLESHEET
+   Matches main website design system
+   ======================================================== */
 
 :root {
   --gold:        #DFC573;
@@ -24,50 +24,293 @@
   --nav-h:       56px;
 }
 
-/* ---- TABS -------------------------------------------- */
-.tabs-container { 
-  display: flex; 
-  gap: 0; 
-  border-bottom: 2px solid var(--border); 
-  margin-bottom: 2rem; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: linear-gradient(135deg, var(--bg-dark) 0%, 
+              var(--bg-panel) 100%);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+/* ---- NAVIGATION --------------------------------- */
+.site-nav {
+  background: rgba(26,66,138,0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  height: var(--nav-h);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.nav-logo-mark {
+  font-size: 20px;
+  background: linear-gradient(135deg, var(--gold), 
+              var(--blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-logo-text {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.nav-logo-dim {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--gold);
+}
+
+.nav-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-h);
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg-dark);
+    padding: 1rem 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-mobile-toggle {
+    display: block;
+  }
+}
+
+/* ---- HEADER ------------------------------------ */
+.site-header {
+  background: linear-gradient(135deg, var(--bg-panel) 0%, 
+              var(--bg-card) 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.header-brand {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header-eyebrow {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.header-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 36px;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.header-meta {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.meta-label {
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.meta-value {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* ---- HERO SECTION -------------------------------- */
+.hero {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+
+.hero-simple {
+  background: linear-gradient(135deg, 
+              rgba(126,200,255,0.08) 0%, 
+              rgba(223,197,115,0.05) 100%);
+  border: 1px solid var(--border-blue);
+  border-radius: var(--radius-lg);
+}
+
+.hero-text {
+  margin: 0;
+}
+
+.hero-summary {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ---- MAIN CONTENT -------------------------------- */
+.main {
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
+
+/* ---- TABS CONTAINER ------------------------------- */
+.tabs-container {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 2rem;
   overflow-x: auto;
   flex-wrap: wrap;
 }
 
-.tab-btn { 
-  padding: 1rem 1.5rem; 
-  background: transparent; 
-  border: none; 
-  color: var(--text-muted); 
-  cursor: pointer; 
-  font-weight: 500; 
-  font-size: 12px; 
-  letter-spacing: 0.5px; 
-  text-transform: uppercase; 
-  transition: all 0.2s; 
-  border-bottom: 3px solid transparent; 
+.tab-btn {
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  border-bottom: 3px solid transparent;
   margin-bottom: -2px;
   white-space: nowrap;
 }
 
-.tab-btn:hover { 
-  color: var(--text-primary); 
+.tab-btn:hover {
+  color: var(--text-primary);
 }
 
-.tab-btn.active { 
-  color: var(--gold); 
-  border-bottom-color: var(--gold); 
+.tab-btn.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
 }
 
-.tab-content { 
-  display: none; 
+.tab-content {
+  display: none;
 }
 
-.tab-content.active { 
-  display: block; 
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
 }
 
-/* ---- CONTENT BOXES --------------------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ---- SECTION HEADING ------------------------------ */
+.section-heading {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+
+.section-heading:first-child {
+  margin-top: 0;
+}
+
+/* ---- IMAGE BLOCKS ---------------------------------- */
+.image-block {
+  margin: 1.5rem auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  max-width: 85%;
+}
+
+.image-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-caption {
+  padding: 0.75rem 1.25rem;
+  font-size: 11px;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid var(--border);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* ---- CONTENT BOXES -------------------------------- */
 .content-box {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -126,4 +369,91 @@
 
 .status-box strong {
   color: var(--gold);
+}
+
+/* ---- TABLE STYLES ---------------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+thead {
+  background: var(--bg-panel);
+  border-bottom: 2px solid var(--border);
+}
+
+th {
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 0.75rem;
+  border-bottom: 1px solid 
+                 rgba(223, 197, 115, 0.1);
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+tbody tr:hover {
+  background: rgba(126, 200, 255, 0.05);
+}
+
+/* ---- FOOTER ------------------------------------ */
+footer {
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border);
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 12px;
+  margin-top: 4rem;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+.update-tag {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+#footer-date {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* ---- RESPONSIVE ---------------------------------- */
+@media (max-width: 768px) {
+  .main {
+    padding: 0 1rem;
+  }
+
+  .header-title {
+    font-size: 24px;
+  }
+
+  .tabs-container {
+    margin-bottom: 1.5rem;
+  }
+
+  .tab-btn {
+    padding: 0.75rem 1rem;
+    font-size: 11px;
+  }
+
+  .image-block {
+    max-width: 95%;
+  }
+
+  .section-heading {
+    font-size: 16px;
+  }
 }
