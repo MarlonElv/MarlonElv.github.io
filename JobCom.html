@@ -6,6 +6,18 @@
   <title>Solar Project Installation & Construction</title>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/stylei.css">
+  <style>
+    /* Thumbnail sizing for large plan images */
+    .image-thumbnail {
+      max-width: 25%;
+      height: auto;
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+    }
+    .image-thumbnail:hover {
+      opacity: 0.8;
+    }
+  </style>
 </head>
 <body>
 
@@ -16,11 +28,11 @@
       <span class="nav-logo-text">Job<span class="nav-logo-dim">COM</span></span>
     </div>
     <ul class="nav-links">
+      <li><a href="#overview"      class="nav-link active">Overview</a></li>
       <li><a href="#site-overview" class="nav-link active">Site Overview</a></li>
       <li><a href="#pile-installation" class="nav-link">Pile Installation</a></li>
       <li><a href="#tracker-system" class="nav-link">Tracker System</a></li>
       <li><a href="#electrical-equipment" class="nav-link">Electrical Equipment</a></li>
-      <li><a href="#design-review" class="nav-link">Design Review</a></li>
     </ul>
     <button class="nav-mobile-toggle" id="mobileToggle">
       <span></span>
@@ -78,7 +90,7 @@
             <span class="image-meta">Easely II Project Layout</span>
           </div>
           <div class="image-container">
-            <img src="assets/images/jimage2.png" alt="Site master plan showing all project blocks with color-coded zones and access routes">
+            <img src="assets/images/jimage2.png" alt="Site master plan showing all project blocks with color-coded zones and access routes" class="image-thumbnail" onclick="showImage('assets/images/jimage2.png', 'Site Master Plan - Easely II Project Layout')">
           </div>
           <div class="image-description">
             <p><strong>Project Layout:</strong> Complete site organization showing block distribution (red and blue zones), equipment staging areas, and primary access corridors. Multi-block configuration optimized for phased construction and equipment deployment.</p>
@@ -149,7 +161,7 @@
             <span class="image-meta">Equipment Support Structure</span>
           </div>
           <div class="image-container">
-            <img src="assets/images/jimage4.png" alt="Torque tube plan showing color-coded sections with damper placement and legend">
+            <img src="assets/images/jimage4.png" alt="Torque tube plan showing color-coded sections with damper placement and legend" class="image-thumbnail" onclick="showImage('assets/images/jimage4.png', 'Torque Tube & Array Configuration')">
           </div>
           <div class="image-description">
             <p><strong>Torque Tube System:</strong> Horizontal drive system supporting tracker rotation. Multi-section design with color-coded types (Orange, Purple, Black, Blue, Galvanized). Each section rated for specific loads and bearing configurations.</p>
@@ -164,7 +176,7 @@
             <span class="image-meta">Foundation Stack Configuration</span>
           </div>
           <div class="image-container">
-            <img src="jassets/images/image6.png" alt="Vertical section diagram showing stacked pile configurations with color-coded elements">
+            <img src="assets/images/jimage6.png" alt="Vertical section diagram showing stacked pile configurations with color-coded elements">
           </div>
           <div class="image-description">
             <p><strong>Pile Stacking:</strong> Vertical assembly showing complete foundation stack from base to tracker mounting points. Red and blue circles indicate mechanical connections. Hatched areas show bracing and lateral support members.</p>
@@ -300,7 +312,7 @@
             <span class="image-meta">MET Station Installation Points - Block E51A-5</span>
           </div>
           <div class="image-container">
-            <img src="assets/images/jimage5.png" alt="Site plan showing MET equipment locations and sensor positions across project">
+            <img src="assets/images/jimage5.png" alt="Site plan showing MET equipment locations and sensor positions across project" class="image-thumbnail" onclick="showImage('assets/images/jimage5.png', 'Meteorological Equipment Placement - Block E51A-5')">
           </div>
           <div class="image-description">
             <p><strong>Monitoring System:</strong> Distributed meteorological equipment (MET-D.1, MET-D.2, etc.) provides real-time environmental data. Sensors measure wind speed, temperature, irradiance, and humidity. Block E51A-5 configuration shown with equipment staging and connection points.</p>
@@ -370,80 +382,13 @@
 
     </section>
 
-    <!-- ===== DESIGN REVIEW & OPTIMIZATION ===== -->
-    <section id="design-review" style="margin-top: 4rem;">
-      <h2 class="section-heading">Design Review & Optimization Lessons</h2>
-
-      <div class="overview">
-        <p>Engineering analysis and design optimization review documenting lessons learned during project development. This section highlights design complexity challenges, cost optimization opportunities, and best practices for future tracker installations. Real-world examples demonstrate the value of design review in reducing material costs and improving constructability.</p>
-      </div>
-
-      <div class="image-grid">
-        <!-- Module Mixing Complexity -->
-        <div class="image-card">
-          <div class="image-header">
-            <h3 class="image-title">Design Complexity: Module Type Mixing</h3>
-            <span class="image-meta">Constructability & Installation Clarity</span>
-          </div>
-          <div class="image-description">
-            <p><strong>Issue Identified:</strong> Overcomplicated design mixing multiple module types without explicit row-by-row delimitation. Different single and dual trackers (green, yellow, red blocks) scattered across blocks with insufficient visual differentiation between installation zones.</p>
-            <p><strong>Risk Impact:</strong> Unnecessary interpretation required by field crews, leading to potential installation errors, material misplacement, and schedule delays. Increased quality control requirements and rework risk.</p>
-            <p><strong>Lesson Learned:</strong> Standardize module types by contiguous blocks. Clear, simplified design reduces field interpretation, improves crew efficiency, and minimizes installation errors. Future designs should maintain distinct module type separation with explicit boundary marking.</p>
-          </div>
-        </div>
-
-        <!-- Pier Utilization Optimization -->
-        <div class="image-card">
-          <div class="image-header">
-            <h3 class="image-title">Cost Optimization: Pier Type Analysis</h3>
-            <span class="image-meta">Value Engineering & Material Efficiency</span>
-          </div>
-          <div class="image-description">
-            <p><strong>Design Finding:</strong> Black and white (heavy-duty) piers specified throughout block despite limited wind load exposure in sheltered areas. Areas marked show minimal wind load requirements given site topography and exposure classification.</p>
-            <p><strong>Cost Impact:</strong> Unnecessary specification of heavy piers (W6x15-12.25 designation) in locations where lighter piers (W6x8-5.13 or W6x5-13) would provide equivalent performance. Significant material cost premium with no structural benefit.</p>
-            <p><strong>Optimization Recommendation:</strong> Implement wind load analysis by zone. Use heavy piers only in high-exposure perimeter areas. Interior and sheltered zones justify lighter pier specification, reducing material cost while maintaining full structural safety margin and design compliance.</p>
-          </div>
-        </div>
-      </div>
-
-      <h3 class="section-subheading">Design Best Practices Summary</h3>
-      
-      <div class="doc-summary">
-        <div class="summary-card doc-card">
-          <div class="summary-eyebrow">Module Type Strategy</div>
-          <p><strong>Principle:</strong> Simplify by grouping identical configurations<br><strong>Benefit:</strong> Reduced field interpretation and errors<br><strong>Application:</strong> Group single and dual trackers by contiguous zones<br><strong>Result:</strong> Improved constructability and crew efficiency</p>
-        </div>
-
-        <div class="summary-card doc-card">
-          <div class="summary-eyebrow">Structural Optimization</div>
-          <p><strong>Principle:</strong> Right-size components based on actual loads<br><strong>Benefit:</strong> 15-25% material cost reduction without compromising safety<br><strong>Application:</strong> Conduct wind load analysis by exposure zone<br><strong>Result:</strong> Optimized design meets code with value engineering</p>
-        </div>
-
-        <div class="summary-card doc-card">
-          <div class="summary-eyebrow">Design Clarity</div>
-          <p><strong>Principle:</strong> Explicit visual differentiation of installation zones<br><strong>Benefit:</strong> Eliminates field guessing and rework<br><strong>Application:</strong> Color coding, clear block boundaries, explicit legends<br><strong>Result:</strong> First-time-right installation with minimal QC issues</p>
-        </div>
-
-        <div class="summary-card doc-card">
-          <div class="summary-eyebrow">Quality Control</div>
-          <p><strong>Principle:</strong> Design simplicity enables effective field verification<br><strong>Benefit:</strong> Reduced inspection time, faster approvals<br><strong>Application:</strong> Standardized configurations, clear material specifications<br><strong>Result:</strong> Streamlined quality assurance process</p>
-        </div>
-      </div>
-
-      <h3 class="section-subheading">Design Review Takeaways</h3>
-      <div class="info-block">
-        <p><strong>Key Finding:</strong> Over-optimization in design phase creates unnecessary field complexity and cost. The most elegant designs balance technical sophistication with constructability and clarity. Future projects should prioritize design simplification and value engineering analysis during the planning phase, resulting in faster installation, reduced field errors, and optimized material costs while maintaining full structural safety and performance requirements.</p>
-      </div>
-
-    </section>
-
   </main>
 
   <!-- ========== LIGHTBOX ========== -->
   <div id="lightbox-overlay" class="lightbox-overlay">
     <div class="lightbox-inner">
       <button class="lightbox-close" onclick="closeLightbox()">×</button>
-      <img src="" alt="">
+      <img src="" alt="" id="lightbox-image">
       <div class="lightbox-caption"></div>
     </div>
   </div>
@@ -455,7 +400,47 @@
   </footer>
 
   <!-- ========== SCRIPTS ========== -->
-  <script src="js/maini.js"></script>
+  <script>
+    // Lightbox functionality
+    function showImage(src, caption) {
+      const overlay = document.getElementById('lightbox-overlay');
+      const img = document.getElementById('lightbox-image');
+      const captionEl = overlay.querySelector('.lightbox-caption');
+      
+      img.src = src;
+      captionEl.textContent = caption;
+      overlay.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox-overlay').style.display = 'none';
+    }
+
+    // Close lightbox on ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Close lightbox on overlay click
+    document.getElementById('lightbox-overlay').addEventListener('click', (e) => {
+      if (e.target.id === 'lightbox-overlay') closeLightbox();
+    });
+
+    // Auto-populate dates
+    const today = new Date();
+    const dateStr = today.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    document.getElementById('report-date').textContent = dateStr;
+    document.getElementById('footer-date').textContent = dateStr;
+
+    // Mobile nav toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (mobileToggle) {
+      mobileToggle.addEventListener('click', () => {
+        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+      });
+    }
+  </script>
 
 </body>
 </html>
