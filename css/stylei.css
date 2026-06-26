@@ -1,6 +1,5 @@
 /* ============================================================
-   LOGISTICS & MATERIAL PAGE STYLESHEET
-   Mirrors stylef.css design structure
+   LOGISTICS & MATERIAL PAGE STYLESHEET - IMPROVED READABILITY
    Primoris Gold  #DFC573
    Primoris Blue  #7EC8FF
    ============================================================ */
@@ -80,6 +79,53 @@ body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(
 .section-heading { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); border-left: 3px solid var(--gold); padding-left: 10px; margin-bottom: 0.75rem; margin-top: 3rem; }
 .main > .section-heading:first-child { margin-top: 0; }
 .table-note { font-size: 11px; color: var(--text-muted); margin-bottom: 1.25rem; line-height: 1.5; }
+
+/* ---- IMPROVED PARAGRAPH STYLING ------------------------- */
+/* Option 1: Subtle background with left accent */
+p {
+  background: rgba(22, 33, 88, 0.7);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.25rem;
+  border-left: 3px solid rgba(223, 197, 115, 0.4);
+  line-height: 1.75;
+  color: #f0f5fb;
+}
+
+p:last-child { margin-bottom: 0; }
+p strong { color: var(--gold); font-weight: 600; }
+p em { color: var(--blue-light); font-style: italic; }
+
+/* Alternative content card for important sections */
+.content-card,
+.info-block {
+  background: rgba(27, 45, 110, 0.8);
+  border: 1px solid rgba(223, 197, 115, 0.2);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+}
+
+.info-block.highlight {
+  background: rgba(126, 200, 255, 0.08);
+  border-color: rgba(126, 200, 255, 0.25);
+}
+
+.info-block.warning {
+  background: rgba(224, 123, 57, 0.08);
+  border-color: rgba(224, 123, 57, 0.25);
+}
+
+/* Overview sections with better contrast */
+.overview {
+  background: linear-gradient(135deg, rgba(22, 33, 88, 0.5) 0%, rgba(27, 45, 110, 0.4) 100%);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 2rem;
+  line-height: 1.75;
+}
 
 /* ---- COST TABLE ------------------------------------------- */
 .table-wrap { overflow-x: auto; border-radius: var(--radius-lg); border: 1px solid var(--border); }
