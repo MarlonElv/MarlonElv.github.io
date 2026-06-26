@@ -6,8 +6,7 @@
   <title>Quality — Easely I &amp; II</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/styleq.css">
+  <link rel="stylesheet" href="css/styleu.css">
 </head>
 <body>
 
@@ -19,9 +18,9 @@
   </div>
   <ul class="nav-links">
     <li><a href="index.html" class="nav-link">Overview</a></li>
-    <li><a href="LogiMat.html" class="nav-link">Logistics &amp; Material</a></li>
+    <li><a href="Logistics.html" class="nav-link">Logistics &amp; Material</a></li>
     <li><a href="QualTor.html" class="nav-link active">Quality</a></li>
-    <li><a href="CivilEng.html" class="nav-link">Mechanical Constraints</a></li>
+    <li><a href="MechCons.html" class="nav-link">Mechanical Constraints</a></li>
   </ul>
   <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
     <span></span><span></span><span></span>
@@ -29,158 +28,434 @@
 </nav>
 
 <!-- HEADER -->
-<header class="site-header">
+<header class="site-header" id="overview">
   <div class="header-brand">
-    <div class="header-eyebrow">Making Sure Work Is Done Right</div>
-    <div class="header-title">Quality &amp; Inspections</div>
+    <div class="header-eyebrow">Engineering Project Showcase · Quality Summary</div>
+    <div class="header-title">Easely I &amp; II — Quality Overview</div>
   </div>
   <div class="header-meta">
-    <div class="meta-item"><span class="meta-label">How Important?</span><span class="meta-value">Extremely Important</span></div>
-    <div class="meta-item"><span class="meta-label">Last Updated</span><span class="meta-value" id="report-date">&mdash;</span></div>
+    <div class="meta-item">
+      <span class="meta-label">Project No.</span>
+      <span class="meta-value">EASLEY I — 55133</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Project No.</span>
+      <span class="meta-value">EASLEY II — 55134</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Senior Manager</span>
+      <span class="meta-value">Halston Rowe</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Project Manager</span>
+      <span class="meta-value">Anthony Rochin</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Last Updated</span>
+      <span class="meta-value" id="report-date">—</span>
+    </div>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero hero-simple">
-  <div class="hero-text">
-    <p class="hero-summary">Quality is one of the most important parts of building these projects. This page shows who checks the work, what problems we found, and how we fixed them.</p>
-  </div>
+<section class="hero">
+  <p class="hero-summary">Quality assurance and control documentation for Easely I &amp; II construction projects. Equipment calibration records, torque verification, and remediation tracking.</p>
 </section>
 
 <main class="main">
 
-  <div class="section-heading">Why Quality Matters</div>
+  <!-- QUALITY OVERVIEW -->
+  <div class="section-heading">Quality Management Overview</div>
+  
+  <p style="
+    color: var(--text-secondary); 
+    line-height: 1.8; 
+    margin-bottom: 1.5rem;
+    max-width: 860px;
+  ">
+    <strong>Project Quality Issues & Resolution:</strong> Quality remained a major issue during the Easely development. 
+    After John Ruiz left, there was an entire month without quality guidance. The regional quality manager was subsequently 
+    fired, with no replacement available until February 2026. This created significant challenges with documentation turn over, 
+    client FIA submissions, tooling certification, and more. The impact of incomplete torque checks was estimated at $150,000 
+    in rework due to the absence of strong quality management oversight and relationships with IPX. Resolution involved 
+    establishing pile remediation logs, leading to an expensive concrete collar remediation to substitute pull testing. 
+    Financial impact and disrupted progress were documented throughout the project lifecycle.
+  </p>
 
-  <div class="highlight-box">
-    <p><strong>Quality is everything.</strong> We need to make sure everything is built correctly so the solar trackers work well and last a long time. A quality manager checks the work to catch any problems early.</p>
-  </div>
+  <!-- CALIBRATION CERTIFICATIONS -->
+  <div class="section-heading">Equipment Calibration Certifications</div>
+  <p style="
+    color: var(--text-secondary); 
+    line-height: 1.8; 
+    margin-bottom: 1.5rem;
+  ">
+    Current calibration certificates for torque wrenches and measurement equipment used in QA/QC activities. 
+    Click images to view full certification details.
+  </p>
 
-  <!-- QUICK STATS -->
-  <div class="section-heading">Quick Numbers</div>
-
-  <div class="metrics">
-    <div class="metric">
-      <div class="metric-value">[#]</div>
-      <div class="metric-label">Quality Problems Found</div>
-    </div>
-    <div class="metric">
-      <div class="metric-value">[#]</div>
-      <div class="metric-label">Quality Manager Changes</div>
-    </div>
-    <div class="metric">
-      <div class="metric-value">[#]</div>
-      <div class="metric-label">Teams Being Checked</div>
-    </div>
-  </div>
-
-  <!-- QUALITY TEAM -->
-  <div class="section-heading">Quality Team Members</div>
-
-  <div class="team-box">
-    <div class="team-member">
-      <div class="team-info">
-        <div class="team-name">[PERSON 1 NAME]</div>
-        <div class="team-role">[THEIR JOB TITLE]</div>
+  <div style="
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  ">
+    <!-- STAHLWILLE Calibration -->
+    <div style="
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+    "
+    onclick="showImage('qimage2')"
+    onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(223,197,115,0.5)'"
+    onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(223,197,115,0.12)'">
+      <img src="assets/images/qimage2.png" 
+        alt="STAHLWILLE Kalibrierzertifikat Calibration Certificate"
+        style="width: 100%; height: auto; display: block;">
+      <div style="
+        padding: 1rem;
+        background: rgba(255,255,255,0.02);
+        border-top: 1px solid var(--border);
+      ">
+        <div style="
+          font-weight: 600;
+          color: var(--gold);
+          margin-bottom: 0.25rem;
+        ">
+          STAHLWILLE Calibration Certificate
+        </div>
+        <div style="
+          font-size: 11px;
+          color: var(--text-muted);
+        ">
+          Torque Wrench Calibration 790035
+        </div>
       </div>
-      <div class="team-dates">[START DATE - END DATE]</div>
     </div>
 
-    <div class="team-member">
-      <div class="team-info">
-        <div class="team-name">[PERSON 2 NAME]</div>
-        <div class="team-role">[THEIR JOB TITLE]</div>
+    <!-- HYTORC Calibration -->
+    <div style="
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+    "
+    onclick="showImage('qimage3')"
+    onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(223,197,115,0.5)'"
+    onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(223,197,115,0.12)'">
+      <img src="assets/images/qimage3.png" 
+        alt="HYTORC Certificate of Calibration"
+        style="width: 100%; height: auto; display: block;">
+      <div style="
+        padding: 1rem;
+        background: rgba(255,255,255,0.02);
+        border-top: 1px solid var(--border);
+      ">
+        <div style="
+          font-weight: 600;
+          color: var(--gold);
+          margin-bottom: 0.25rem;
+        ">
+          HYTORC Calibration Certificate
+        </div>
+        <div style="
+          font-size: 11px;
+          color: var(--text-muted);
+        ">
+          Manual Torque Wrench Calibration
+        </div>
       </div>
-      <div class="team-dates">[START DATE - END DATE]</div>
     </div>
+  </div>
 
-    <div class="team-member">
-      <div class="team-info">
-        <div class="team-name">[PERSON 3 NAME]</div>
-        <div class="team-role">[THEIR JOB TITLE]</div>
+  <!-- CONCRETE COLLER REMEDIATION -->
+  <div class="section-heading">Concrete Collar Remediation</div>
+  <p style="
+    color: var(--text-secondary); 
+    line-height: 1.8; 
+    margin-bottom: 1.5rem;
+  ">
+    Detailed tracking of concrete collar remediation work performed across both sites due to incomplete pull testing 
+    verification. Remediation substitute for torque check validation.
+  </p>
+
+  <div class="table-wrap" style="margin-bottom: 2rem;">
+    <table class="cost-table">
+      <thead>
+        <tr>
+          <th>Site</th>
+          <th>Block</th>
+          <th>Nearest Pier</th>
+          <th>Remediation Type</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F52A-6</td>
+          <td>42-8</td>
+          <td>AWM</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F52A-6</td>
+          <td>139-1</td>
+          <td>AWM</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F53B-5</td>
+          <td>31-15</td>
+          <td>AWM</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E1</td>
+          <td>F68B-3</td>
+          <td>DE #8</td>
+          <td>AWM</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F68A-5</td>
+          <td>DE #7</td>
+          <td>AWM</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E1</td>
+          <td>F68A-2</td>
+          <td>DE#5</td>
+          <td>AWM</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E1</td>
+          <td>F65A-1</td>
+          <td>DE#5</td>
+          <td>AWM</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E1</td>
+          <td>F65A-1</td>
+          <td>DE#6</td>
+          <td>AWM</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E1</td>
+          <td>F65A-1</td>
+          <td>DE#12</td>
+          <td>AWM</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E1</td>
+          <td>F68B-1</td>
+          <td>R29 P09</td>
+          <td>Tracker</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E1</td>
+          <td>F68B-1</td>
+          <td>R36 P06</td>
+          <td>Tracker</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E1</td>
+          <td>F52A-4</td>
+          <td>R18-P05</td>
+          <td>Tracker</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F52A-6</td>
+          <td>R81-P15</td>
+          <td>Tracker</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F52A-6</td>
+          <td>R6-P06</td>
+          <td>Tracker</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F53A-6</td>
+          <td>R35-P07</td>
+          <td>Tracker</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F53A-6</td>
+          <td>R44-P04</td>
+          <td>Tracker</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F53B-1</td>
+          <td>R59-P08</td>
+          <td>Tracker</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F53B-1</td>
+          <td>R72-P01</td>
+          <td>Tracker</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F53B-1</td>
+          <td>R4-P08</td>
+          <td>Tracker</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F54B-2</td>
+          <td>R53-P04</td>
+          <td>Tracker</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F54B-2</td>
+          <td>R40-P04</td>
+          <td>Tracker</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F54B-2</td>
+          <td>R75-P08</td>
+          <td>Tracker</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F54B-2</td>
+          <td>R1-P05</td>
+          <td>Tracker</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F54B-3</td>
+          <td>R38-P04</td>
+          <td>Tracker</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F54B-4</td>
+          <td>R37-P12</td>
+          <td>Tracker</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F54B-4</td>
+          <td>R19-P12</td>
+          <td>Tracker</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td>F53A-2</td>
+          <td>R29-P11</td>
+          <td>Tracker</td>
+          <td style="color: #68d391; font-weight: 500;">Complete</td>
+        </tr>
+        <tr style="background: rgba(255, 215, 0, 0.08);">
+          <td style="font-weight: 600; color: var(--gold);">E2</td>
+          <td style="font-weight: 600; color: #ffd700;">F53B-M</td>
+          <td style="font-weight: 600; color: #ffd700;">R49-P8</td>
+          <td style="font-weight: 600; color: #ffd700;">AWM</td>
+          <td style="color: #ffd700; font-weight: 500;">In Progress</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TORQUE VERIFICATION MAP -->
+  <div class="section-heading">Blocks Torque Checked</div>
+  <p style="
+    color: var(--text-secondary); 
+    line-height: 1.8; 
+    margin-bottom: 1.5rem;
+  ">
+    Site map showing all blocks where torque verification checks were completed. Click image to view full map with detailed block locations.
+  </p>
+
+  <div style="
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+    max-width: 900px;
+    margin: 0 auto;
+  "
+  onclick="showImage('qimage5')"
+  onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(223,197,115,0.5)'"
+  onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(223,197,115,0.12)'">
+    <img src="assets/images/qimage4.png" 
+      alt="Blocks Torque Checked Site Map"
+      style="width: 100%; height: auto; display: block;">
+    <div style="
+      padding: 1.5rem;
+      background: rgba(255,255,255,0.02);
+      border-top: 1px solid var(--border);
+    ">
+      <div style="
+        font-weight: 600;
+        color: var(--gold);
+        margin-bottom: 0.25rem;
+      ">
+        Torque Verification Map
       </div>
-      <div class="team-dates">[START DATE - END DATE]</div>
-    </div>
-
-    <div class="team-member">
-      <div class="team-info">
-        <div class="team-name">[PERSON 4 NAME]</div>
-        <div class="team-role">[THEIR JOB TITLE]</div>
+      <div style="
+        font-size: 11px;
+        color: var(--text-muted);
+      ">
+        Click to view full-screen site map with torque check locations
       </div>
-      <div class="team-dates">[START DATE - END DATE]</div>
     </div>
   </div>
 
-  <!-- PROBLEMS WE FOUND -->
-  <div class="section-heading">Problems We Found &amp; How We Fixed Them</div>
-
-  <div class="issue-box">
-    <div class="issue-title">[PROBLEM 1 NAME]</div>
-    <div class="issue-desc">[DESCRIBE THE PROBLEM - What was wrong and why it mattered]</div>
-    <div class="issue-owner">Owner: [WHO FIXED IT]</div>
-  </div>
-
-  <div class="issue-box">
-    <div class="issue-title">[PROBLEM 2 NAME]</div>
-    <div class="issue-desc">[DESCRIBE THE PROBLEM - What was wrong and why it mattered]</div>
-    <div class="issue-owner">Owner: [WHO FIXED IT]</div>
-  </div>
-
-  <div class="issue-box">
-    <div class="issue-title">[PROBLEM 3 NAME]</div>
-    <div class="issue-desc">[DESCRIBE THE PROBLEM - What was wrong and why it mattered]</div>
-    <div class="issue-owner">Owner: [WHO FIXED IT]</div>
-  </div>
-
-  <!-- WHAT WE CHECK -->
-  <div class="section-heading">What We Check</div>
-
-  <div class="content-box">
-    <h3>Inspections & Tests</h3>
-    <p>We check the work at different stages:</p>
-    <ul>
-      <li><strong>Before Work Starts:</strong> [DESCRIBE WHAT WE CHECK]</li>
-      <li><strong>During Work:</strong> [DESCRIBE WHAT WE CHECK]</li>
-      <li><strong>After Work Finishes:</strong> [DESCRIBE WHAT WE CHECK]</li>
-    </ul>
-  </div>
-
-  <div class="content-box">
-    <h3>Keeping Good Records</h3>
-    <p>We write down everything we check and test. This helps us:</p>
-    <ul>
-      <li>Remember what we checked</li>
-      <li>Find problems if they happen later</li>
-      <li>Prove the work was done right</li>
-    </ul>
-  </div>
-
-  <div class="content-box">
-    <h3>Fixing Problems</h3>
-    <p>If we find something wrong, we:</p>
-    <ul>
-      <li>Tell the team right away</li>
-      <li>Plan how to fix it</li>
-      <li>Check the fix to make sure it worked</li>
-    </ul>
-  </div>
-
-  <!-- KEY FOCUS -->
-  <div class="section-heading">Most Important Things</div>
-
-  <div class="content-box">
-    <h3>1. Getting The Right People</h3>
-    <p>We need quality managers who know their job. [DESCRIBE ANY ISSUES OR SOLUTIONS]</p>
-  </div>
-
-  <div class="content-box">
-    <h3>2. Good Training</h3>
-    <p>New team members need to understand how to do their job. [DESCRIBE TRAINING OR ISSUES]</p>
-  </div>
-
-  <div class="content-box">
-    <h3>3. Keeping Records</h3>
-    <p>We must write down everything we check. [DESCRIBE HOW WE DO THIS]</p>
-  </div>
+  <!-- KEY FINDINGS -->
+  <p style="
+    color: var(--text-secondary); 
+    line-height: 1.8; 
+    margin: 2rem 0;
+    max-width: 860px;
+  ">
+    <strong>Key Findings:</strong> Quality management challenges stemmed from personnel changes and lack of continuity in 
+    oversight. Documentation gaps and certification delays impacted project progress and IPX coordination. Concrete collar 
+    remediation represents $150,000 in corrective action to substitute for incomplete pull testing protocols. All remediation 
+    work has been completed across both sites with full documentation. Equipment calibration records confirm all torque 
+    wrenches and measurement devices are current and validated to industry standards. Torque verification mapping shows 
+    comprehensive block-by-block coverage with documented completion status for all critical verification points.
+  </p>
 
 </main>
 
@@ -189,6 +464,16 @@
   <span class="update-tag">Last Updated: <span id="footer-date">&mdash;</span></span>
 </footer>
 
-<script src="js/mainq.js"></script>
+<!-- LIGHTBOX OVERLAY -->
+<div id="lightbox-overlay" class="lightbox-overlay">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" 
+      onclick="closeLightbox()">×</button>
+    <img src="" alt="">
+    <div class="lightbox-caption"></div>
+  </div>
+</div>
+
+<script src="js/mainu.js"></script>
 </body>
 </html>
