@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estimation & Budget Analysis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/stylei.css">
+  <style>
+    /* Thumbnail sizing for large spreadsheet images */
+    .image-thumbnail {
+      max-width: 25%;
+      height: auto;
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+    }
+    .image-thumbnail:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="site-nav">
+    <div class="nav-logo">
+      <div class="nav-logo-mark">E</div>
+      <span class="nav-logo-text">Est<span class="nav-logo-dim">BUD</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#index.html" class="nav-link active">Overview</a></li>
+      <li><a href="#cost-analysis" class="nav-link">Cost Analysis</a></li>
+      <li><a href="#design-summary" class="nav-link">Design Summary</a></li>
+      <li><a href="#lessons-learned" class="nav-link">Lessons Learned</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" id="mobileToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+<!-- HEADER -->
+<header class="site-header" id="overview">
+  <div class="header-brand">
+    <div class="header-eyebrow">Project Analysis · Estimation & Budget Review</div>
+    <div class="header-title">Easely II — Estimation & Budget Issues</div>
+  </div>
+  <div class="header-meta">
+    <div class="meta-item">
+      <span class="meta-label">Project</span>
+      <span class="meta-value">Easely II Solar Facility</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Focus Area</span>
+      <span class="meta-value">Cost & Labor Estimation</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Document Type</span>
+      <span class="meta-value">Lessons Learned & Analysis</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Last Updated</span>
+      <span class="meta-value" id="report-date">—</span>
+    </div>
+  </div>
+</header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main class="main">
+
+    <!-- ===== ESTIMATION OVERVIEW ===== -->
+    <section id="overview">
+      <h2 class="section-heading">Estimation & Budget Overview</h2>
+      
+      <div class="overview">
+        <p>Comprehensive analysis of estimation and budgeting challenges encountered during the Easely II solar project. This documentation reviews cost estimation methodologies, identifies discrepancies between budgeted and actual labor allocations, and provides recommendations for improving future estimation accuracy. Project includes review of modular rail quantities, phase code definitions, equipment specifications, and labor allocation across installation activities.</p>
+      </div>
+
+      <div class="info-block highlight">
+        <p><strong>Critical Finding:</strong> Mod rails were incorrectly estimated for the Easely project. Modules require two brackets per system in this particular installation — a detail missed by estimators. Using the Design Summary estimates should provide 268,048 additional brackets for Easely II. Budget accounting for this phase now exceeds half of what was required, significantly impacting labor forecasts and material planning.</p>
+      </div>
+    </section>
+
+    <!-- ===== COST ANALYSIS ===== -->
+    <section id="cost-analysis" style="margin-top: 4rem;">
+      <h2 class="section-heading">Cost & Labor Analysis</h2>
+
+      <div class="overview">
+        <p>Detailed cost breakdown and labor estimation documentation from Easely II project. Analysis includes component installation costs, labor hours by activity, material costs, and equipment staging. Cost estimates derived from actual field conditions and design specifications with hourly labor rates by trade classification.</p>
+      </div>
+
+      <div class="image-grid">
+        <!-- Installation Cost Detail -->
+        <div class="image-card">
+          <div class="image-header">
+            <h3 class="image-title">Installation Cost Analysis - Hardware & Assembly</h3>
+            <span class="image-meta">Component Labor & Material Costs</span>
+          </div>
+          <div class="image-container">
+            <img src="assets/images/bimage1.png" alt="Excel spreadsheet showing NXT module bracket installation costs and labor breakdown" class="image-thumbnail" onclick="showImage('assets/images/bimage1.png', 'Installation Cost Analysis - Hardware & Assembly')">
+          </div>
+          <div class="image-description">
+            <p><strong>Cost Breakdown:</strong> Detailed line-item costs for module bracket installation (NXT 13632), gear drive assembly (13633), torque tube assembly (13634), and associated hardware. Each item includes quantity, unit cost, total cost, and hourly labor rates by trade classification.</p>
+            <p><strong>Labor Allocation:</strong> Installation activities broken down by ironworker classification with hourly rates. Activities include bracket installation, gear drive installation, torque tube assembly, weather station installation, and module bracket installation. Costs reflect estimated quantities and crew productivity rates.</p>
+          </div>
+        </div>
+
+        <!-- Module Installation Cost Detail -->
+        <div class="image-card">
+          <div class="image-header">
+            <h3 class="image-title">Module Installation Cost Analysis - Material & Labor</h3>
+            <span class="image-meta">PV Module & Staging Costs</span>
+          </div>
+          <div class="image-container">
+            <img src="assets/images/bimage2.png" alt="Excel spreadsheet showing module installation rivet costs and labor allocation" class="image-thumbnail" onclick="showImage('assets/images/bimage2.png', 'Module Installation Cost Analysis')">
+          </div>
+          <div class="image-description">
+            <p><strong>Module Installation Detail:</strong> PV module installation costs including module bracket installation (13635), torque and alignment (13636), huck bomb installation (13636), motor and controller installation (13639), and equipment handling (13642). Material handling and delivery costs accounted for trucks and operator labor.</p>
+            <p><strong>Material & Staging Costs:</strong> Breakdown includes PV module costs, module staging labor, wiring management installation, and module hanger costs. Significant budget allocation for material handling with trucks (Operator - Medium classification) and skilled laborers. Stage and prep harness costs include TE connectivity harness staging and wire management installation.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-subheading">Budget Summary by Phase</h3>
+      
+      <div class="doc-summary">
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Hardware & Structural Assembly</div>
+          <p><strong>Bracket Installation:</strong> 12-10 qty, $0.095 hr/each<br><strong>Gear Drives:</strong> Multiple units, $4,539 assembly cost<br><strong>Torque Tubes:</strong> 5,635.00 total assembly cost<br><strong>Total Structural Phase:</strong> Largest single cost component</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Module & Electrical Installation</div>
+          <p><strong>Module Brackets:</strong> 96-48 qty per row<br><strong>Rivet Installation:</strong> 384,024.00 total cost<br><strong>Harness & Management:</strong> 19,280.80 allocation<br><strong>Module Installation (1)P:</strong> 55,357.10 cost</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Labor Classification Rates</div>
+          <p><strong>Ironworker:</strong> Base rate for structural assembly<br><strong>Millwright:</strong> Motor and SPC installation<br><strong>Operator - Medium:</strong> Material handling trucks<br><strong>Skilled Laborer:</strong> Module staging and installation</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Equipment Staging & Delivery</div>
+          <p><strong>Material Handling:</strong> 835 truck deliveries<br><strong>Double Handling:</strong> 1,016.00 cost<br><strong>Module Staging:</strong> 835 units<br><strong>Equipment Logistics:</strong> Significant budget impact</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DESIGN SUMMARY ===== -->
+    <section id="design-summary" style="margin-top: 4rem;">
+      <h2 class="section-heading">Easely II Solar Design Summary</h2>
+
+      <div class="overview">
+        <p>Comprehensive design specification summary for Easely II solar facility. Documentation includes inverter and transformer specifications, module racking configuration, photovoltaic module details, and block-level characteristics. Design parameters establish basis for cost estimation, labor planning, and equipment procurement across all project blocks.</p>
+      </div>
+
+      <div class="image-grid">
+        <!-- Design Summary Table -->
+        <div class="image-card">
+          <div class="image-header">
+            <h3 class="image-title">Design Specifications - Equipment & Racking Details</h3>
+            <span class="image-meta">System Configuration Summary (Blocks FS1A-FS4B-5)</span>
+          </div>
+          <div class="image-container">
+            <img src="assets/images/bimage3.png" alt="Design summary table showing inverter, transformer, module racking, and module specifications for all project blocks">
+          </div>
+          <div class="image-description">
+            <p><strong>Inverter Specifications:</strong> TMEIC inverters with PVU-L840UFN model (703.8 kW @ 50°C & 0 SL), configured in single and STEP-UP arrangements. Inverter quantities range from 1-6 units per block, supporting both 630V and ungrounded configurations with S940 transformers.</p>
+            <p><strong>Module & Racking Configuration:</strong> NesTracker Horizon modules (13.37 pitch, 54.00 GCR) with First Solar Series 7 TR1 and Series 7 TR1 mounting systems. Module configurations vary by block from 525V to 535V ratings, with string counts ranging from 5-6 modules per tracker. Total block characteristics include quantity summaries for 13-string trackers, 8-string trackers, and module counts across FS1A-FS4B project portfolio.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-subheading">Design Summary Statistics</h3>
+      
+      <div class="doc-summary">
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Inverter Configuration</div>
+          <p><strong>Manufacturer:</strong> TMEIC<br><strong>Model:</strong> PVU-L840UFN<br><strong>Rating:</strong> 703.8 kW @ 50°C<br><strong>Voltage:</strong> 630V & Ungrounded Options</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Transformer Specifications</div>
+          <p><strong>Type:</strong> STEP-UP Configuration<br><strong>Voltage:</strong> 630V to Ungrounded Wye<br><strong>Rating:</strong> S940 Transformers<br><strong>Quantity:</strong> Varies by circuit block</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Module Specifications</div>
+          <p><strong>Make:</strong> First Solar<br><strong>Model:</strong> Series 7 TR1<br><strong>Voltage Rating:</strong> 525V-535V<br><strong>Quantity Tracking:</strong> Per circuit configuration</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Racking & Tracking</div>
+          <p><strong>Manufacturer:</strong> NesTracker<br><strong>Type:</strong> Horizon (2-axis tracking)<br><strong>Pitch (FT):</strong> 13.37<br><strong>GCR:</strong> 54.00% Ground Coverage</p>
+        </div>
+      </div>
+
+      <h3 class="section-subheading">Block-Level Summary</h3>
+      
+      <div class="doc-summary">
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Total Circuits & Quantity</div>
+          <p><strong>Total Circuits:</strong> 161<br><strong>Total Inverters:</strong> 231<br><strong>Total Transformers:</strong> 231<br><strong>Total Design Output:</strong> 161,815 kW aggregate</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">String Configuration</div>
+          <p><strong>13-String Trackers:</strong> 3,173 units<br><strong>8-String Trackers:</strong> 602 units<br><strong>Total Strings:</strong> 3,775 tracking rows<br><strong>Module Quantity:</strong> 63,706 modules per configuration</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Project Block Distribution</div>
+          <p><strong>Circuits per Block:</strong> FS1A-FS4B configuration<br><strong>Inverter Distribution:</strong> Load-balanced across 231 units<br><strong>Modular Design:</strong> Repeating circuit patterns<br><strong>Scalability:</strong> Consistent across all 5 project blocks</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Design Basis for Estimation</div>
+          <p><strong>Module Count:</strong> 362,236 total modules (design basis)<br><strong>Tracker Quantity:</strong> 3,775 tracking rows<br><strong>Equipment Redundancy:</strong> Standardized across blocks<br><strong>Cost Driver:</strong> Module bracket quantity estimation critical</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LESSONS LEARNED ===== -->
+    <section id="lessons-learned" style="margin-top: 4rem;">
+      <h2 class="section-heading">Key Takeaways & Lessons Learned</h2>
+
+      <div class="overview">
+        <p>Critical findings and recommendations from Easely II estimation and budgeting analysis. This section documents estimation errors, identifies root causes, and provides actionable recommendations for improving future project cost forecasting and labor planning processes.</p>
+      </div>
+
+      <h3 class="section-subheading">Critical Issues Identified</h3>
+      
+      <div class="info-block">
+        <p><strong>1. Mod Rail Quantity Estimation Error:</strong> Modular rail quantities were incorrectly estimated for the Easely project. Modules require two brackets in this particular system — a detail that was missed by estimators. Using the Design Summary estimates should provide 268,048 additional brackets for Easely II. The budget for this phase now exceeds half of what was actually required, creating significant labor forecast and material planning discrepancies.</p>
+      </div>
+
+      <div class="info-block">
+        <p><strong>2. Phase Code Definition Issues:</strong> No phase code was established for activities such as trash removal or remediation. Phase codes such as PHASE: 01048100M32 - INSTALL PILE CAPS/BHA lack clear definitions and don't align with activity quantities. Definitions are often unclear, and estimators couldn't correlate codes to specific work activities, making it difficult to interpret which phase codes map to which on-site work.</p>
+      </div>
+
+      <div class="info-block">
+        <p><strong>3. Equipment Specification Gaps:</strong> Many phase codes lack clear equipment definitions. Incomplete specifications create ambiguity in estimating labor requirements and material needs. Without explicit definitions, estimation teams spent significant effort interpreting phase codes, leading to inconsistent cost allocations across project activities.</p>
+      </div>
+
+      <div class="info-block">
+        <p><strong>4. Labor Interpretation Challenges:</strong> In the mechanical department, there was a lot of difficulty interpreting phase codes. There weren't always ideal definitions, and often the phase codes could be rationalized one way or another. Without explicit explanations of what the estimators expected, it was up to the team to decide on solutions — sometimes generating disagreement between phases. This wasn't especially damaging because phase codes have high production and can be used for future bidding, but the system remains complicated.</p>
+      </div>
+
+      <h3 class="section-subheading">Recommendations for Improvement</h3>
+      
+      <div class="doc-summary">
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Estimation Process</div>
+          <p><strong>Action:</strong> Implement closer collaboration with experienced teams<br><strong>Benefit:</strong> Reduces estimation errors from missed details<br><strong>Timeline:</strong> Implement before next bid cycle<br><strong>Owner:</strong> Estimating department lead</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Phase Code Documentation</div>
+          <p><strong>Action:</strong> Document phase code definitions and equipment lists<br><strong>Benefit:</strong> Enables site teams to better interpret codes<br><strong>Timeline:</strong> Complete documentation audit before mobilization<br><strong>Owner:</strong> Project management + estimating</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Quantity Verification</div>
+          <p><strong>Action:</strong> Conduct pre-bid audits of all quantities<br><strong>Benefit:</strong> Catches discrepancies early (like module bracket counts)<br><strong>Timeline:</strong> Implement for Phase 2 estimates<br><strong>Owner:</strong> QA/QC team</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Design-Estimate Alignment</div>
+          <p><strong>Action:</strong> Cross-reference all estimates against design specs<br><strong>Benefit:</strong> Ensures quantity match between designs and budgets<br><strong>Timeline:</strong> Establish as standard procedure<br><strong>Owner:</strong> Estimating lead</p>
+        </div>
+      </div>
+
+      <h3 class="section-subheading">Implementation Priority</h3>
+      
+      <div class="info-block highlight">
+        <p><strong>High Priority:</strong> Phase code standardization and documentation. This single improvement would reduce future estimation errors and enable faster on-site interpretation of work assignments. Estimated impact: 20-30% reduction in estimation-related rework and schedule delays.</p>
+      </div>
+
+      <div class="info-block">
+        <p><strong>Medium Priority:</strong> Design-estimate correlation process. Creating a formal checklist that compares design quantities against estimated quantities would catch bracket count errors before budget approval. Estimated effort: 4-8 hours per project phase.</p>
+      </div>
+
+      <div class="info-block">
+        <p><strong>Ongoing:</strong> Estimator training and knowledge transfer. Pairing newer estimators with experienced team members improves estimation accuracy and reduces learning curve for complex solar projects. Consider shadowing program and post-project reviews to document lessons learned.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========== LIGHTBOX ========== -->
+  <div id="lightbox-overlay" class="lightbox-overlay">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" onclick="closeLightbox()">×</button>
+      <img src="" alt="" id="lightbox-image">
+      <div class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div>Estimation & Budget Analysis - Easely II Project Documentation</div>
+    <div class="update-tag">Last Updated: <span id="footer-date">—</span></div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    // Lightbox functionality
+    function showImage(src, caption) {
+      const overlay = document.getElementById('lightbox-overlay');
+      const img = document.getElementById('lightbox-image');
+      const captionEl = overlay.querySelector('.lightbox-caption');
+      
+      img.src = src;
+      captionEl.textContent = caption;
+      overlay.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox-overlay').style.display = 'none';
+    }
+
+    // Close lightbox on ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Close lightbox on overlay click
+    document.getElementById('lightbox-overlay').addEventListener('click', (e) => {
+      if (e.target.id === 'lightbox-overlay') closeLightbox();
+    });
+
+    // Auto-populate dates
+    const today = new Date();
+    const dateStr = today.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    document.getElementById('report-date').textContent = dateStr;
+    document.getElementById('footer-date').textContent = dateStr;
+
+    // Mobile nav toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (mobileToggle) {
+      mobileToggle.addEventListener('click', () => {
+        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+      });
+    }
+  </script>
+
+</body>
+</html>
