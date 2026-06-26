@@ -307,29 +307,192 @@
     </div>
   </div>
 
-  <!-- TAB: GERDAU PILES -->
-  <div id="gerdau" class="tab-content">
-    <div class="section-heading">Gerdau Pile Procurement</div>
-    
-    <div style="margin-bottom: 2rem;">
-      <h3 style="color: var(--gold); margin-bottom: 1rem; font-family: 'Barlow Condensed', sans-serif; font-size: 14px; letter-spacing: 1px;">Easely II: Non-Tracker Piles Received by Week (After 8/6/2025)</h3>
-      <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; min-height: 300px; display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
-        [Graph: Easely II Gerdau Non-Tracker Piles Received By Week After 8/6/2025]
+<!-- TAB: GERDAU PILES -->
+<div id="gerdau" class="tab-content">
+  <div class="section-heading">Gerdau Pile Procurement & Delivery</div>
+  
+  <p style="
+    color: var(--text-secondary); 
+    line-height: 1.8; 
+    margin-bottom: 1.5rem;
+    max-width: 860px;
+  ">
+    <strong>Overview:</strong> Gerdau pile procurement and delivery tracking for Easely I and II projects. 
+    Comprehensive documentation of weekly delivery schedules, tracker/non-tracker pile distribution, and 
+    delivery performance metrics across both project sites. All piles received, tracked, and documented 
+    for foundation construction and quality assurance.
+  </p>
+ 
+  <!-- SUMMARY METRICS -->
+  <div class="section-heading">Delivery Summary</div>
+  <div class="table-wrap" style="margin-bottom: 2rem;">
+    <table class="cost-table">
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Total Piles</th>
+          <th>Avg Weekly</th>
+          <th>Avg Daily</th>
+          <th>Promised Daily</th>
+          <th>Avg Received</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">Easely I</td>
+          <td style="text-align: right;">58,028</td>
+          <td style="text-align: right;">4,414</td>
+          <td style="text-align: right;">90</td>
+          <td style="text-align: right;">7</td>
+          <td style="text-align: right;">5,687</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; color: var(--gold);">Easely II</td>
+          <td style="text-align: right;">61,825</td>
+          <td style="text-align: right;">4,402</td>
+          <td style="text-align: right;">90</td>
+          <td style="text-align: right;">7</td>
+          <td style="text-align: right;">3.93</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+ 
+  <!-- SCHEDULE DETAILS -->
+  <div class="section-heading">Schedule Details</div>
+  <div class="table-wrap" style="margin-bottom: 2rem;">
+    <table class="cost-table">
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Schedule Type</th>
+          <th>Start Date</th>
+          <th>Stop Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="3" style="font-weight: 600; color: var(--gold);">Easely I</td>
+          <td>Non-Tracker</td>
+          <td>8/6/2025</td>
+          <td>9/23/2025</td>
+        </tr>
+        <tr>
+          <td>Tracker</td>
+          <td>8/6/2025</td>
+          <td>12/22/2025</td>
+        </tr>
+        <tr>
+          <td>Actual Start</td>
+          <td>8/18/2025</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td rowspan="3" style="font-weight: 600; color: var(--gold);">Easely II</td>
+          <td>Non-Tracker</td>
+          <td>8/6/2025</td>
+          <td>9/23/2025</td>
+        </tr>
+        <tr>
+          <td>Tracker</td>
+          <td>8/6/2025</td>
+          <td>12/22/2025</td>
+        </tr>
+        <tr>
+          <td>Actual Start</td>
+          <td>8/18/2025</td>
+          <td>11/10/2025</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+ 
+  <!-- DELIVERY GRAPHS -->
+  <div class="section-heading">Weekly Delivery Charts</div>
+  <p style="
+    color: var(--text-secondary); 
+    line-height: 1.8; 
+    margin-bottom: 1.5rem;
+  ">
+    Click graphs below to view full-screen delivery performance and weekly pile receipt data.
+  </p>
+ 
+  <div style="
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  ">
+    <!-- Easely I Graph -->
+    <div style="
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+    "
+    onclick="showImage('gimage1')"
+    onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(223,197,115,0.5)'"
+    onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(223,197,115,0.12)'">
+      <img src="assets/images/gimage1.png" 
+        alt="Easely I Gerdau Non-Tracker & Tracker Piles Received By Week"
+        style="width: 100%; height: auto; display: block;">
+      <div style="
+        padding: 1rem;
+        background: rgba(255,255,255,0.02);
+        border-top: 1px solid var(--border);
+      ">
+        <div style="
+          font-weight: 600;
+          color: var(--gold);
+          margin-bottom: 0.25rem;
+        ">
+          Easely I Weekly Delivery Chart
+        </div>
+        <div style="
+          font-size: 11px;
+          color: var(--text-muted);
+        ">
+          Non-Tracker & Tracker Piles Received By Week
+        </div>
       </div>
     </div>
-
-    <div style="margin-bottom: 2rem;">
-      <h3 style="color: var(--gold); margin-bottom: 1rem; font-family: 'Barlow Condensed', sans-serif; font-size: 14px; letter-spacing: 1px;">Easely I: Pile Deliveries</h3>
-      <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; min-height: 300px; display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
-        [Graph: Easely I Gerdau Pile Deliveries]
+ 
+    <!-- Easely II Graph -->
+    <div style="
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+    "
+    onclick="showImage('gimage2')"
+    onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(223,197,115,0.5)'"
+    onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(223,197,115,0.12)'">
+      <img src="assets/images/gimage2.png" 
+        alt="Easely II Gerdau Non-Tracker & Tracker Piles Received By Week"
+        style="width: 100%; height: auto; display: block;">
+      <div style="
+        padding: 1rem;
+        background: rgba(255,255,255,0.02);
+        border-top: 1px solid var(--border);
+      ">
+        <div style="
+          font-weight: 600;
+          color: var(--gold);
+          margin-bottom: 0.25rem;
+        ">
+          Easely II Weekly Delivery Chart
+        </div>
+        <div style="
+          font-size: 11px;
+          color: var(--text-muted);
+        ">
+          Non-Tracker & Tracker Piles Received By Week
+        </div>
       </div>
-    </div>
-
-    <div class="section-heading">Procurement Status</div>
-    <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem;">
-      <p style="color: var(--text-secondary); line-height: 1.8;">
-        Gerdau pile procurement overview and key metrics for both Easely I and II projects.
-      </p>
     </div>
   </div>
 
