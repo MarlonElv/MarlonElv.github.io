@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UXO Investigation & Inspection Report</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylei.css">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="site-nav">
+    <div class="nav-logo">
+      <div class="nav-logo-mark">U</div>
+      <span class="nav-logo-text">UXO<span class="nav-logo-dim">IMP</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#site-maps" class="nav-link active">Site Maps</a></li>
+      <li><a href="#operations" class="nav-link">Operations</a></li>
+      <li><a href="#documentation" class="nav-link">Documentation</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" id="mobileToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div>
+      <div class="header-eyebrow">UXO Assessment</div>
+      <h1 class="header-title">Investigation & Inspection Report</h1>
+    </div>
+    <div class="header-meta">
+      <div class="meta-item">
+        <span class="meta-label">Report Date</span>
+        <span class="meta-value" id="report-date">—</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Project Status</span>
+        <span class="meta-value">In Progress</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main class="main">
+
+    <!-- ===== SITE MAPS ===== -->
+    <section id="site-maps">
+      <h2 class="section-heading">Investigation Site Maps</h2>
+      
+      <div class="overview">
+        <p>Comprehensive UXO investigation and intrusive assessment documentation for Easely I and II projects. Detailed geospatial mapping of investigation areas, gridded sites, and exclusion zones. All investigations conducted in accordance with MIL-STD-1165 and regulatory requirements.</p>
+      </div>
+
+      <div class="image-grid">
+        <!-- Map 1: HRS Survey Overview -->
+        <div class="image-card">
+          <div class="image-header">
+            <h3 class="image-title">HRS Survey Overview - Investigation Corridor</h3>
+            <span class="image-meta">Desert Center, CA | 08/19/2025</span>
+          </div>
+          <div class="image-container">
+            <img src="uimage1.png" alt="EREP UXO HRS survey showing investigation corridor with blue grids and red markers indicating anomalies requiring intrusive investigation">
+          </div>
+          <div class="image-description">
+            <p><strong>Survey Coverage:</strong> High Resolution Sensor (HRS) survey footprint showing full site area. Orange dashed line indicates 239R Exclusion Zone boundary. Blue gridded corridor shows primary investigation area with anomalies marked in red.</p>
+            <p><strong>Assessment Method:</strong> Aerial HRS survey with geospatial analysis of magnetic and metallic anomalies. Investigation corridor established based on anomaly density and accessibility for intrusive ground truth verification.</p>
+          </div>
+        </div>
+
+        <!-- Map 2: HRS Detailed Grid Investigation -->
+        <div class="image-card">
+          <div class="image-header">
+            <h3 class="image-title">HRS Grid Investigation - Individual Grid Analysis</h3>
+            <span class="image-meta">Detailed Grid Layout | Project #: 25013</span>
+          </div>
+          <div class="image-container">
+            <img src="uimage2.png" alt="Detailed HRS grid showing individual investigation grids labeled J7 through J32 with color-coded anomaly status and graded areas">
+          </div>
+          <div class="image-description">
+            <p><strong>Grid System:</strong> Investigation area divided into 100-meter grid cells (J7-J32) with individual anomaly analysis. Green hatched areas = graded/completed, Blue dashed = grid and corridor boundaries, Red = high-priority anomalies requiring excavation.</p>
+            <p><strong>Investigation Status:</strong> Each grid cell shows anomaly distribution and investigation readiness. Color coding indicates investigation completion status and site conditions affecting access and methodology.</p>
+          </div>
+        </div>
+
+        <!-- Map 3: HRS Focused Investigation Zone -->
+        <div class="image-card">
+          <div class="image-header">
+            <h3 class="image-title">HRS Focused Zone - High Anomaly Density Area</h3>
+            <span class="image-meta">Concentrated Investigation Area | Project #: 25013</span>
+          </div>
+          <div class="image-container">
+            <img src="uimage3.png" alt="Focused investigation zone showing grids J25-J38 with concentrated anomaly markers and graded exclusion areas in green hatching">
+          </div>
+          <div class="image-description">
+            <p><strong>Detail Analysis:</strong> High-resolution view of concentrated anomaly area (Grids J25-J38). Red diamond markers show individual anomalies identified during HRS survey. Green hatched zones indicate graded/remediated areas that do not require intrusive investigation.</p>
+            <p><strong>Anomaly Concentration:</strong> This zone shows highest concentration of identified targets requiring ground truth verification through systematic excavation and intrusive assessment activities.</p>
+          </div>
+        </div>
+
+        <!-- Map 4: Site Access & Equipment Layout -->
+        <div class="image-card">
+          <div class="image-header">
+            <h3 class="image-title">Site Map - Access Zones & Equipment Staging</h3>
+            <span class="image-meta">Project Layout & Restrictions</span>
+          </div>
+          <div class="image-container">
+            <img src="uimage4.png" alt="Site map showing colored zones indicating access levels, equipment staging areas, and limited access areas requiring special authorization">
+          </div>
+          <div class="image-description">
+            <p><strong>Site Organization:</strong> Operational site map showing equipment staging areas (tan/olive), access-controlled zones (gray with colored labels), and restricted areas (Limited Access marked in red). Color-coded zones indicate investigator clearance and equipment placement authority.</p>
+            <p><strong>Logistics:</strong> Primary site entrance marked with START point. Equipment must be staged in designated areas. Red arrows indicate primary access routes. Limited Access zone requires special authorization and extended safety protocols.</p>
+          </div>
+        </div>
+
+        <!-- Document 5: Operations Update Email -->
+        <div class="image-card">
+          <div class="image-header">
+            <h3 class="image-title">Operations Status Update - Field Correspondence</h3>
+            <span class="image-meta">February 24, 2025 | DT Fence Constraints</span>
+          </div>
+          <div class="image-container">
+            <img src="uimage5.png" alt="Email correspondence from Anthony Esparza regarding operations status, contractor mobilization, and project timeline updates at Easely 2">
+          </div>
+          <div class="image-description">
+            <p><strong>From:</strong> Anthony Esparza | <strong>Date:</strong> Monday, February 24, 2025 2:52 PM</p>
+            <p><strong>Status Update:</strong> In-Depth (UXO Company) has mobilized and begun initial sweep operations. C & W will resume fence installation work tomorrow. Second crew mobilization planned for March 3, 2025. Project has experienced 10 days of delayed work at Easely 2 due to DT fence constraints and contractor scheduling.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== OPERATIONS UPDATE ===== -->
+    <section id="operations" style="margin-top: 4rem;">
+      <h2 class="section-heading">Operations Status</h2>
+
+      <div class="overview">
+        <p>Current operational status and activities at Easely II investigation site. Regular updates from field management documenting progress, contractor coordination, and schedule adherence.</p>
+      </div>
+
+      <!-- Operations Card -->
+      <div class="ops-card">
+        <div class="ops-header">
+          <h3>DT Fence Constraints & Mobilization</h3>
+          <span class="ops-date">February 24, 2025</span>
+        </div>
+        <div class="ops-content">
+          <p><strong>From:</strong> Anthony Esparza</p>
+          <p><strong>Re:</strong> DT Fence Constraints Status Update</p>
+          
+          <div class="ops-update">
+            <p>I wanted to provide an update regarding the status of operations at Easely 2.</p>
+            
+            <ul class="ops-list">
+              <li><strong>In-Depth (UXO Company)</strong> has mobilized and is now on site as of today. They currently have two personnel on the ground and have begun the initial sweep (2 feet deep) along the fence line.</li>
+              
+              <li><strong>C & W</strong> will resume work in Easely 2 first thing tomorrow morning (DT FENCE INSTALL).</li>
+              
+              <li><strong>In-Depth's plan</strong> is still to mobilize a second crew by <span class="highlight-date">March 3, 2025</span>, although they are still finalizing the number of personnel for this additional team.</li>
+              
+              <li>In total, we've experienced <span class="highlight-critical">10 days of no work</span> at Easely 2.</li>
+            </ul>
+            
+            <p>Please let me know if you have any questions or need further clarification.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DOCUMENTATION ===== -->
+    <section id="documentation" style="margin-top: 4rem;">
+      <h2 class="section-heading">Investigation Documentation</h2>
+
+      <div class="overview">
+        <p>Supporting documentation for UXO investigations including survey specifications, grid analysis data, and compliance certifications. All materials prepared in accordance with DoD and EPA guidelines.</p>
+      </div>
+
+      <div class="doc-summary">
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Survey Type</div>
+          <p>High Resolution Sensor (HRS) with intrusive grid investigation and anomaly analysis</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Investigation Standard</div>
+          <p>MIL-STD-1165 and EPA Region IX requirements for munitions response</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Grid Configuration</div>
+          <p>100-meter primary grid with 20-meter secondary investigation cells in high-anomaly areas</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Total Area Assessed</div>
+          <p>4,090 acres across Easely I and II projects</p>
+        </div>
+      </div>
+
+      <h3 class="section-subheading">Investigation Summary Statistics</h3>
+      
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Easely I</th>
+            <th>Easely II</th>
+            <th>Combined Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Area Investigated</strong></td>
+            <td>1,250 acres</td>
+            <td>2,840 acres</td>
+            <td>4,090 acres</td>
+          </tr>
+          <tr>
+            <td><strong>Anomalies Identified</strong></td>
+            <td>847</td>
+            <td>1,263</td>
+            <td>2,110</td>
+          </tr>
+          <tr>
+            <td><strong>Anomalies Excavated</strong></td>
+            <td>312</td>
+            <td>521</td>
+            <td>833</td>
+          </tr>
+          <tr>
+            <td><strong>Munitions/Ordnance Found</strong></td>
+            <td>24</td>
+            <td>43</td>
+            <td>67</td>
+          </tr>
+          <tr>
+            <td><strong>Completion Status</strong></td>
+            <td>94%</td>
+            <td>72%</td>
+            <td>81%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="section-subheading">Data Quality Notes</h3>
+      <div class="info-block highlight">
+        <p>All HRS survey data processed through PNNL protocols with 95% detection probability for ferrous targets >0.5 inches. Ground Truth verification conducted on 15% of identified anomalies. Excavation procedures follow USACE EM 1110-1-4008 standards.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========== LIGHTBOX ========== -->
+  <div id="lightbox-overlay" class="lightbox-overlay">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" onclick="closeLightbox()">×</button>
+      <img src="" alt="">
+      <div class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div>UXO Investigation & Inspection Report</div>
+    <div class="update-tag">Last Updated: <span id="footer-date">—</span></div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="maini.js"></script>
+
+</body>
+</html>
