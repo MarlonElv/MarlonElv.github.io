@@ -16,7 +16,6 @@
       <span class="nav-logo-text">UXO<span class="nav-logo-dim">IMP</span></span>
     </div>
     <ul class="nav-links">
-      <li><a href="#overview"  class="nav-link">Overview</a></li>
       <li><a href="#site-maps" class="nav-link active">Site Maps</a></li>
       <li><a href="#operations" class="nav-link">Operations</a></li>
       <li><a href="#documentation" class="nav-link">Documentation</a></li>
@@ -204,48 +203,33 @@
 
       <h3 class="section-subheading">Investigation Summary Statistics</h3>
       
-      <table class="info-table">
-        <thead>
-          <tr>
-            <th>Metric</th>
-            <th>Easely I</th>
-            <th>Easely II</th>
-            <th>Combined Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Area Investigated</strong></td>
-            <td>1,250 acres</td>
-            <td>2,840 acres</td>
-            <td>4,090 acres</td>
-          </tr>
-          <tr>
-            <td><strong>Anomalies Identified</strong></td>
-            <td>847</td>
-            <td>1,263</td>
-            <td>2,110</td>
-          </tr>
-          <tr>
-            <td><strong>Anomalies Excavated</strong></td>
-            <td>312</td>
-            <td>521</td>
-            <td>833</td>
-          </tr>
-          <tr>
-            <td><strong>Munitions/Ordnance Found</strong></td>
-            <td>24</td>
-            <td>43</td>
-            <td>67</td>
-          </tr>
-          <tr>
-            <td><strong>Completion Status</strong></td>
-            <td>94%</td>
-            <td>72%</td>
-            <td>81%</td>
-          </tr>
-        </tbody>
-      </table>
+      <!-- Structured with existing CSS classes -->
+      <div class="doc-summary">
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Area Investigated</div>
+          <p><strong>Easely I:</strong> 1,250 acres<br><strong>Easely II:</strong> 2,840 acres<br><strong>Total:</strong> 4,090 acres</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Anomalies Identified</div>
+          <p><strong>Easely I:</strong> 847<br><strong>Easely II:</strong> 1,263<br><strong>Total:</strong> 2,110</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Anomalies Excavated</div>
+          <p><strong>Easely I:</strong> 312<br><strong>Easely II:</strong> 521<br><strong>Total:</strong> 833</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Munitions/Ordnance Found</div>
+          <p><strong>Easely I:</strong> 24<br><strong>Easely II:</strong> 43<br><strong>Total:</strong> 67</p>
+        </div>
+
+        <div class="summary-card doc-card">
+          <div class="summary-eyebrow">Completion Status</div>
+          <p><strong>Easely I:</strong> 94%<br><strong>Easely II:</strong> 72%<br><strong>Combined:</strong> 81%</p>
+        </div>
+      </div>
 
       <h3 class="section-subheading">Data Quality Notes</h3>
       <div class="info-block highlight">
