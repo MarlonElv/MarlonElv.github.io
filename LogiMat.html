@@ -98,7 +98,7 @@
         <div class="photo-preview-grid" id="preview-excess-001">
           <div class="preview" onclick="showImage(
             'eximage1')">
-            <img src="assets/images/eximage1.jpeg" 
+            <img src="assets/images/eximage1.png" 
               alt="Excess Cable Photo 1">
             <p class="desc">Cable Spools On-Site</p>
           </div>
@@ -113,6 +113,102 @@
             <img src="assets/images/eximage3.png" 
               alt="Excess Cable Photo 3">
             <p class="desc">Easely II Inventory</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inventory Table Images - Clickable -->
+    <div style="margin-top: 2.5rem;">
+      <div class="section-heading">Inventory Details</div>
+      <p style="
+        color: var(--text-secondary); 
+        line-height: 1.8; 
+        margin-bottom: 1.5rem;
+      ">
+        Click images below to view full-screen inventory 
+        documentation and detailed material listings.
+      </p>
+      
+      <div style="
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      ">
+        <div style="
+          background: var(--bg-card);
+          border: 1px solid var(--border);
+          border-radius: var(--radius-lg);
+          overflow: hidden;
+          cursor: pointer;
+          transition: transform 0.2s, 
+                      border-color 0.2s;
+        "
+        onclick="showImage('eximage2')"
+        onmouseover="this.style.transform='scale(1.02)'; 
+                     this.style.borderColor='rgba(223,197,115,0.5)'"
+        onmouseout="this.style.transform='scale(1)'; 
+                    this.style.borderColor='rgba(223,197,115,0.12)'">
+          <img src="assets/images/eximage2.png" 
+            alt="Easely I 55133 Excess & Scrap Recycling Inventory"
+            style="width: 100%; height: auto; display: block;">
+          <div style="
+            padding: 1rem;
+            background: rgba(255,255,255,0.02);
+            border-top: 1px solid var(--border);
+          ">
+            <div style="
+              font-weight: 600;
+              color: var(--gold);
+              margin-bottom: 0.25rem;
+            ">
+              Easely I Inventory Table
+            </div>
+            <div style="
+              font-size: 11px;
+              color: var(--text-muted);
+            ">
+              Click to view full inventory details
+            </div>
+          </div>
+        </div>
+
+        <div style="
+          background: var(--bg-card);
+          border: 1px solid var(--border);
+          border-radius: var(--radius-lg);
+          overflow: hidden;
+          cursor: pointer;
+          transition: transform 0.2s, 
+                      border-color 0.2s;
+        "
+        onclick="showImage('eximage3')"
+        onmouseover="this.style.transform='scale(1.02)'; 
+                     this.style.borderColor='rgba(223,197,115,0.5)'"
+        onmouseout="this.style.transform='scale(1)'; 
+                    this.style.borderColor='rgba(223,197,115,0.12)'">
+          <img src="assets/images/eximage3.png" 
+            alt="Easely II 55134 Excess & Scrap Recycling Inventory"
+            style="width: 100%; height: auto; display: block;">
+          <div style="
+            padding: 1rem;
+            background: rgba(255,255,255,0.02);
+            border-top: 1px solid var(--border);
+          ">
+            <div style="
+              font-weight: 600;
+              color: var(--gold);
+              margin-bottom: 0.25rem;
+            ">
+              Easely II Inventory Table
+            </div>
+            <div style="
+              font-size: 11px;
+              color: var(--text-muted);
+            ">
+              Click to view full inventory details
+            </div>
           </div>
         </div>
       </div>
@@ -140,7 +236,7 @@
     <div class="section-heading">
       Inverter Procurement & Deployment
     </div>
- 
+
     <p style="
       color: var(--text-secondary); 
       line-height: 1.8; 
@@ -154,7 +250,7 @@
       with 28 circuits. Total installation value and logistical 
       coordination across dual-site delivery and setup.
     </p>
- 
+
     <!-- Inverter Delivery & Installation Event -->
     <div class="tl-event done has-photo" id="inverter-001">
       <div class="tl-meta">
@@ -184,18 +280,12 @@
             'eximage6')">
             <img src="assets/images/eximage6.png" 
               alt="Payment Application Cover">
-            <p class="desc">Payment Documentation I</p>
-          </div>
-          <div class="preview" onclick="showImage(
-            'eximage6')">
-            <img src="assets/images/eximage7.png" 
-              alt="Payment Application Cover">
-            <p class="desc">Payment Documentation II</p>
+            <p class="desc">Payment Documentation</p>
           </div>
         </div>
       </div>
     </div>
- 
+
     <p style="
       color: var(--text-secondary); 
       line-height: 1.8; 
@@ -210,7 +300,18 @@
       installation progress. As-built documentation 
       synchronized with BOM updates for final reconciliation.
     </p>
- 
+
+    <div class="section-heading">Inverter Timeline</div>
+    <div style="
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+    ">
+      <p style="color: var(--text-muted);">
+        Placeholder for inverter delivery timeline and 
+        status tracking.
+      </p>
     </div>
   </div>
 
@@ -257,104 +358,6 @@
   </div>
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const today = new Date().toLocaleDateString('en-US', {
-    month: 'long', day: 'numeric', year: 'numeric'
-  });
-  ['report-date', 'footer-date'].forEach(function (id) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = today;
-  });
-
-  /* ---- TAB FUNCTIONALITY ----------------------------- */
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', function () {
-      const tabName = this.dataset.tab;
-      
-      // Hide all tabs
-      document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.remove('active');
-      });
-      
-      // Remove active class from all buttons
-      document.querySelectorAll('.tab-btn').forEach(b => {
-        b.classList.remove('active');
-      });
-      
-      // Show selected tab and activate button
-      document.getElementById(tabName).classList.add('active');
-      this.classList.add('active');
-    });
-  });
-
-  /* ---- MOBILE MENU TOGGLE ----------------------- */
-  const toggle = document.getElementById('mobileToggle');
-  const navLinksEl = document.querySelector('.nav-links');
-  if (toggle && navLinksEl) {
-    toggle.addEventListener('click', function () { 
-      navLinksEl.classList.toggle('open'); 
-    });
-    navLinksEl.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () { 
-        navLinksEl.classList.remove('open'); 
-      });
-    });
-  }
-});
-
-/* ---- LIGHTBOX FUNCTIONALITY ----------------------- */
-function showImage(imageId) {
-  const overlay = document.getElementById(
-    'lightbox-overlay') || createLightbox();
-  const img = document.querySelector(
-    '[src*="' + imageId + '"]');
-  
-  if (!img) return;
-  
-  const lightboxImg = overlay.querySelector(
-    '.lightbox-inner img');
-  const lightboxCaption = overlay.querySelector(
-    '.lightbox-caption');
-  
-  lightboxImg.src = img.src;
-  lightboxImg.alt = img.alt;
-  lightboxCaption.textContent = img.alt;
-  
-  overlay.classList.add('active');
-}
-
-function closeLightbox() {
-  const overlay = document.getElementById(
-    'lightbox-overlay');
-  if (overlay) overlay.classList.remove('active');
-}
-
-function createLightbox() {
-  const overlay = document.createElement('div');
-  overlay.id = 'lightbox-overlay';
-  overlay.className = 'lightbox-overlay';
-  overlay.innerHTML = `
-    <div class="lightbox-inner">
-      <button class="lightbox-close" 
-        onclick="closeLightbox()">×</button>
-      <img src="" alt="">
-      <div class="lightbox-caption"></div>
-    </div>
-  `;
-  
-  overlay.addEventListener('click', function(e) {
-    if (e.target === overlay) closeLightbox();
-  });
-  
-  document.body.appendChild(overlay);
-  return overlay;
-}
-
-// Close lightbox on Escape key
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeLightbox();
-});
-</script>
+<script src="js/maini.js"></script>
 </body>
 </html>

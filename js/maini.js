@@ -97,3 +97,56 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+
+/* ---- LIGHTBOX FUNCTIONALITY ----------------------- */
+function showImage(imageId) {
+  const overlay = document.getElementById(
+    'lightbox-overlay') || createLightbox();
+  const img = document.querySelector(
+    '[src*="' + imageId + '"]');
+  
+  if (!img) return;
+  
+  const lightboxImg = overlay.querySelector(
+    '.lightbox-inner img');
+  const lightboxCaption = overlay.querySelector(
+    '.lightbox-caption');
+  
+  lightboxImg.src = img.src;
+  lightboxImg.alt = img.alt;
+  lightboxCaption.textContent = img.alt;
+  
+  overlay.classList.add('active');
+}
+
+function closeLightbox() {
+  const overlay = document.getElementById(
+    'lightbox-overlay');
+  if (overlay) overlay.classList.remove('active');
+}
+
+function createLightbox() {
+  const overlay = document.createElement('div');
+  overlay.id = 'lightbox-overlay';
+  overlay.className = 'lightbox-overlay';
+  overlay.innerHTML = `
+    <div class="lightbox-inner">
+      <button class="lightbox-close" 
+        onclick="closeLightbox()">×</button>
+      <img src="" alt="">
+      <div class="lightbox-caption"></div>
+    </div>
+  `;
+  
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) closeLightbox();
+  });
+  
+  document.body.appendChild(overlay);
+  return overlay;
+}
+
+// Close lightbox on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
